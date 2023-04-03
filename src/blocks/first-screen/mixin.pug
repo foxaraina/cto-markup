@@ -1,0 +1,18 @@
+mixin first-screen()
+    .first-screen.parallax
+        .parallax__img-wrap
+            .parallax__img
+                .first-screen__img.parallax__img-inner(style='background-image: url("img/index-bg.jpg")')
+        .container.parallax__content
+            .row
+                .col-lg-12
+                    h1.first-screen__title.
+                        Построим для Вас работающую систему управления охраной труда, сложив нормы и&nbsp;возможности!
+                .col-lg-offset-4.col-lg-8
+                    .first-screen__bottom.scroll-animate.scroll-animate-fadeInUp
+                        .first-screen__desc Компания «Системы охраны труда» — первая в Красноярске компания в сфере охраны труда,застраховавшая свою гражданскую ответственность перед клиентами.
+                        button.btn-with-icon(type='button')
+                            span.btn-with-icon__text Наши услуги
+                            span.btn-with-icon__sign
+                                span.btn-with-icon__wrapper
+                                    +icon('arrow')

@@ -1,0 +1,9 @@
+.faq-modal {
+    &__form {
+        margin-top: 30px;
+
+        @include mq('desktop') {
+            margin-top: 43px;
+        }
+    }
+}

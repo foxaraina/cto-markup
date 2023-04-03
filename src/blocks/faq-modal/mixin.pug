@@ -1,0 +1,19 @@
+.faq-modal
+    h2.modal__title Задать вопрос
+    p.modal__desc Если вы не нашли ответа на свой вопрос, то можете задать его нашим специалистам.
+    form.faq-modal__form
+        form
+            .form-group
+                label(for='feedback-name') Ваше имя
+                input(type='text' name='feedback-name' id='feedback-name' placeholder='Введите ваше имя')
+            .form-group
+                label(for='feedback-phone') Ваш телефон
+                input(type='tel' name='feedback-phone' id='feedback-phone')
+            .form-group
+                label(for='feedback-email') Ваш адрес электронной почты
+                input(type='mail' name='feedback-phone' id='feedback-email' placeholder='Введите вашу электронную почту')
+            .form-group
+                label(for='feedback-message') Ваше сообщение
+                textarea(name='feedback-message' id='feedback-message' placeholder='Введите свое сообщение')
+            .form-group-submit
+                button.btn.btn--md.btn--green(type='button') Отправить сообщение

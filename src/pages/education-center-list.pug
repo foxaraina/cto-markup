@@ -1,0 +1,44 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+include ../blocks/educational-courses-list/mixin
+
+block variables
+    -
+        var title = 'СОТ учебный центр курсы'
+    -
+        var educationalCoursesList = [
+            {
+                img: '/img/education-centre/1',
+                caption: 'Обеспечение пожарной безопасности',
+                desc: 'Комплексная программа «Обеспечение пожарной безопасности» разработана с учетом действующих законодательных требований к специалистам, осуществляющим работу по пожарной безопасности и противопожарной профилактике.'
+            },
+            {
+                img: '/img/education-centre/2',
+                caption: 'Организационные мероприятия по обеспечению пожарной безопасности',
+                desc: 'Цель курса - повышение уровня готовности для успешного выполнения планирования и организации пожарно-профилактической работы на объекте.'
+            },
+            {
+                img: '/img/education-centre/3',
+                caption: 'Программа повышения квалификациидля руководителей организаций, лиц, назначенных руководителем организации ответственными за обеспечение пожарной безопасности, в том числе в обособленных подразделениях организации',
+            },
+            {
+                img: '/img/education-centre/4',
+                caption: 'Оценка соответствия требованиям пожарной безопасности',
+                desc: 'Цель курса - повышение уровня готовности для успешного представления интересов организации по вопросам пожарной безопасности.'
+            }
+        ]
+
+
+block styles
+    link(rel='stylesheet' href='css/pages/education-center-list.css')
+
+block content
+    +page-header('Пожарная безопасность', 'На главную страницу', 'background-image: url("../img/page-headers/education-cources-header.jpg")')
+    section.section-grey
+        .container
+            +educational-courses-list(educationalCoursesList)
+
+    section.section-white
+        .container
+            +feedback()

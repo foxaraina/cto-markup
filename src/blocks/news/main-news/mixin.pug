@@ -1,0 +1,12 @@
+mixin main-news(data)
+    .main-news
+        a.main-news__link(href='#')
+        .row
+            .col-md-4
+                .main-news__img
+                    +srcsetRetinaImg(data.img, 'jpg', 535, 352)
+            .col-md-8
+                .main-news__content
+                    .main-news__date=data.date
+                    .main-news__caption=data.caption
+                    span.btn.btn--md.btn--green(href='#') Узнать больше

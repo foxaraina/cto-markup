@@ -1,0 +1,71 @@
+mixin services-list(white)
+    .row
+        .col-lg-4.col-md-6
+            a.service-card(href='#' class={'service-card--white': white})
+                .service-card__icon
+                    +iconAutsors()
+                    +icon('autsors', 'animated-outline')
+                .service-card__content
+                    .service-card__title Аутсорсинг #[br] по&nbsp;охране труда
+                    +btn-with-arrow()
+                .service-card__img
+                    +srcsetRetinaImg('img/service-covers/sevice-1', 'jpg')
+        .col-lg-4.col-md-6
+            a.service-card(href='#' class={'service-card--white': white})
+                .service-card__icon
+                    +iconAudit()
+                    +icon('audit')
+                .service-card__content
+                    .service-card__title Аудит #[br] по&nbsp;охране труда
+                    +btn-with-arrow()
+                .service-card__img
+                    +srcsetRetinaImg('img/service-covers/sevice-2', 'jpg')
+        .col-lg-4.col-md-6
+            a.service-card(href='#' class={'service-card--white': white})
+                .service-card__icon
+                    +iconEstimate()
+                    +icon('estimate')
+                .service-card__content
+                    .service-card__title Оценка профессиональных рисков
+                    +btn-with-arrow()
+                .service-card__img
+                    +srcsetRetinaImg('img/service-covers/sevice-3', 'jpg')
+        .col-lg-6.col-md-6
+            a.service-card(href='#' class={'service-card--white': white})
+                .service-card__icon
+                    +iconInvestigation()
+                    +icon('investigation')
+                .service-card__content
+                    .service-card__title Расследование несчастных случаев на&nbsp;производстве
+                    +btn-with-arrow()
+                .service-card__img
+                    +srcsetRetinaImg('img/service-covers/sevice-4', 'jpg')
+        .col-lg-6.col-md-12
+            a.service-card(href='#' class={'service-card--white': white})
+                .service-card__icon
+                    +iconDevelopment()
+                    +icon('development')
+                .service-card__content
+                    .service-card__title Разработка пакета локальных нормативных #[br] актов по&nbsp;охране труда
+                    +btn-with-arrow()
+                .service-card__img
+                    +srcsetRetinaImg('img/service-covers/sevice-5', 'jpg')
+mixin services()
+    .services
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    h2.title.title--md.title--white.
+                        Компания «Системы охраны труда» предлагает максимальный набор услуг аутсорсинга по охране труда.
+            +services-list()
+            .row
+                .col-lg-4
+                    .services__desc Компанией накоплен многолетний практический опыт в области охраны труда.
+                .col-lg-8
+                    .services__list
+                        .services__list-item.
+                            В составе комиссий по расследованию более 100 несчастных случаев на производстве, в том числе, групповых, тяжелых и со смертельным исходом
+                        .services__list-item.
+                            Вместе с нашими клиентами прошли более 200 проверок надзорными органами
+                        .services__list-item.
+                            Внедрили системы управления охраной труда в более чем 500 организациях

@@ -1,0 +1,135 @@
+.teams-list {
+    margin-top: 30px;
+
+    @include mq('tablet') {
+        margin-top: 50px;
+    }
+
+    @include mq('desktop') {
+        margin-top: 100px;
+    }
+}
+
+.team-card {
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+    @include mq('tablet') {
+        margin-bottom: 25px;
+    }
+
+    @include mq('desktop') {
+        margin-bottom: 60px;
+        border-radius: 8px;
+    }
+
+    &__img {
+        padding-bottom: 100%;
+        position: relative;
+
+        img {
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        padding: 15px 15px 20px;
+
+        @include mq('tablet') {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px 25px 25px;
+        }
+
+        @include mq('desktop') {
+            padding: 40px;
+        }
+    }
+
+    &__info {
+        flex-grow: 1;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        transition: .4s ease-in-out;
+
+        @include mq('tablet') {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        @include mq('desktop') {
+            font-size: 35px;
+        }
+    }
+
+    &__post {
+        font-size: 10px;
+        line-height: 1.7;
+
+        @include mq('tablet') {
+            font-size: 11px;
+            margin-bottom: 36px;
+        }
+
+        @include mq('desktop') {
+            font-size: 17px;
+        }
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 15px;
+        border: 1px solid rgb(35 35 37 / 60%);
+        border-radius: 4px;
+        transition: .4s ease;
+
+        @include mq('tablet') {
+            padding: 14px 22px;
+        }
+
+        @include mq('desktop') {
+            padding: 17px 31px;
+        }
+
+        .icon {
+            fill: $dark-bg;
+            font-size: 16px;
+            transition: .4s ease-in-out;
+
+            @include mq('tablet') {
+                font-size: 10px;
+            }
+
+            @include mq('desktop') {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &:hover {
+        .team-card__name {
+            color: $primary-color;
+        }
+
+        .team-card__btn {
+            background-color: $primary-color;
+            border-color: $primary-color;
+
+            .icon {
+                fill: #fff;
+            }
+        }
+    }
+}

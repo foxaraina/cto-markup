@@ -1,0 +1,14 @@
+@import "news-card/style";
+@import "main-news/style";
+
+.news-list {
+    @include mq('tablet') {
+        margin-top: 16px;
+    }
+
+    .btn-all {
+        @include mq('tablet') {
+            margin-top: 30px;
+        }
+    }
+}

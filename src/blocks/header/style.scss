@@ -1,0 +1,309 @@
+.header {
+    background-color: #fff;
+    position: fixed;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    width: calc(100% - 10px);
+    border-radius: 6px;
+    z-index: 1000;
+    padding: 9px 0;
+    transition: .4s ease;
+
+    @include mq('tablet') {
+        padding: 11px 0;
+        left: 15px;
+        right: 15px;
+        top: 15px;
+        width: calc(100% - 30px);
+    }
+
+    @include mq('desktop') {
+        padding: 14px 0;
+        width: calc(100% - 40px);
+        left: 20px;
+        right: 20px;
+        top: 20px;
+        border-radius: 8px;
+    }
+
+    &.fixed {
+        transform: translate(0, 0);
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        border-radius: 0;
+    }
+
+    &.menu-open {
+        border-radius: 8px 8px 0 0;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        color: $primary-color;
+
+        .icon {
+            font-size: 32px;
+            margin-right: 8px;
+            fill: $primary-color;
+
+            @include mq('tablet') {
+                font-size: 48px;
+                margin-right: 14px;
+            }
+
+            @include mq('desktop') {
+                font-size: 72px;
+                margin-right: 20px;
+            }
+        }
+
+        span {
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 8px;
+
+            @include mq('tablet') {
+                font-size: 11px;
+            }
+
+            @include mq('desktop') {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__clock {
+        display: none;
+
+        @include mq('tablet') {
+            color: $primary-color;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-right: 106px;
+            max-width: 140px;
+            font-size: 11px;
+        }
+
+        @include mq('desktop') {
+            font-size: 16px;
+        }
+
+        .icon {
+            @include mq('tablet') {
+                flex-shrink: 0;
+                margin-right: 13px;
+                font-size: 24px;
+                fill: $primary-color;
+            }
+
+            @include mq('desktop') {
+                margin-right: 20px;
+                font-size: 42px;
+            }
+        }
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__special-version {
+        display: none;
+
+        @include mq('tablet') {
+            border-right: 1px solid rgba($grey-md, .3);
+            margin-right: 20px;
+            padding-right: 20px;
+            display: flex;
+        }
+
+        @include mq('desktop') {
+            margin-right: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    &__phone {
+        margin-right: 15px;
+
+        @include mq('tablet') {
+            margin-right: 20px;
+        }
+
+        @include mq('laptop') {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        @include mq('desktop') {
+            margin-right: 30px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $dark-bg;
+            color: #fff;
+            font-size: 10px;
+            line-height: 1;
+            padding: 10px 15px;
+            border-radius: 3px;
+
+            @include mq('tablet') {
+                font-size: 12px;
+                padding: 14px 20px;
+                border-radius: 4px;
+            }
+
+            @include mq('laptop') {
+                color: $dark-bg;
+                font-weight: 600;
+                background-color: transparent;
+                justify-content: flex-end;
+                padding: 0;
+                margin: 0;
+            }
+
+            @include mq('desktop') {
+                font-size: 16px;
+                color: $dark-bg;
+            }
+        }
+
+        span {
+            display: none;
+
+            @include mq('laptop') {
+                font-size: 11px;
+                display: block;
+                color: $grey-md;
+            }
+
+            @include mq('desktop') {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &__menu {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        background: none;
+        border: none;
+
+        @include mq('tablet') {
+            width: 28px;
+            height: 28px;
+        }
+
+        @include mq('laptop') {
+            &:hover {
+                span {
+                    background-color: $dark-bg;
+                }
+            }
+        }
+
+        @include mq('desktop') {
+            width: 40px;
+            height: 40px;
+        }
+
+        span {
+            position: absolute;
+            display: block;
+            background-color: $primary-color;
+            height: 2px;
+            border-radius: 2px;
+            transition: .3s ease;
+
+            &:first-child {
+                width: 18px;
+                top: 7px;
+
+                @include mq('tablet') {
+                    top: 10px;
+                    width: 26px;
+                }
+
+                @include mq('desktop') {
+                    top: 15px;
+                    width: 38px;
+                }
+            }
+
+            &:last-child {
+                width: 14px;
+                top: 13px;
+
+                @include mq('tablet') {
+                    top: 18px;
+                    width: 20px;
+                }
+
+                @include mq('desktop') {
+                    top: 25px;
+                    width: 29px;
+                }
+            }
+        }
+
+        &.is-active {
+            span {
+                &:first-child {
+                    width: 26px;
+                    transform: rotate(45deg);
+                    top: calc(50% - 1px);
+
+                    @include mq('desktop') {
+                        width: 42px;
+                    }
+                }
+
+                &:last-child {
+                    width: 26px;
+                    transform: rotate(-45deg);
+                    top: calc(50% - 1px);
+
+                    @include mq('desktop') {
+                        width: 42px;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn.btn--dark {
+        display: none;
+
+        @include mq('laptop') {
+            display: block;
+            margin-right: 20px;
+        }
+
+        @include mq('desktop') {
+            margin-right: 40px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .header__phone a {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}

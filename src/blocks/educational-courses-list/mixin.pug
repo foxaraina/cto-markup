@@ -1,0 +1,27 @@
+mixin educational-course(data)
+    a.educational-course(href='#')
+        .educational-course__img
+            +srcsetRetinaImg(data.img, 'jpg', 434, 284)
+        .educational-course__content
+            .educational-course__caption=data.caption
+            if data.desc
+                .educational-course__desc=data.desc
+            .educational-course__info
+                .educational-course__info-row
+                    .educational-course__info-item
+                        span.educational-course__info-item-caption Длительность:
+                        span.educational-course__info-item-value 28 дней
+                    .educational-course__info-item
+                        span.educational-course__info-item-caption Стоимость:
+                        span.educational-course__info-item-value от 10 000 руб.
+                span.btn.btn--md.btn--green(href='#') Программа курса
+
+
+mixin educational-courses-list(data)
+    .educational-courses-list
+        .educational-courses-list__quantity
+            |Всего в категории:&nbsp
+            span 4 курса
+        .educational-course-cards
+            each course in data
+                +educational-course(course)

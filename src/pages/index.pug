@@ -1,0 +1,140 @@
+extends ../template/layout
+include ../blocks/first-screen/mixin
+include ../blocks/features/mixin
+include ../blocks/sliders/mixin
+include ../blocks/services/mixin
+include ../blocks/list-text/mixin
+include ../blocks/articles/mixin
+include ../blocks/articles-gallery/mixin
+include ../blocks/news/mixin
+include ../blocks/callback/mixin
+include ../blocks/faq/mixin
+include ../blocks/feedback/mixin
+
+block variables
+    -
+        var title = 'СОТ'
+    -
+        var sliderImgs = [
+            '/img/slider/slide-1.jpg', '/img/slider/slide-2.jpg', '/img/slider/slide-3.jpg', '/img/slider/slide-4.jpg'
+        ]
+    -
+        var featuresData = [
+            {
+                icon: 'mintrud',
+                caption: 'Аккредитованы Минтрудом России'
+            },
+            {
+                icon: 'portfel',
+                caption: 'Защищаем интересы работодателя'
+            },
+            {
+                icon: 'lock',
+                caption: 'Аутсорсинг по&nbsp;охране труда'
+            },
+            {
+                icon: 'umbrella',
+                caption: 'Ответственность застрахована'
+            }
+        ]
+    -
+        var listText2 = [
+            'В составе комиссий по расследованию более 100 несчастных случаев на производстве, в том числе, групповых, тяжелых и со смертельным исходом',
+            'Вместе с нашими клиентами прошли более 200 проверок надзорными органами',
+            'Внедрили системы управления охраной труда в более чем 500 организациях'
+        ]
+    -
+        var articlesList = [
+            {
+                section: 'Частные ситуации',
+                caption: 'Проверка охраны труда надзорными органами'
+            },
+            {
+                section: 'Частные ситуации',
+                caption: 'Работник получил травму или погиб, что делать?'
+            }
+        ]
+    -
+        var newsList = [
+            {
+                date: '22 апреля 2022',
+                caption: 'Введение новых Правил обучения по охране труда и проверки знания требований охраны труда.'
+            },
+            {
+                date: '27 января 2022',
+                caption: 'Порядок проведения инвентаризации стационарных источников и выбросов загрязняющих веществ в атмосферный воздух'
+            },
+            {
+                date: '24 января 2020',
+                caption: 'Показать все что скрыто: Роструд проводит «охоту» на скрытые несчастные случаи'
+            },
+            {
+                date: '25 ноября 2021',
+                caption: 'Добавлены новые программы в обучение по пожарной безопасности'
+            }
+        ]
+    -
+        var faqList = [
+            'Кто обязан проходить медицинские осмотры?',
+            'Кто подлежит обучению по охране труда и проверке знания требований охраны труда?',
+            'Куда и в какой срок надо направлять извещение о несчастных случаях?',
+            'Где можно пройти обучение по охране труда?',
+            'Для чего используются средства индивидуальной защиты?',
+        ]
+
+block styles
+    link(rel='stylesheet' href='css/pages/index.css')
+
+block content
+    +first-screen()
+    section.section-grey.border-radius-full
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    h2.title.title--md.mb-md-50.mb-lg-20.mb-xl-40.scroll-animate.scroll-animate-fadeInUp.
+                        Оказываем услуги по охране труда и кадровому делопроизводству.
+                        Помогаем руководителям компаний сохранять такие важные ресурсы,
+                        как энергию, время и деньги, чтобы они могли направить их на развитие дела.
+            .row.bottom-lg
+                .col-lg-4
+                    .sidebar
+                        .sidebar__text
+                            p.sidebar__text--md.scroll-animate.scroll-animate-fadeInUp
+                                | Выбирая нас, вы выбираете
+                                | основательное и эффективное решение вопроса охраны труда.
+                .col-lg-8
+                    +features(featuresData)
+            +sliderAnimate(sliderImgs)
+    section.section-dark
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    h2.title.title--md.title--white.mb-md-50.mb-xl-90.scroll-animate.scroll-animate-fadeInUp Компания «Системы охраны труда» предлагает максимальный набор услуг аутсорсинга по охране труда.
+            .services
+                +services-list()
+            .row.bottom-lg.my-lg-90
+                .col-lg-4
+                    .sidebar
+                        .sidebar__text
+                            p.sidebar__text--md.sidebar__text--light.scroll-animate.scroll-animate-fadeInUp.
+                                Компанией накоплен многолетний практический опыт в области охраны труда.
+                .col-lg-8
+                    +list-text(listText2, 'md-index', 'light')
+    section.section-grey.border-radius-full
+        .container
+            +articles(articlesList, 'mb-md-40')
+            +articles-gallery('mt-md-40')
+            .row
+                .col-lg-offset-4.col-lg-8
+                    +news-index(newsList, true)
+            +callback()
+    section.section-dark
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    h2.title.title--md.title--white.scroll-animate.scroll-animate-fadeInUp Мы собрали самые часто встречающиеся вопросы в области охраны труда
+                    +faq-list-index(false, faqList)
+                    a.btn.btn--green.btn--md(href='#') Все вопросы
+    section.section-white.border-radius-full
+        .container
+            +feedback()

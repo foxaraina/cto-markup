@@ -1,0 +1,21 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../../blocks/price-block/style";
+
+.price-block {
+    margin-top: 30px;
+
+    @include mq('laptop') {
+        margin-top: 0;
+    }
+
+    @include mq('desktop') {
+        margin-top: 40px;
+    }
+
+    .sidebar-text {
+        @include mq('laptop') {
+            align-items: center;
+        }
+    }
+}

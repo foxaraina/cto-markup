@@ -1,0 +1,30 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+include ../blocks/teams-list/mixin
+
+block variables
+    -
+        var title = 'СОТ Лица компании'
+
+block styles
+    link(rel='stylesheet' href='css/pages/teams.css')
+
+block content
+    +page-header('Лица компании', 'На главную страницу', 'background-image: url("../img/teams-header.jpg")')
+    section.section-grey
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    p.page-desc-style-2.scroll-animate.scroll-animate-fadeInUp.
+                        Каждый сотрудник нашей команды имеет высшее образование и профессиональную подготовку
+                        по направлению «Техносферная безопасность» и каждые 3 года проходит очередную проверку
+                        знаний по охране труда. Выделенные специалисты имеют подготовку и аттестацию по
+                        промышленной безопасности и соответствующие группы по электробезопасности.
+                    h2.title.title--md.scroll-animate.scroll-animate-fadeInUp Опыт каждого нашего работника складывается в опыт всего коллектива, что усиливает потенциал в решении задач клиента.
+            +teams-list()
+    section.section-white
+        .container
+            +feedback()
+block modals
+    +modal('team-modal', {member: true}, 'modal-wide')

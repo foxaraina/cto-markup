@@ -1,0 +1,38 @@
+include ../member-modal/mixin
+
+mixin modal(id, data, className)
+    .modal.effect(id=id class=className ? className : '')
+        .modal__container.modal__content
+            .modal__inner
+                button.modal__close.js-modal-close(type='button')
+                    +icon('close')
+                if data.header
+                    +modal-header(data.header)
+                if data.form
+                    +modal-form(id, data.form)
+
+mixin modal-header(data)
+    .modal__header
+        .modal__title=data.title
+        if data.desc
+            .modal__desc=data.desc
+        if data.section
+            .modal__section(class=data.section.icon ? 'modal__section--with-icon':'' )
+                if data.section.icon
+                    .modal__section-icon
+                        +icon(data.section.icon)
+                .modal__section-caption=data.section.caption
+
+mixin modal-form(id, data)
+    .modal__form
+        each field in data.fields
+            if field.textarea
+                .form-group
+                    label(for=id + '-' + field.id)=field.label
+                    textarea(name=id + '-' + field.id id=id + '-' + field.id placeholder=field.placeholder)
+            else
+                .form-group
+                    label(for=id + '-' + field.id)=field.label
+                    input(type=field.type name=id + '-' + field.id id=id + '-' + field.id placeholder=field.placeholder)
+        .form-group-submit
+            .btn.btn--md.btn--green(type='submit')=data.submitText

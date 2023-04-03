@@ -1,0 +1,5 @@
+mixin list-text(data, size, color)
+    .list-text(class='list-text-'+size + ' ' + 'list-text-'+color)
+        each item in data
+            .list-text__item.scroll-animate.scroll-animate-fadeInUp=item
+            .list-text__line.scroll-animate.scroll-animate-fadeLeftToRight

@@ -1,0 +1,163 @@
+.first-screen {
+    position: relative;
+    min-height: 667px;
+
+    @include mq('tablet') {
+        min-height: 1270px;
+    }
+
+    @include mq('laptop') {
+        min-height: 689px;
+    }
+
+    @include mq('desktop') {
+        min-height: 1030px;
+        padding: 0;
+    }
+
+    &__title {
+        display: inline-flex;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 10;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0 0 46px;
+        opacity: 0;
+
+        @include mq('tablet') {
+            font-size: 45px;
+            margin: 0 0 44px;
+        }
+
+        @include mq('laptop') {
+            margin: 0 0 47px;
+        }
+
+        @include mq('desktop') {
+            font-size: 68px;
+            margin: 0 0 67px;
+        }
+
+        span {
+            margin-right: 8px;
+            opacity: 0;
+
+            @include mq('tablet') {
+                margin-right: 16px;
+            }
+
+            &.animate-1 {
+                animation-duration: 2s;
+                animation-name: animate1;
+                animation-fill-mode: both;
+            }
+
+            &.animate-2 {
+                animation-delay: .4s;
+                animation-duration: 2s;
+                animation-name: animate1;
+                animation-fill-mode: both;
+            }
+
+            &.animate-3 {
+                animation-delay: .6s;
+                animation-duration: 2s;
+                animation-name: animate1;
+                animation-fill-mode: both;
+            }
+
+            &.animate-4 {
+                animation-delay: .8s;
+                animation-duration: 2s;
+                animation-name: animate1;
+                animation-fill-mode: both;
+            }
+
+            &.animate-5 {
+                animation-delay: 1s;
+                animation-duration: 2s;
+                animation-name: animate1;
+                animation-fill-mode: both;
+            }
+
+            &.animate-6 {
+                animation-delay: 1.2s;
+                animation-duration: 2s;
+                animation-name: animate1;
+                animation-fill-mode: both;
+            }
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        @include mq('laptop') {
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    &__desc {
+        color: #A5A8AA;
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+
+        @include mq('tablet') {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 681px;
+        }
+
+        @include mq('laptop') {
+            padding-right: 25px;
+            margin-right: 25px;
+            border-right: 1px solid rgba(#F0F2F4, .3);
+            margin-bottom: 0;
+            max-width: 565px;
+        }
+
+        @include mq('desktop') {
+            padding-right: 50px;
+            margin-right: 50px;
+            font-size: 22px;
+            max-width: 100%;
+        }
+    }
+
+    .btn-with-icon {
+        width: 100%;
+
+        @include mq('tablet') {
+            width: auto;
+        }
+
+        @include mq('laptop') {
+            flex-shrink: 0;
+        }
+    }
+}
+
+/* Animation */
+
+@keyframes animate1 {
+    from {
+        transform: translateY(40px) scale(1, 0);
+    }
+
+    to {
+        transform: translateY(0) scale(1, 1);
+        opacity: 1;
+    }
+}

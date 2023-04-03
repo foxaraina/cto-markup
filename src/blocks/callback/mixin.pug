@@ -1,0 +1,13 @@
+mixin callback()
+    .callback.scroll-animate.scroll-animate-fadeInUp
+        .callback__img
+            +srcsetRetinaImg('img/callback', 'jpg')
+        .row
+            .col-md-offset-4.col-lg-6.col-md-8
+                .callback__content
+                    h2.callback__title Наши специалисты #[br] на связи круглосуточно!
+                    p.callback__desc.
+                        Небольшой текст о позиционировании нас как специалистов,
+                        которые приедут, помогут, мы за «живое общение».
+                    a.callback__phone(href='tel:89339991234') 8 933 999-12-34
+                    button.btn.btn--md.btn--green.modal-trigger.md-setperspective(type='button' data-modal='feedback-modal') Обратный звонок

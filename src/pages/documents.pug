@@ -1,0 +1,35 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+include ../blocks/documents-list/mixin
+include ../blocks/pagination/mixin
+include ../blocks/filter/mixin
+
+
+
+block variables
+    -
+        var title = 'СОТ документы'
+
+block styles
+    link(rel='stylesheet' href='css/pages/documents.css')
+
+block content
+    +page-header('Документы', 'На главную страницу', 'background-image: url("../img/documents-header.jpg")')
+    section.section-grey
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    p.page-desc-style-2.
+                        Наша компания имеет все необходимые лицензии и документы. В соответствии с
+                        требованием закона Общество с ограниченной ответственностью «Системы охраны труда»
+                        (ООО «СОТ») и ИП Агафарова С.А. зарегистрированы в реестре аккредитованных
+                        Министерством труда и социальной защиты Российской федерации организаций,
+                        оказывающих услуги в области охраны труда
+                    +filter()
+            +documents-list()
+            +pagination()
+
+    section.section-white
+        .container
+            +feedback()

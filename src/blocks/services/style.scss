@@ -1,0 +1,213 @@
+.services {
+    margin-bottom: 20px;
+
+    @include mq('tablet') {
+        margin-bottom: 40px;
+    }
+
+    @include mq('laptop') {
+        margin-bottom: 20px;
+    }
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    background: #F0F2F4;
+    border-radius: 6px;
+    position: relative;
+    padding: 15px 15px 20px;
+    color: $dark-bg;
+    overflow: hidden;
+    margin-top: 8px;
+
+    @include mq('tablet') {
+        margin-top: 14px;
+        padding: 25px 25px 30px;
+        min-height: calc(100% - 14px);
+    }
+
+    @include mq('desktop') {
+        border-radius: 8px;
+        padding: 40px 40px 50px;
+    }
+
+    &.service-card--white {
+        background-color: #fff;
+    }
+
+    &__content {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        z-index: 3;
+    }
+
+    &__icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background-color: $primary-color;
+        border-radius: 3px;
+        margin-bottom: 40px;
+        flex-shrink: 0;
+        z-index: 3;
+
+        @include mq('tablet') {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 65px;
+            border-radius: 4px;
+        }
+
+        @include mq('laptop') {
+            margin-bottom: 85px;
+        }
+
+        @include mq('desktop') {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 135px;
+        }
+
+        .animated-outline {
+            width: 1em;
+            height: 1em;
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include mq('tablet') {
+                font-size: 53px;
+            }
+
+            @include mq('desktop') {
+                font-size: 80px;
+            }
+        }
+
+        .icon {
+            fill: #fff;
+            font-size: 40px;
+
+            @include mq('tablet') {
+                font-size: 53px;
+            }
+
+            @include mq('desktop') {
+                font-size: 80px;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        transition: .4s ease;
+
+        @include mq('tablet') {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        @include mq('desktop') {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 1023px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 2;
+        transition: .4s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #232325;
+            opacity: .5;
+            z-index: 2;
+        }
+
+        img {
+            left: 50%;
+            max-width: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+        }
+    }
+
+    &:hover {
+        .btn-with-arrow {
+            border-color: #fff;
+            background-color: #fff;
+
+            .icon {
+                fill: $primary-color;
+            }
+        }
+
+        .service-card__img {
+            opacity: 1;
+        }
+
+        .service-card__title {
+            color: #fff;
+        }
+
+        .service-card__icon {
+            .icon {
+                opacity: .3;
+            }
+
+            .animated-outline {
+                path {
+                    stroke-dasharray: 0, 1000;
+                    stroke-dashoffset: 0;
+                    animation: draw 5s linear;
+                }
+            }
+        }
+    }
+}
+
+@keyframes draw {
+    0%, 100% {
+        stroke-dasharray: 0, 1000;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 300, 0;
+        stroke-dashoffset: 0;
+    }
+}

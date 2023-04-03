@@ -1,0 +1,64 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+include ../blocks/price-block/mixin
+
+
+block variables
+    -
+        var title = 'СОТ карточка услуги'
+    -
+        var fieldName = {type: 'text', placeholder: 'Введите ваше имя', label: 'Ваше имя', id: 'name'}
+    -
+        var fieldPhone = {type: 'tel', placeholder: '', label: 'Ваш телефон', id: 'phone'}
+    -
+        var fieldMessage = {
+            textarea: true,
+            placeholder: 'Введите свое сообщение',
+            label: 'Ваше сообщение',
+            id: 'company'
+        }
+
+block styles
+    link(rel='stylesheet' href='css/pages/service-page.css')
+
+block content
+    +page-header('Аудит по охране труда', 'К списку услуг', 'background-image: url("../img/service-page-header.jpg")', true)
+    section.section-grey
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    .page-content
+                        p.scroll-animate.scroll-animate-fadeInUp.
+                            Наличие штатного специалиста/службы по охране труда – это не панацея от
+                            проблем по охране труда в организации. Конечно, лучше не дожидаться «неприглашенного аудита» -
+                            проверки надзорными органами. Мы проведем проверку, выявим нарушения в области трудового
+                            законодательства в вашей организации комфортно и с позитивными результатами: все ясно, и
+                            понятно, что именно нужно делать для приведения имеющейся системы в соответствие нормам.
+                        .list.scroll-animate.scroll-animate-fadeInUp
+                            .list__caption Вы получаете:
+                            ul
+                                li Комплексную проверку всех аспектов организации работы по охране труда на вашем предприятии.
+                                li Рекомендации по устранению и проработке слабых мест в охране труда.
+                        h3.scroll-animate.scroll-animate-fadeInUp Проведение аудита по охране труда – надежный способ контроля работодателем хода выполнения работ по охране труда.
+            .row.bottom-md
+                .col-lg-4
+                    .sidebar-text.scroll-animate.scroll-animate-fadeInUp.
+                        Выбирая нас, вы выбираете основательное и эффективное решение вопроса охраны труда.
+                .col-lg-8
+                    +price-block({items:[{caption: 'Стоимость услуги:', value: 'от 10 000 руб.'}], btn: 'Заказать услугу', modal: 'service-order'})
+    section.section-white
+        .container
+            +feedback()
+    +modal('service-order',
+        {
+            header:
+                {
+                    title: 'Заказ услуги',
+                    section: {caption: 'Аутсорсинг по охране труда', icon: 'mintrud'}
+                },
+            form: {
+                fields: [fieldName, fieldPhone, fieldMessage],
+                submitText: 'Отправить сообщение'
+            }
+        })

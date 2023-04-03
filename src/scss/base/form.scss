@@ -1,0 +1,225 @@
+@import "../helpers/variables";
+
+input, textarea, select {
+    appearance: none;
+    padding-left: 0;
+    padding-right: 0;
+    transition: .3s ease;
+
+    &:focus {
+        outline: none;
+
+        &::placeholder {
+            color: transparent !important;
+        }
+    }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    appearance:none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance:textfield;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @include mq('desktop') {
+        margin-bottom: 30px;
+    }
+
+    label {
+        font-size: 10px;
+        line-height: 1.5;
+        color: #4A5259;
+
+        @include mq('tablet') {
+            font-size: 11px;
+        }
+
+        @include mq('desktop') {
+            font-size: 16px;
+        }
+    }
+
+    input[type='text'],
+    input[type='mail'],
+    input[type='tel'],
+    input[type='password'],
+    input[type='number'],
+    input[type='password'], textarea, select {
+        display: flex;
+        align-items: flex-start;
+        border: none;
+        border-bottom: 1px solid rgba(#232325, .38);
+        background: none;
+        color: #4A5259;
+        font-size: 12px;
+        line-height: 1.5;
+
+        @include mq('tablet') {
+            font-size: 16px;
+        }
+
+        @include mq('desktop') {
+            font-size: 22px;
+        }
+
+        &:focus {
+            border-color: $primary-color;
+        }
+    }
+
+    input[type='text'],
+    input[type='mail'],
+    input[type='tel'],
+    input[type='password'],
+    input[type='number'],
+    input[type='password'], select {
+        height: 25px;
+        padding-bottom: 10px;
+
+        @include mq('tablet') {
+            height: 34px;
+            padding-bottom: 10px;
+        }
+
+        @include mq('desktop') {
+            height: 53px;
+            padding-bottom: 20px;
+        }
+    }
+
+    textarea {
+        height: 104px;
+
+        @include mq('tablet') {
+            height: 120px;
+        }
+
+        @include mq('laptop') {
+
+        }
+
+        @include mq('desktop') {
+            height: 155px;
+        }
+    }
+
+    &.completed {
+        input {
+            border-color: $dark-bg;
+        }
+    }
+
+    &.error {
+        input {
+            color: #D20505;
+            border-color: rgba(#D20505, .38);
+        }
+
+    }
+
+    .error-message {
+        margin-top: 4px;
+        font-size: 10px;
+        line-height: 1.5;
+        color: #D20505;
+
+        @include mq('tablet') {
+            font-size: 11px;
+        }
+
+        @include mq('desktop') {
+            margin-top: 7px;
+            font-size: 16px;
+        }
+    }
+}
+
+.form-group-submit {
+    @include mq('tablet') {
+        margin-top: 25px;
+    }
+}
+
+.fieldset {
+    margin-bottom: 20px;
+
+    @include mq('tablet') {
+        margin-bottom: 30px;
+    }
+
+    @include mq('desktop') {
+        margin-bottom: 50px;
+    }
+}
+
+.form-group-checkbox {
+    position: relative;
+    margin-bottom: 8px;
+
+    @include mq('tablet') {
+        margin-bottom: 14px;
+    }
+
+    @include mq('dasktop') {
+        margin-bottom: 20px;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+
+        + label {
+            position: relative;
+            padding-left: 26px;
+
+            @include mq('desktop') {
+                padding-left: 36px;
+            }
+
+            &::before {
+                content: '';
+                width: 18px;
+                height: 18px;
+                border-radius: 3px;
+                border: 1px solid rgba(#232325, .38);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include mq('desktop') {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 4px;
+                }
+            }
+
+            &::after {
+
+            }
+        }
+
+        &:checked {
+            + label {
+
+            }
+        }
+    }
+}

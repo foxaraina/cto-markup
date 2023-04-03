@@ -1,0 +1,27 @@
+mixin footer()
+    footer.footer
+        .container
+            .row
+                .col-lg-4
+                    .footer__logo
+                        +icon('logo')
+                        span системы #[br] охраны труда
+                .col-lg-8
+                    .footer__phones
+                        a(href='tel:') 8 933 999-12-34
+                        a(href='tel:') 8 913 507-94-65
+                    .footer__mail
+                        a(href='mailto:sot-24@mail.ru') sot-24@mail.ru
+                    address.footer__address
+                        | 660118, Россия, Красноярский край,
+                        br
+                        | г. Красноярск, пр. Комсомольский, здание 1Е, пом. 28
+                    .footer__sert В реестре Минтруда РФ № 4427
+            .row
+                .col-md-3
+                    button.button-scroll-top#button-scroll-top
+                        span.button-scroll-top__text Наверх
+                        span.button-scroll-top__icon
+                            +icon('arrow')
+                .col-md-9.first-md
+                    .footer__copyright © Системы охраны труда, 2018‒2023

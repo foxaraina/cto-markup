@@ -1,0 +1,75 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+include ../blocks/documents-list/mixin
+include ../blocks/pagination/mixin
+include ../blocks/filter/mixin
+include ../blocks/faq/mixin
+include ../blocks/ask-question/mixin
+
+block variables
+    -
+        var title = 'СОТ Вопросы и ответы'
+    -
+        var fieldName = {type: 'text', placeholder: 'Введите ваше имя', label: 'Ваше имя', id: 'name'}
+    -
+        var fieldPhone = {type: 'tel', placeholder: '', label: 'Ваш телефон', id: 'phone'}
+    -
+        var fieldEmail = {
+                    type: 'mail',
+                    placeholder: 'Введите вашу электронную почту',
+                    label: 'Ваш адрес электронной почты',
+                    id: 'email'
+                }
+    -
+        var fieldMessage = {
+            textarea: true,
+            placeholder: 'Введите свое сообщение',
+            label: 'Ваше сообщение',
+            id: 'company'
+        }
+    -
+        var faqList = [
+            'Кто обязан проходить медицинские осмотры?',
+            'Кто подлежит обучению по охране труда и проверке знания требований охраны труда?',
+            'Куда и в какой срок надо направлять извещение о несчастных случаях?',
+            'Где можно пройти обучение по охране труда?',
+            'Кто подлежит обучению по охране труда и проверке знания требований охраны труда?',
+            'Для чего используются средства индивидуальной защиты?',
+            'Где можно пройти обучение по охране труда?',
+            'Куда и в какой срок надо направлять извещение о несчастных случаях?',
+            'Кто подлежит обучению по охране труда и проверке знания требований охраны труда?',
+            'Где можно пройти обучение по охране труда?'
+        ]
+
+block styles
+    link(rel='stylesheet' href='css/pages/faq.css')
+
+block content
+    +page-header('Вопросы и ответы', 'На главную страницу', 'background-image: url("../img/faq-header.jpg")')
+    section.section-grey
+        .container
+            .row
+                .col-lg-4
+                    +ask-question()
+                .col-lg-8
+                    h2.title.title--md Мы собрали самые часто встречающиеся вопросы в области охраны труда
+                    +faq-list(true, faqList)
+                    +pagination()
+
+    section.section-white
+        .container
+            +feedback()
+block modals
+    +modal('ask-question',
+        {
+            header:
+                {
+                    title: 'Задать вопрос',
+                    desc: 'Если вы не нашли ответа на свой вопрос, то можете задать его нашим специалистам.'
+                },
+            form: {
+                fields: [fieldName, fieldPhone, fieldEmail, fieldMessage],
+                submitText: 'Отправить сообщение'
+            }
+        })

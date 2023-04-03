@@ -1,0 +1,37 @@
+.ask-question {
+    padding: 15px 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background-color: #fff;
+
+    @include mq('tablet') {
+        padding: 25px 25px 30px;
+        margin-bottom: 50px;
+    }
+
+    @include mq('laptop') {
+        max-width: calc(100% - 20px);
+    }
+
+    @include mq('desktop') {
+        padding: 40px 40px 50px;
+        max-width: calc(100% - 40px);
+    }
+
+    &__caption {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #4A5259;
+        margin-bottom: 20px;
+
+        @include mq('tablet') {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        @include mq('desktop') {
+            font-size: 22px;
+            margin-bottom:90px;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+extends ../template/layout
+include ../blocks/first-screen/mixin
+include ../blocks/features/mixin
+include ../blocks/services/mixin
+include ../blocks/articles/mixin
+include ../blocks/callback/mixin
+include ../blocks/feedback/mixin
+include ../blocks/faq/mixin
+include ../blocks/page-header/mixin
+
+
+block variables
+    -
+        var title = 'СОТ список услуг'
+
+block styles
+    link(rel='stylesheet' href='css/pages/services-list.css')
+
+block content
+    +page-header('Наши услуги', 'На главную страницу', 'background-image: url("../img/services-list-page-header.jpg")')
+    section.section-grey
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    p.page-desc.
+                        Компания «Системы охраны труда» предлагает максимальный набор
+                        услуг аутсорсинга по охране труда. Вы можете выбрать как отдельные
+                        интересующие вас направления по охране труда, так и полный
+                        комплекс работ сопровождения по охране труда.
+            +services-list(true)
+            +callback()
+    section.section-white
+        .container
+            +feedback()

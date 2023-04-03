@@ -1,0 +1,15 @@
+include ./news-card/mixin
+mixin news(data)
+    .row
+        each news in data
+            .col-lg-4.col-md-6
+                +news-card(news)
+
+mixin news-index(data, all)
+    .news-list
+        .row
+            each news in data
+                .col-md-6
+                    +news-card(news)
+        if all
+            a.btn.btn--outline.btn--md.btn-all(href='#') Все новости

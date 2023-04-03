@@ -1,0 +1,58 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    @include mq('tablet') {
+        margin-top: 30px;
+    }
+
+    @include mq('desktop') {
+        margin-top: 54px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 17px;
+        border: 1px solid rgba(#232325, .6);
+        border-radius: 4px;
+        color: #232325;
+        font-size: 11px;
+        line-height: 1;
+        margin: 0;
+        transition: .3s ease;
+
+        @include mq('tablet') {
+            font-size: 12px;
+            padding: 14px 20px;
+        }
+
+        @include mq('laptop') {
+            &:hover {
+                border-color: $primary-color;
+                color: $primary-color;
+            }
+        }
+
+        @include mq('desktop') {
+            font-size: 16px;
+            padding: 20px 30px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 6px;
+
+            @include mq('desktop') {
+                margin-right: 10px;
+            }
+        }
+
+        &.active {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: #fff;
+        }
+    }
+}

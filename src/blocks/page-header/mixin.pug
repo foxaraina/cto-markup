@@ -1,0 +1,20 @@
+mixin page-header(title, backText, bg, h1Smaller)
+    .page-header.parallax
+        .parallax__img-wrap
+            .parallax__img
+                .parallax__img-inner(style=bg)
+        .container.parallax__content
+            .page-header__content
+                a.page-header__back(href='#')
+                    span.page-header__back-icon
+                        +icon('arrow')
+                    span.page-header__back-caption= backText
+                h1.title.title--white(class=h1Smaller ? 'title--lg-long': 'title--lg')= title
+
+mixin page-header-nobg(title, backText)
+    .page-header-nobg.page-header
+        a.page-header__back(href='#')
+            span.page-header__back-icon
+                +icon('arrow')
+            span.page-header__back-caption= backText
+        h1.title.title--white.title--lg-long= title

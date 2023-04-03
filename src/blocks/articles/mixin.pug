@@ -1,0 +1,15 @@
+mixin article-card(data)
+    a.article-card.scroll-animate.scroll-animate-fadeInUp(href='#')
+        if data.section
+            span.article-card__category=data.section
+        else
+            span.article-card__date=data.date
+        span.article-card__content
+            span.article-card__caption=data.caption
+            +btn-with-arrow()
+
+mixin articles(data, className)
+    .row(class= className ? className : '' )
+        each article in data
+            .col-md-6.article-card-wrapper
+                +article-card(article)

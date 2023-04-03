@@ -1,0 +1,22 @@
+.feedback {
+    .title {
+        margin-bottom: 14px;
+
+        @include mq('desktop') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__form {
+        margin-top: 22px;
+
+        @include mq('tablet') {
+            margin-top: 53px;
+            margin-bottom: 0;
+        }
+
+        @include mq('desktop') {
+            margin-top: 90px;
+        }
+    }
+}

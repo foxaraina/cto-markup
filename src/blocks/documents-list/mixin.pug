@@ -1,0 +1,33 @@
+mixin document-card(img, title)
+    a.document-card(href=img+'.jpg' data-src=img+'.jpg')
+        .document-card__img
+            +srcsetRetinaImg(img, 'jpg')
+        .document-card__title=title
+        .document-card__date Дата выдачи: декабрь 2021
+
+mixin documents-list()
+    .row.documents-list.js-documents#lightgallery
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/1', 'Аттестат аккредитации для проведения работ по классификации объектов туристской индустрии')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/2', 'Аккредитация ЦОБТ')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/3', 'Лицензия на право обучения УК ЦОБТ. Департамент образования Москвы')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/4', 'Лицензия на право обучение 2 сторона')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/2', 'Аккредитация ЦОБТ')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/3', 'Лицензия на право обучения УК ЦОБТ. Департамент образования Москвы')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/3', 'Аттестат аккредитации для проведения работ по классификации объектов туристской индустрии')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/4', 'Лицензия на право обучение 2 сторона')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/3', 'Лицензия на право обучения УК ЦОБТ. Департамент образования Москвы')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/2', 'Аккредитация ЦОБТ')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/3', 'Аттестат аккредитации для проведения работ по классификации объектов туристской индустрии')
+        .col-lg-3.col-md-4
+            +document-card('/img/documents/4', 'Лицензия на право обучение 2 сторона')

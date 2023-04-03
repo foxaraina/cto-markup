@@ -1,0 +1,100 @@
+.features {
+    margin: 20px 0 30px;
+
+    @include mq('tablet') {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px -7px 40px;
+    }
+
+    @include mq('laptop') {
+        margin-bottom: 0;
+    }
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    margin: 0 0 8px;
+    background-color: #fff;
+    padding: 15px;
+
+    @include mq('tablet') {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 7px 14px;
+        width: calc(50% - 14px);
+        padding: 25px 25px 30px;
+    }
+
+    @include mq('desktop') {
+        width: calc(50% - 20px);
+        padding: 40px;
+        margin: 20px 10px 0;
+    }
+
+    &:last-of-type,&:nth-last-of-type(2) {
+        @include mq('laptop') {
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 3px;
+        background-color: $primary-color;
+        margin-right: 30px;
+
+        @include mq('tablet') {
+            width: 80px;
+            height: 80px;
+            margin-right: 0;
+            margin-bottom: 35px;
+        }
+
+        @include mq('desktop') {
+            margin-bottom: 50px;
+            margin-right: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 4px;
+        }
+
+        .icon {
+            fill: #fff;
+            font-size: 40px;
+
+            @include mq('tablet') {
+                font-size: 55px;
+            }
+
+            @include mq('desktop') {
+                font-size: 80px;
+            }
+        }
+    }
+
+    &__caption {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.5;
+        max-width: 152px;
+
+        @include mq('tablet') {
+            font-size: 19px;
+            max-width: 230px;
+        }
+
+        @include mq('desktop') {
+            max-width: 344px;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+    }
+}
+

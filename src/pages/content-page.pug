@@ -1,0 +1,123 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+
+
+
+block variables
+    -
+        var title = 'СОТ учебный центр карточка'
+
+block styles
+    link(rel='stylesheet' href='css/pages/content-page.css')
+
+block content
+    section.section-grey.section-grey--margin
+        .container
+            +page-header-nobg('Заголовок H1 для страницы без картинки в шапке, в несколько строк', 'На главную страницу')
+            .row
+                .col-lg-4
+                    .sidebar
+                .col-lg-8
+                    .page-content
+                        figure
+                            +srcsetRetinaImg('img/content-img', 'jpg', 1165, 767)
+                            figcaption Подпись  к картинке или  иллюстрации
+                        h2 Заголовок H2
+                        h3 Заголовок H3
+                        h4 Заголовок H4
+                        h5 Заголовок H5
+                        p.
+                            Параграф. При проведении инвентаризации выбросов выявляются и учитываются все
+                            стационарные и передвижные источники загрязнения атмосферного воздуха, устанавливаются
+                            их характеристики, а также определяются количественные и качественные показатели выбросов
+                            из всех стационарных и передвижных источников, которые постоянно или временно эксплуатируются
+                            (функционируют) на объекте, оказывающем негативное воздействие на окружающую среду,
+                            систематизируются и документируются полученные результаты.
+                        p.
+                            Признан утратившим силу аналогичный Приказ Минприроды России
+                            от 07.08.2018 N 352. Признан утратившим силу аналогичный Приказ
+                            Минприроды России от 07.08.2018 N 352.
+                        .list
+                            p Вы получаете:
+                            ul
+                                li Комплексную проверку всех аспектов организации работы по охране труда на вашем предприятии.
+                                li Рекомендации по устранению и проработке слабых мест в охране труда.
+                                li Сведения о травматизме на производстве и профессиональных заболеваниях
+                        .list
+                            p Вы получаете:
+                            ol
+                                li Комплексную проверку всех аспектов организации работы по охране труда на вашем предприятии.
+                                li Рекомендации по устранению и проработке слабых мест в охране труда.
+                        .table-scrollable
+                            .table-scrollable__container
+                                table
+                                    thead
+                                        tr
+                                            th Форма отчета
+                                            th Нормативный документ
+                                            th Сроки подачи
+                                        tr
+                                            td Сведения о травматизме на производстве и профессиональных заболеваниях
+                                            td Приказ Росстата от 21 июня 2017 г. № 417
+                                            td Ежегодно, до 25 января
+                                        tr
+                                            td Сведения о распределении числа пострадавших при несчастных случаях на производстве по основным видам происшествий и причинам несчастных случаев
+                                            td Приложение 6 к приказу Росстата от 10.08.2018 № 493
+                                            td 1 раз в 3 года, до 25 января
+                                        tr
+                                            td Сведения о состоянии условий труда и компенсациях на работах с вредными и (или) опасными условиями труда
+                                            td Приложение 1 к письму ФСС России от 20 февраля 2017 г. № 02-09-11/16-05-3685 «О финансовом обеспечении предупредительных мер»
+                                            td Ежеквартально вместе с формой 4-ФСС
+                                        tr
+                                            td Расчет по начисленным и уплаченным страховым взносам на обязательное социальное
+                                            td Приказ Росстата от 21 июня 2017 г. № 417
+                                            td Ежегодно, до 25 января
+    section.section-white
+        .container
+            form
+                .form-group
+                    label(for='feedback-name') Ваше имя
+                    input(type='text' name='feedback-name' id='feedback-name' placeholder='Введите ваше имя')
+                .form-group.completed
+                    label(for='feedback-name1') Ваше имя
+                    input(type='text' value='Василий' name='feedback-name' id='feedback-name1' placeholder='Введите ваше имя')
+                .form-group.error
+                    label(for='feedback-name2') Ваше имя
+                    input(type='text' name='feedback-name' id='feedback-name2' placeholder='Введите ваше имя')
+                    .error-message Сообщение об ошибке
+                .form-group
+                    label(for='feedback-phone') Ваш телефон
+                    input(type='tel' name='feedback-phone' id='feedback-phone' placeholder='+7 (___) __-__-__ ')
+                .form-group.form-group-select
+                    label(for='feedback-region') Ваш регион
+                    select(id='feedback-region')
+                        option(value='0' selected disabled) Выберите свой регион
+                        option(value='0') Краснодарский край
+                        option(value='0') Ставропольский край
+                        option(value='0') Ростовская область
+                        option(value='0') Красноярский край
+                        option(value='0') Кабардино-Балкарская Республика
+                        option(value='0') Москва
+                .form-group
+                    label(for='feedback-message') Ваше сообщение
+                    textarea(name='feedback-message' id='feedback-message' placeholder='Введите свое сообщение')
+                .fieldset
+                    .form-group.form-group-checkbox
+                        input(type='checkbox' id='checkbox-1' checked)
+                        label(for='checkbox-1') Выбранный пункт
+                    .form-group.form-group-checkbox
+                        input(type='checkbox' id='checkbox-2' checked)
+                        label(for='checkbox-2') Не выбранный пункт
+                .fieldset
+                    .form-group.form-group-radio
+                        input(type='checkbox' id='radio-1' checked)
+                        label(for='checkbox-1') Выбранный пункт
+                    .form-group.form-group-radio
+                        input(type='checkbox' id='radio-2' checked)
+                        label(for='checkbox-2') Не выбранный пункт
+                .form-group-submit
+                    button.btn.btn--md.btn--grey(type='button') Отправить сообщение
+        .container
+            +feedback()
+    +modal('service-order', 'service-order')

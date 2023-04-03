@@ -1,0 +1,203 @@
+.educational-course {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 15px 15px 20px;
+    color: $dark-bg;
+    border-radius: 6px;
+
+    @include mq('tablet') {
+        flex-direction: row;
+        padding: 35px 35px 40px;
+    }
+
+    @include mq('desktop') {
+        border-radius: 8px;
+        padding: 60px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+
+        @include mq('tablet') {
+            margin-bottom: 14px;
+        }
+
+        @include mq('desktop') {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        margin-bottom: 20px;
+
+        @include mq('tablet') {
+            flex-shrink: 0;
+            max-width: 28%;
+            margin-bottom: 0;
+            margin-right: 40px;
+        }
+
+        @include mq('laptop') {
+            max-width: 29%;
+        }
+
+        @include mq('desktop') {
+            margin-right: 100px;
+        }
+
+        img {
+            border-radius: 4px;
+        }
+    }
+
+    &__caption {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 14px;
+
+        @include mq('tablet') {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        @include mq('desktop') {
+            font-size: 42px;
+        }
+    }
+
+    &__desc {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #4A5259;
+        margin-bottom: 14px;
+
+        @include mq('tablet') {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        @include mq('desktop') {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__info {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(#4A5259, .3);
+
+        @include mq('tablet') {
+            margin-top: 20px;
+            padding-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        @include mq('desktop') {
+            margin-top: 30px;
+            padding-top: 30px;
+        }
+
+        .btn {
+            width: 100%;
+
+            @include mq('tablet') {
+                width: auto;
+            }
+
+            @include mq('desktop') {
+                padding-left: 51px;
+                padding-right: 51px;
+            }
+        }
+
+        &-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 14px;
+
+            @include mq('tablet') {
+                flex-grow: 1;
+                margin-bottom: 0;
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+
+            &:not(:last-child) {
+                margin-right: 73px;
+
+                @include mq('tablet') {
+                    margin-right: 60px;
+                }
+
+                @include mq('laptop') {
+                    margin-right: 116px;
+                }
+
+                @include mq('desktop') {
+                    margin-right: 155px;
+                }
+                @media (max-width: 360px) {
+                    margin-right: 40px;
+                }
+            }
+
+            &-caption {
+                font-size: 10px;
+                line-height: 1.7;
+                color: #4A5259;
+
+                @include mq('tablet') {
+                    font-size: 11px;
+                }
+
+                @include mq('desktop') {
+                    font-size: 17px;
+                }
+            }
+
+            &-value {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 1.5;
+
+                @include mq('tablet') {
+                    font-size: 21px;
+                }
+
+                @include mq('desktop') {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+.educational-courses-list {
+    &__quantity {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+
+        @include mq('tablet') {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+
+        @include mq('desktop') {
+            font-size: 30px;
+            margin-bottom: 60px;
+        }
+
+        span {
+            color: #4A5259;
+        }
+    }
+}

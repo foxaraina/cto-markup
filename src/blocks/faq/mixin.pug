@@ -1,0 +1,42 @@
+mixin faq-item(title)
+    .faq__item
+        button.faq__item-header.scroll-animate.scroll-animate-fadeInUp(type='button')
+            .faq__item-title=title
+            span.faq__item-toggle
+        .faq__item-content
+            p.
+                Обязательные медицинские осмотры могут быть предварительными (при поступлении на работу),
+                периодическими (в течение трудовой деятельности), внеочередными (по медицинским показаниям),
+                постоянными (каждый рабочий день/смену).
+            p.
+                Работники на время предварительных, периодических и внеочередных обязательных
+                медицинских осмотров освобождаются от работы, за ними сохраняется средняя заработная плата,
+                которая исчисляется, исходя из его заработка за последние 12 месяцев.
+            p.
+                Если работодатель неправомерно отказывается оплачивать прохождение обязательного
+                медицинского осмотра работником или требует прохождение осмотра в случаях,
+                не предусмотренных законодательством, работник вправе обратиться с жалобой
+                на действия работодателя и за защитой своих прав в территориальный орган
+                Роструда – государственную инспекцию труда (в том числе через данный ресурс),
+                а также в суд.
+            p.comment Александр Иванов, 12 декабря 2023
+        .faq__item-line.scroll-animate.scroll-animate-fadeLeftToRight
+
+mixin faq-list(light, data)
+    .faq__list(class={'faq__list--light': light})
+        each faq in data
+            +faq-item(faq)
+
+mixin faq-list-index(light, data)
+    .faq__list.faq__list--index(class={'faq__list--light': light})
+        each faq in data
+            +faq-item(faq)
+mixin faq()
+    .faq
+        .container
+            .row
+                .col-lg-8.col-lg-offset-4
+                    h2.title.title--md.title--white Мы собрали самые часто встречающиеся вопросы в&nbsp;области охраны труда
+                    +faq-list()
+                    .faq__all
+                        a.btn.btn--md.btn--green(href='#') Все вопросы

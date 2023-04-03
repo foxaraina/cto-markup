@@ -1,0 +1,76 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+include ../blocks/price-block/mixin
+
+
+block variables
+    -
+        var title = 'СОТ учебный центр карточка'
+    -
+        var fieldName = {type: 'text', placeholder: 'Введите ваше имя', label: 'Ваше имя', id: 'name'}
+    -
+        var fieldPhone = {type: 'tel', placeholder: '', label: 'Ваш телефон', id: 'phone'}
+    -
+        var fieldCompany = {
+            type: 'text',
+            placeholder: 'Введите название организации',
+            label: 'Название организации',
+            id: 'company'
+        }
+    -
+        var fieldMessage = {
+            textarea: true,
+            placeholder: 'Введите свое сообщение',
+            label: 'Ваше сообщение',
+            id: 'company'
+        }
+
+block styles
+    link(rel='stylesheet' href='css/pages/education-center-card.css')
+
+block content
+    +page-header('Организационные мероприятия по обеспечению пожарной безопасности', 'К списку курсов', 'background-image: url("../img/page-headers/education-card-header.jpg")', true)
+    section.section-grey
+        .container
+            .row
+                .col-lg-4
+                    .sidebar
+                        .sidebar__education-category
+                            .sidebar__education-category-caption Категория:
+                            .sidebar__education-category-name Пожарная безопасность
+                .col-lg-8
+                    .page-content
+                        h3.title.title--sm Цель курса - повышение уровня готовности для успешного выполнения планирования и организации пожарно-профилактической работы на объекте.
+                        p.grey.
+                            Приказ Минприроды России от 19.11.2021 N 871 "Об утверждении Порядка
+                            проведения инвентаризации стационарных источников и выбросов загрязняющих
+                            веществ в атмосферный воздух, корректировки ее данных, документирования
+                            и хранения данных, полученных в результате проведения таких инвентаризации и корректировки"
+                        p.grey.
+                            При проведении инвентаризации выбросов выявляются и учитываются все стационарные
+                            и передвижные источники загрязнения атмосферного воздуха, устанавливаются их
+                            характеристики, а также определяются количественные и качественные показатели
+                            выбросов из всех стационарных и передвижных источников, которые постоянно или
+                            временно эксплуатируются (функционируют) на объекте, оказывающем негативное
+                            воздействие на окружающую среду, систематизируются и документируются полученные результаты.
+                        p.grey.
+                            Признан утратившим силу аналогичный Приказ Минприроды России от 07.08.2018 N 352.
+                    +price-block({items:[{caption: 'Длительность:', value: '72 часа'}, {caption: 'Стоимость услуги:', value: 'от 10 000 руб.'}], btn: 'Записаться на обучение', modal: 'education-order'})
+                    a.btn.btn--md.btn--outline.btn--wide-xs Вернуться к списку курсов
+
+    section.section-white
+        .container
+            +feedback()
+    +modal('education-order',
+        {
+        header:
+            {
+                title: 'Заявка на обучение',
+                section: {caption: 'Оценка соответствия требованиям пожарной безопасности'}
+            },
+        form: {
+            fields: [fieldName, fieldCompany, fieldPhone, fieldMessage],
+            submitText: 'Отправить сообщение'
+        }
+        })

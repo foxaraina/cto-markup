@@ -1,0 +1,18 @@
+mixin education-category(data)
+    .education-category
+        .row
+            .col-md-5.col-lg-4
+                .education-category__header
+                    .education-category__icon
+                        +icon(data.icon)
+                    .education-category__name !{data.name}
+            .col-md-7.col-lg-8
+                .education-category__body
+                    .education-category__list
+                        each category in data.categories
+                            a(href='#')=category
+                    a.btn.btn--md.btn--outline(href='#') Все курсы этой категории
+mixin education-categories(data)
+    .education-categories
+        each category in data
+            +education-category(category)

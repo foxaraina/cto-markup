@@ -1,0 +1,63 @@
+mixin team-card(data)
+    .col-md-6.col-lg-4.scroll-animate.scroll-animate-fadeInUp
+        .team-card.modal-trigger.md-setperspective.ajax-modal(data-modal='team-modal' href='#' data-path='data/member-modal.txt')
+            .team-card__img
+                +srcsetRetinaImg(data.img, 'jpg')
+            .team-card__content
+                .team-card__info
+                    .team-card__name=data.name
+                    .team-card__post=data.post
+                span.team-card__btn
+                    +icon('user')
+mixin teams-list()
+    -
+        var teamsData = [
+            {
+                img: '/img/members/1',
+                name: 'Иван Мельник',
+                post: 'Финансовый директор'
+            },
+            {
+                img: '/img/members/2',
+                name: 'Светлана Кузьмина',
+                post: 'Консультант по правовым вопросам'
+            },
+            {
+                img: '/img/members/3',
+                name: 'Анастасия Корневич',
+                post: 'Директор департамента управления недвижимостью'
+            },
+            {
+                img: '/img/members/4',
+                name: 'Руслан Зайцев',
+                post: 'Финансовый директор'
+            },
+            {
+                img: '/img/members/5',
+                name: 'Полина Луцак',
+                post: 'Консультант по правовым вопросам'
+            },
+            {
+                img: '/img/members/6',
+                name: 'Сергей Пашин',
+                post: 'Директор департамента управления недвижимостью'
+            },
+            {
+                img: '/img/members/7',
+                name: 'Иван Рожинский',
+                post: 'Финансовый директор'
+            },
+            {
+                img: '/img/members/8',
+                name: 'Светлана Кузьмина',
+                post: 'Консультант по правовым вопросам'
+            },
+            {
+                img: '/img/members/9',
+                name: 'Анастасия Корневич',
+                post: 'Директор департамента управления недвижимостью'
+            }
+        ]
+    .teams-list.row
+        each member in teamsData
+            +team-card(member)

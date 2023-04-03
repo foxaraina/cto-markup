@@ -1,0 +1,41 @@
+mixin slide(img)
+    .swiper-slide
+        img(src=img)
+        div.swiper-lazy-preloader.swiper-lazy-preloader-white
+
+
+mixin sliderAnimate(imgs)
+    .slider-index.js-sliders
+        .slider-index__container.js-slider-container(data-images=imgs data-disp="/img/disp1.jpg")
+        button.slider-button-prev(type='button')
+            +icon('arrow')
+        button.slider-button-next(type='button')
+            +icon('arrow')
+
+mixin sliderArticle(imgs)
+    .slider-article.js-sliders
+        .slider-article__container.js-slider-container(data-images=imgs data-disp="/img/disp1.jpg")
+        .slider__controls
+            .slider__controls-btns
+                button.slider-button-prev(type='button')
+                    +icon('arrow')
+                button.slider-button-next(type='button')
+                    +icon('arrow')
+            .slider__controls-counter.js-slider-counter
+                span.slider__controls-counter-current.js-slider-current 1
+                span.slider__controls-counter-devider /
+                span.slider__controls-counter-total.js-slider-total
+
+mixin sliderNews(imgs)
+    .slider-news.js-sliders
+        .slider-news__container.js-slider-container(data-images=imgs data-disp="/img/disp1.jpg")
+        .slider__controls
+            .slider__controls-btns
+                button.slider-button-prev(type='button')
+                    +icon('arrow')
+                button.slider-button-next(type='button')
+                    +icon('arrow')
+            .slider__controls-counter.js-slider-counter
+                span.slider__controls-counter-current.js-slider-current 1
+                span.slider__controls-counter-devider /
+                span.slider__controls-counter-total.js-slider-total

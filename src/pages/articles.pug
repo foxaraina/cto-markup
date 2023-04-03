@@ -1,0 +1,52 @@
+extends ../template/layout
+include ../blocks/feedback/mixin
+include ../blocks/page-header/mixin
+include ../blocks/pagination/mixin
+include ../blocks/articles/mixin
+
+block variables
+    -
+        var title = 'СОТ Список новостей'
+    -
+        var articlesList = [
+            {
+                date: '27 января 2022',
+                caption: 'Проверка охраны труда надзорными органами'
+            },
+            {
+                date: '27 января 2022',
+                caption: 'Работник получил травму или погиб, что делать?'
+            },
+            {
+                date: '27 января 2022',
+                caption: 'Работник получил травму или погиб, что делать?'
+            },
+            {
+                date: '27 января 2022',
+                caption: 'Проверка охраны труда надзорными органами'
+            },
+            {
+                date: '27 января 2022',
+                caption: 'Проверка охраны труда надзорными органами'
+            },
+            {
+                date: '27 января 2022',
+                caption: 'Работник получил травму или погиб, что делать?'
+            }
+        ]
+
+block styles
+    link(rel='stylesheet' href='css/pages/articles.css')
+
+block content
+    +page-header('Частные ситуации', 'На главную страницу', 'background-image: url("../img/page-headers/articles-header.jpg")')
+    section.section-grey
+        .container
+            .articles-list
+                +articles(articlesList)
+                +pagination()
+
+    section.section-white
+        .container
+            +feedback()
+    +modal('ask-question', 'ask-question')

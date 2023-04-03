@@ -1,0 +1,12 @@
+mixin price-block(data)
+    .price-block.scroll-animate.scroll-animate-fadeInUp
+        .price-block__col
+            each item in data.items
+                .price-block__col-item
+                    .price-block__caption=item.caption
+                    .price-block__value=item.value
+
+        button.btn.btn-with-icon.modal-trigger.md-setperspective(type='button' data-modal=data.modal)
+            span.btn-with-icon__text=data.btn
+            span.btn-with-icon__sign
+                +icon('edit')

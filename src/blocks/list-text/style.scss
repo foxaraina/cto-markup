@@ -1,0 +1,167 @@
+.list-text {
+    &.list-text-xs {
+        .list-text__item {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 1.5;
+            padding: 14px 0;
+
+            @include mq('tablet') {
+                font-size: 17px;
+                padding: 20px 0;
+            }
+
+            @include mq('desktop') {
+                font-weight: 500;
+                font-size: 24px;
+                padding: 30px 0;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &.list-text-sm {
+        margin: 30px 0;
+
+        @include mq('tablet') {
+            margin: 50px 0;
+        }
+
+        @include mq('laptop') {
+            margin-bottom: 0;
+        }
+
+        @include mq('desktop') {
+            margin-top: 60px;
+        }
+
+        .list-text__item {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1.5;
+            padding: 20px 0;
+
+            @include mq('tablet') {
+                font-size: 17px;
+            }
+
+            @include mq('desktop') {
+                font-weight: 500;
+                font-size: 24px;
+                padding: 30px 0;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &.list-text-md {
+        margin-top: 20px;
+
+        @include mq('tablet') {
+            margin-top: 40px;
+        }
+
+        @include mq('laptop') {
+            margin-bottom: 0;
+        }
+
+        .list-text__item {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 20px 0;
+
+            @include mq('tablet') {
+                font-weight: 600;
+                font-size: 21px;
+                padding: 30px 0;
+            }
+
+            @include mq('desktop') {
+                font-size: 30px;
+                padding: 50px 0;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &.list-text-md-index {
+        .list-text__item {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 20px 0;
+
+            @include mq('tablet') {
+                font-weight: 600;
+                font-size: 24px;
+                padding: 30px 0;
+            }
+
+            @include mq('laptop') {
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+
+            @include mq('desktop') {
+                font-weight: 500;
+                font-size: 35px;
+                padding: 50px 0;
+            }
+        }
+    }
+
+    &.list-text-dark {
+        .list-text__item {
+            color: $dark-bg;
+
+            &:last-child {
+                + .list-text__line {
+                    display: none;
+                }
+            }
+        }
+
+        .list-text__line {
+            border-bottom: 1px solid rgba(#4A5259, .53);
+        }
+    }
+
+    &.list-text-light {
+        .list-text__item {
+            color: #F0F2F4;
+
+            &:last-child {
+                + .list-text__line {
+                    display: none;
+                }
+            }
+        }
+
+        .list-text__line {
+            border-bottom: 1px solid rgba(#4A5259, .5);
+        }
+    }
+}

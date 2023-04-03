@@ -1,0 +1,10 @@
+mixin feature-card(data)
+    .feature-card.scroll-animate.scroll-animate-fadeInUp
+        .feature-card__icon
+            +icon(data.icon)
+        .feature-card__caption !{data.caption}
+
+mixin features(data)
+    .features
+        each feature in data
+            +feature-card(feature)
