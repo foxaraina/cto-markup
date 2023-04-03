@@ -1,0 +1,38 @@
+extends ../template/layout
+include ../blocks/page-header/mixin
+
+block variables
+    -
+        var title = 'СОТ'
+
+block styles
+    link(rel='stylesheet' href='css/pages/content-page.css')
+
+block content
+    section.section-grey.section-grey--margin
+        .container
+            +page-header-nobg('Список страниц', 'На главную страницу')
+            .row
+                .col-lg-4
+                    .sidebar
+                .col-lg-8
+                    .page-content
+
+                        .list
+
+                            ul
+                                li: a(href='/articles.html') Список статей
+                                li: a(href='/contacts.html') Контакты
+                                li: a(href='/content-page.html') Тестовая страница
+                                li: a(href='/documents.html') Документы
+                                li: a(href='/education-center.html') Учебный центр
+                                li: a(href='/education-center-card.html') Учебный центр карточка
+                                li: a(href='/education-center-list.html') Учебный центр список
+                                li: a(href='/faq.html') Вопросы и ответы
+                                li: a(href='/index.html') Главная
+                                li: a(href='/news.html') Новости
+                                li: a(href='/service-page.html') Страница услуги
+                                li: a(href='/services-list.html') Список услуг
+                                li: a(href='/single-article.html') Статья
+                                li: a(href='/single-news.html') Новость
+                                li: a(href='/teams.html') Команда
