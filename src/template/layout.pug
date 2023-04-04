@@ -47,6 +47,12 @@ html(lang='ru')
 
     body
         .page
+
+            +header()
+            main.main
+                block content
+            +footer()
+            block modals
             +modal('feedback-modal',
                 {
                     header:
@@ -59,10 +65,5 @@ html(lang='ru')
                         submitText: 'Отправить сообщение'
                     }
                 })
-            +header()
-            main.main
-                block content
-            +footer()
-            block modals
             .modal__overlay
         script(src='js/main.js')
