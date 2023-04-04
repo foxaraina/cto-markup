@@ -16,9 +16,8 @@ import {slideDown, slideUp} from '../../js/helpers/helpers';
                     if (activeFaq) {
                         slideUp(activeFaqContent);
                         activeFaq.classList.remove('is-active');
+                        $downBlock.scrollIntoView({ behavior: "smooth", block: 'center' })
                     }
-
-                    $downBlock.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
                 } else {
                     slideUp($downBlock);
                 }
