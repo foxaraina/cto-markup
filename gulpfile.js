@@ -75,8 +75,8 @@ gulp.task('build:img', () => {
 });
 
 gulp.task('build:json', () => {
-    return gulp.src(['src/json/*.json'])
-        .pipe(gulp.dest('dist/json'))
+    return gulp.src(['src/data/*.*'])
+        .pipe(gulp.dest('dist/data'))
         .pipe(debug({title: 'json copy'}));
 });
 

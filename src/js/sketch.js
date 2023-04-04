@@ -44,7 +44,6 @@ export default class Sketch {
 
         this.paused = true;
         this.initiate(()=>{
-            console.log(this.textures);
             this.setupResize();
             this.settings();
             this.addObjects();
@@ -53,6 +52,7 @@ export default class Sketch {
             this.play();
             this.clickPrevBtn();
             this.clickNextBtn();
+            this.autoplay();
         })
     }
 
@@ -242,6 +242,13 @@ export default class Sketch {
 
         requestAnimationFrame(this.render.bind(this));
         this.renderer.render(this.scene, this.camera);
+    }
+
+    autoplay() {
+
+        setInterval(() => {
+            this.next();
+        }, 4000)
     }
 }
 

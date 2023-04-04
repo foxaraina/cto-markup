@@ -1,6 +1,6 @@
 import IMask from 'imask';
 import 'lazysizes';
-import Swiper, {Autoplay, Navigation, Pagination} from 'swiper';
+import Swiper, {Autoplay, EffectFade, Navigation, Pagination} from 'swiper';
 import {gsap} from 'gsap';
 import {preloadImages} from './utils';
 import {Preview} from './preview';
@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 import {Flip} from 'gsap/Flip';
 gsap.registerPlugin(Flip);
 import lightGallery from 'lightgallery';
-import bvi from "bvi"
 import '../blocks/faq/script';
 import '../blocks/navigation/script';
 import '../blocks/modal/script';
@@ -17,12 +16,7 @@ import '../blocks/map/script';
 import '../blocks/documents-list/script';
 import '../blocks/sliders/script';
 import '../blocks/first-screen/script';
-
-new isvek.Bvi({
-    target: '.js-special-version',
-    fontSize: 24,
-    theme: 'black'
-});
+import * as isvek from './bvi/dist/js/bvi'
 
 //add simple support for background images:
 document.addEventListener('lazybeforeunveil', function (e) {
@@ -32,6 +26,25 @@ document.addEventListener('lazybeforeunveil', function (e) {
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
+
+    new isvek.Bvi({
+        target: '.js-special-version',
+        fontSize: 24,
+        theme: 'black'
+    });
+
+    let anchorBtns = document.querySelectorAll('.js-scroll-to')
+    if(anchorBtns.length) {
+        anchorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if( btn.dataset.target) {
+                    let targetBtock = document.querySelector(`#${btn.dataset.target}`)
+                    targetBtock.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+                }
+            })
+
+        })
+    }
 
     lightGallery(document.getElementById('lightgallery'), {
         speed: 500,
@@ -124,12 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     scaleX: 1.3,
                 }, 'start');
         }
-
     };
 
-    preloadImages('.parallax__img-inner').then(_ => {
-        animateOnScroll();
-    });
+        preloadImages('.parallax__img-inner').then(_ => {
+            animateOnScroll();
+        });
+
 
     let animateIcons = document.querySelectorAll('.js-animate-icon')
     if (animateIcons.length) {
@@ -193,6 +206,19 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('fixed');
         }
+    });
+
+    //Слайдер первого экрана
+
+    const swiperFirstScreen = new Swiper('.js-swipper-first-screen', {
+        modules: [Navigation, Pagination, Autoplay, EffectFade],
+        loop: true,
+        lazy: true,
+        speed: 300,
+        autoplay: {
+            delay: 4000,
+        },
+        effect: 'fade',
     });
 
     // Слайдер на главной и в списке новостей

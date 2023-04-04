@@ -1,3 +1,5 @@
+import lightGallery from 'lightgallery';
+
 (function () {
 
     const fetchDocuments = async (url) => {
@@ -11,9 +13,17 @@
         if (filtersBtns.length) {
             filtersBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
+                    document.querySelector('.filter__btn.active').classList.remove('active')
+                    btn.classList.add('active')
                     const url = btn.dataset.url
                     fetchDocuments(url)
-                        .then(data => documentsContainer.innerHTML = data)
+                        .then(data => {
+                            documentsContainer.innerHTML = data
+                            lightGallery(document.getElementById('lightgallery'), {
+                                speed: 500,
+                                selector: '.document-card'
+                            });
+                        })
                 })
             })
         }

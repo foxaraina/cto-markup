@@ -41,7 +41,7 @@ function createConfig(env, mode, isFinance = false, isServer = false) {
             path: path.join(__dirname, './dist/js'),
             filename: '[name].js',
             chunkFilename: 'chunks/[id].js?v=[chunkhash]2',
-            publicPath: prod && !isFinance ? '/local/templates/main/js/' : '/js/',
+            publicPath: prod ? '/local/templates/main/js/' : '/js/',
             clean: true,
         },
         devtool: false,

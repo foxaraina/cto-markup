@@ -304,3 +304,23 @@ picture {
         transition: 1.3s ease;
     }
 }
+
+.bvi-active {
+    .parallax {
+        &__content {
+            grid-area: 1/1/-1/-1;
+            transform: translateY(0);
+        }
+    }
+
+    .scroll-animate {
+        &.scroll-animate-fadeInUp {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &.scroll-animate-fadeLeftToRight {
+            width: 100%;
+        }
+    }
+}
