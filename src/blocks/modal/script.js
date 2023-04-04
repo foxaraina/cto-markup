@@ -1,33 +1,24 @@
 (function (){
-    const ModalEffects = () => {
-
-        const overlay = document.querySelector('.modal__overlay');
         let scrollPosition = 0;
 
-        [].slice.call(document.querySelectorAll('.modal-trigger')).forEach(function (el, i) {
+        function removeModal(modal) {
+            modal.classList.remove('show');
+            document.documentElement.classList.remove('md-perspective');
+            window.scrollTo({top: scrollPosition});
+        }
+
+        function removeModalHandler(modal) {
+            removeModal(modal);
+        }
+
+        document.querySelectorAll('.modal-trigger').forEach(function (el, i) {
 
             const modal = document.querySelector('#' + el.getAttribute('data-modal')),
-                close = modal.querySelector('.modal__close');
+                  close = modal.querySelector('.modal__close');
 
-            function removeModal(hasPerspective) {
-                modal.classList.remove('show');
-
-                if (hasPerspective) {
-                    document.documentElement.classList.remove('md-perspective');
-                }
-
-                window.scrollTo({top: scrollPosition});
-            }
-
-            function removeModalHandler() {
-                removeModal(el.classList.contains('md-setperspective'));
-            }
-
-            el.addEventListener('click', function (ev) {
+            el.addEventListener('click', function (e) {
                 scrollPosition = document.documentElement.scrollTop
                 modal.classList.add('show');
-                overlay.removeEventListener('click', removeModalHandler);
-                overlay.addEventListener('click', removeModalHandler);
 
                 if (el.classList.contains('md-setperspective')) {
                     setTimeout(function () {
@@ -52,13 +43,24 @@
 
             });
 
-            close.addEventListener('click', function (ev) {
-                ev.stopPropagation();
-                removeModalHandler();
+            close.addEventListener('click', function (e) {
+                removeModalHandler(modal);
             });
 
-        });
+            document.addEventListener('keyup', (e) => {
+                if (e.key === "Escape") {
+                    removeModalHandler(modal);
+                }
+            })
 
-    };
-    ModalEffects();
-})()
+            // document.addEventListener('click', (e) => {
+            //     let activeModal = document.querySelector('.modal.show');
+            //     let container = activeModal.querySelector('.modal__inner');
+            //     console.log(container)
+            //     if (container && !(container.contains(e.target))) {
+            //         removeModalHandler(activeModal);
+            //     }
+            // })
+
+        });
+})();
