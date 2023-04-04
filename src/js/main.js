@@ -39,10 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', () => {
                 if( btn.dataset.target) {
                     let targetBtock = document.querySelector(`#${btn.dataset.target}`)
-                    targetBtock.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+                    let headerHeight = document.querySelector('.header').offsetHeight
+                    let targetBtockY = targetBtock.offsetTop
+                    window.scrollTo( {top: targetBtockY - headerHeight, behavior: 'smooth'});
                 }
             })
-
         })
     }
 

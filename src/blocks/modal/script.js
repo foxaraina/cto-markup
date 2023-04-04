@@ -53,7 +53,7 @@
     window.addEventListener('click', (e) => {
         e.stopPropagation();
         let containerInner = activeModal && activeModal.querySelector('.modal__inner')
-        if (!containerInner.contains(e.target) &&
+        if (containerInner && !containerInner.contains(e.target) &&
             !e.target.classList.contains('modal-trigger') &&
             !e.target.closest('.modal-trigger')) {
             removeModalHandler(activeModal);
