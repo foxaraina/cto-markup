@@ -135,9 +135,10 @@
     &__img {
         position: absolute;
         top: 0;
-        left: 0;
+        left:0;
         width: 100%;
         height: 100%;
+        max-width: none;
         opacity: 0;
         z-index: 2;
         transition: .4s ease;
@@ -161,7 +162,7 @@
             top: 50%;
             transform: translate(-50%,-50%);
             height: 100%;
-            width: auto;
+            width: 100%;
             object-fit: cover;
         }
     }

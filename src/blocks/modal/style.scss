@@ -34,7 +34,7 @@
         visibility: visible;
 
         &.effect {
-            .modal__content {
+            .modal__container {
                 transform: translateX(0);
                 opacity: 1;
                 transition: all 0.5s 0.1s;
@@ -43,7 +43,7 @@
     }
 
     &.effect {
-        .modal__content {
+        .modal__container {
             transform: translateX(200%);
             opacity: 0;
         }
@@ -251,6 +251,11 @@
             @include mq('tablet') {
                 max-width: 1880px;
             }
+        }
+        .modal__inner {
+            padding: 0;
+            margin: 0;
+            width: 100%;
         }
     }
 }

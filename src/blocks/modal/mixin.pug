@@ -2,14 +2,15 @@ include ../member-modal/mixin
 
 mixin modal(id, data, className)
     .modal.effect(id=id class=className ? className : '')
-        .modal__container.modal__content
+        .modal__container
             .modal__inner
                 button.modal__close.js-modal-close(type='button')
                     +icon('close')
-                if data.header
-                    +modal-header(data.header)
-                if data.form
-                    +modal-form(id, data.form)
+                .modal__body
+                    if data.header
+                        +modal-header(data.header)
+                    if data.form
+                        +modal-form(id, data.form)
 
 mixin modal-header(data)
     .modal__header

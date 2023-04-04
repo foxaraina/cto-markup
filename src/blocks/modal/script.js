@@ -1,5 +1,6 @@
 (function (){
         let scrollPosition = 0;
+        let activeModal = null;
 
         function removeModal(modal) {
             modal.classList.remove('show');
@@ -19,6 +20,7 @@
             el.addEventListener('click', function (e) {
                 scrollPosition = document.documentElement.scrollTop
                 modal.classList.add('show');
+                activeModal = modal
 
                 if (el.classList.contains('md-setperspective')) {
                     setTimeout(function () {
@@ -30,41 +32,32 @@
                     fetch(el.dataset.path)
                         .then(response => response.text())
                         .then(data => {
-                            let contentBlock = modal.querySelector('.modal__content');
-                            let modalCloseBtn = document.createElement('button')
-                            modalCloseBtn.classList = 'modal__close js-modal-close'
-                            modalCloseBtn.innerHTML = '<svg class="icon icon-close">\n' +
-                                '                                <use xlink:href="img/sprite.svg#close"></use>\n' +
-                                '                            </svg>'
+                            let contentBlock = modal.querySelector('.modal__body');
                             contentBlock.innerHTML = '';
-                            contentBlock.insertAdjacentElement('afterbegin', modalCloseBtn)
                             contentBlock.insertAdjacentHTML('beforeend', data);
-                            modalCloseBtn.addEventListener('click', () => {
-                                removeModalHandler(modal);
-                            })
                         });
                 }
-
             });
 
             close.addEventListener('click', function (e) {
                 removeModalHandler(modal);
             });
-
-            document.addEventListener('keyup', (e) => {
-                if (e.key === "Escape") {
-                    removeModalHandler(modal);
-                }
-            })
-
-            // document.addEventListener('click', (e) => {
-            //     let activeModal = document.querySelector('.modal.show');
-            //     let container = activeModal.querySelector('.modal__inner');
-            //     console.log(container)
-            //     if (container && !(container.contains(e.target))) {
-            //         removeModalHandler(activeModal);
-            //     }
-            // })
-
         });
+
+    document.addEventListener('keyup', (e) => {
+        if (e.key === "Escape" && activeModal) {
+            removeModalHandler(activeModal);
+        }
+    });
+
+    window.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let containerInner = activeModal && activeModal.querySelector('.modal__inner')
+        if (!containerInner.contains(e.target) &&
+            !e.target.classList.contains('modal-trigger') &&
+            !e.target.closest('.modal-trigger')) {
+            removeModalHandler(activeModal);
+        }
+    })
+
 })();

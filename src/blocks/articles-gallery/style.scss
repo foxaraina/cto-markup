@@ -15,6 +15,10 @@
             @include mq('tablet') {
                 width: 22.386%;
 
+                &.swiper-slide-prev {
+                    transform: translateX(-1px);
+                }
+
                 &.swiper-slide-active {
                     width: 11.25%;
 
