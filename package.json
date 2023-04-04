@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.6",
+    "bvi": "^1.0.2",
     "clean-webpack-plugin": "^4.0.0",
     "dat.gui": "^0.7.9",
     "gsap": "^3.11.5",

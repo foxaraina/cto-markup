@@ -31,13 +31,17 @@
                         .then(response => response.text())
                         .then(data => {
                             let contentBlock = modal.querySelector('.modal__content');
-                            contentBlock.innerHTML = '';
-                            contentBlock.insertAdjacentHTML('afterbegin', '<button class="modal__close js-modal-close" type="button">\n' +
-                                '                            <svg class="icon icon-close">\n' +
+                            let modalCloseBtn = document.createElement('button')
+                            modalCloseBtn.classList = 'modal__close js-modal-close'
+                            modalCloseBtn.innerHTML = '<svg class="icon icon-close">\n' +
                                 '                                <use xlink:href="img/sprite.svg#close"></use>\n' +
-                                '                            </svg>\n' +
-                                '                        </button>')
+                                '                            </svg>'
+                            contentBlock.innerHTML = '';
+                            contentBlock.insertAdjacentElement('afterbegin', modalCloseBtn)
                             contentBlock.insertAdjacentHTML('beforeend', data);
+                            modalCloseBtn.addEventListener('click', () => {
+                                removeModalHandler(modal);
+                            })
                         });
                 }
 

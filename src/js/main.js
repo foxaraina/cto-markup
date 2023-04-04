@@ -9,10 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 import {Flip} from 'gsap/Flip';
 gsap.registerPlugin(Flip);
 import lightGallery from 'lightgallery';
-
-import lgThumbnail from 'lightgallery/plugins/thumbnail'
-import lgZoom from 'lightgallery/plugins/zoom'
-
+import bvi from "bvi"
 import '../blocks/faq/script';
 import '../blocks/navigation/script';
 import '../blocks/modal/script';
@@ -20,6 +17,12 @@ import '../blocks/map/script';
 import '../blocks/documents-list/script';
 import '../blocks/sliders/script';
 import '../blocks/first-screen/script';
+
+new isvek.Bvi({
+    target: '.js-special-version',
+    fontSize: 24,
+    theme: 'black'
+});
 
 //add simple support for background images:
 document.addEventListener('lazybeforeunveil', function (e) {

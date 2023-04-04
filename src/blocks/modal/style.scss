@@ -9,9 +9,12 @@
     backface-visibility: hidden;
     overflow: auto;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
 
     &__container {
-
+        max-width: 1880px;
+        margin: 0 auto;
     }
 
     &__overlay {
@@ -246,7 +249,7 @@
     &.modal-wide {
         .modal__container {
             @include mq('tablet') {
-                max-width: 100%;
+                max-width: 1880px;
             }
         }
     }
