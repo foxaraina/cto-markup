@@ -5,8 +5,10 @@ import {gsap} from 'gsap';
 import {preloadImages} from './utils';
 import {Preview} from './preview';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
 import {Flip} from 'gsap/Flip';
+
 gsap.registerPlugin(Flip);
 import lightGallery from 'lightgallery';
 import '../blocks/faq/script';
@@ -16,7 +18,8 @@ import '../blocks/map/script';
 import '../blocks/documents-list/script';
 import '../blocks/sliders/script';
 import '../blocks/first-screen/script';
-import * as isvek from './bvi/dist/js/bvi'
+import './fetch-form';
+import * as isvek from './bvi/dist/js/bvi';
 
 //add simple support for background images:
 document.addEventListener('lazybeforeunveil', function (e) {
@@ -33,18 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         theme: 'black'
     });
 
-    let anchorBtns = document.querySelectorAll('.js-scroll-to')
-    if(anchorBtns.length) {
+    let anchorBtns = document.querySelectorAll('.js-scroll-to');
+    if (anchorBtns.length) {
         anchorBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                if( btn.dataset.target) {
-                    let targetBtock = document.querySelector(`#${btn.dataset.target}`)
-                    let headerHeight = document.querySelector('.header').offsetHeight
-                    let targetBtockY = targetBtock.offsetTop
-                    window.scrollTo( {top: targetBtockY - headerHeight, behavior: 'smooth'});
+                if (btn.dataset.target) {
+                    let targetBtock = document.querySelector(`#${btn.dataset.target}`);
+                    let headerHeight = document.querySelector('.header').offsetHeight;
+                    let targetBtockY = targetBtock.offsetTop;
+                    window.scrollTo({top: targetBtockY - headerHeight, behavior: 'smooth'});
                 }
-            })
-        })
+            });
+        });
     }
 
     lightGallery(document.getElementById('lightgallery'), {
@@ -130,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .addLabel('start', 0)
                 .to(item.DOM.title, {
                     ease: 'none',
-                    y: (item.DOM.imageWrap.offsetHeight - item.DOM.title.offsetHeight)/2.5 + 'px'
+                    y: (item.DOM.imageWrap.offsetHeight - item.DOM.title.offsetHeight) / 2.5 + 'px'
                 }, 'start')
                 .to(item.DOM.imageInner, {
                     ease: 'none',
@@ -140,12 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-        preloadImages('.parallax__img-inner').then(_ => {
-            animateOnScroll();
-        });
+    preloadImages('.parallax__img-inner').then(_ => {
+        animateOnScroll();
+    });
 
 
-    let animateIcons = document.querySelectorAll('.js-animate-icon')
+    let animateIcons = document.querySelectorAll('.js-animate-icon');
     if (animateIcons.length) {
         animateIcons.forEach(item => {
 
@@ -268,6 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
             placeholderChar: '_'     // defaults to '_'
         });
     }
+
     const phoneInputs = document.querySelectorAll('input[type="tel"]');
     phoneInputs.forEach(item => {
         item.addEventListener('focus', () => {

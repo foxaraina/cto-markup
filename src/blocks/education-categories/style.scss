@@ -11,7 +11,7 @@
 }
 
 .education-category {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 6px;
 
     @include mq('tablet') {
@@ -74,7 +74,7 @@
         }
 
         .icon {
-            fill: #fff;
+            fill: $white;
             font-size: 40px;
 
             @include mq('tablet') {

@@ -4,7 +4,7 @@ menu, nav {
 }
 
 .menu {
-    background: #F0F2F4;
+    background: $grey-lighter;
     border-radius: 0 0 8px 8px;
     padding: 15px 0 50px;
     display: none;
@@ -27,7 +27,7 @@ menu, nav {
 .special-version {
     padding-bottom: 20px;
     margin-bottom: 24px;
-    border-bottom: 1px solid rgba(#4A5259, .3);
+    border-bottom: 1px solid rgba($grey-md, .3);
 
     @include mq('tablet') {
         display: none;

@@ -45,7 +45,7 @@ input[type="number"] {
     label {
         font-size: 10px;
         line-height: 1.5;
-        color: #4A5259;
+        color: $grey-md;
 
         @include mq('tablet') {
             font-size: 11px;
@@ -65,9 +65,9 @@ input[type="number"] {
         display: flex;
         align-items: flex-start;
         border: none;
-        border-bottom: 1px solid rgba(#232325, .38);
+        border-bottom: 1px solid rgba($dark-bg, .38);
         background: none;
-        color: #4A5259;
+        color: $grey-md;
         font-size: 12px;
         line-height: 1.5;
 
@@ -155,6 +155,25 @@ input[type="number"] {
     @include mq('tablet') {
         margin-top: 25px;
     }
+    @include mq('desktop') {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.form-policy {
+    font-size: 10px;
+    line-height: 1.4;
+    color: $grey-md;
+    margin-top: 15px;
+    @include mq('tablet') {
+        font-size: 12px;
+    }
+    @include mq('desktop') {
+        font-size: 13px;
+        order: -1;
+        flex-grow: 1;
+    }
 }
 
 .fieldset {
@@ -188,6 +207,7 @@ input[type="number"] {
         + label {
             position: relative;
             padding-left: 26px;
+            cursor: pointer;
 
             @include mq('desktop') {
                 padding-left: 36px;
@@ -198,11 +218,12 @@ input[type="number"] {
                 width: 18px;
                 height: 18px;
                 border-radius: 3px;
-                border: 1px solid rgba(#232325, .38);
+                border: 1px solid rgba($dark-bg, .38);
                 position: absolute;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
+                transition: .4s ease;
 
                 @include mq('desktop') {
                     width: 24px;
@@ -212,12 +233,115 @@ input[type="number"] {
             }
 
             &::after {
-
+                content: '';
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                left: 0;
+                top: 0;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.7304 0.31701C16.1076 0.720412 16.0864 1.35322 15.683 1.73043L6.058 10.7304C5.67363 11.0898 5.07649 11.0899 4.69209 10.7305L0.317091 6.6405C-0.0863533 6.26334 -0.107659 5.63054 0.269504 5.22709C0.646666 4.82365 1.27947 4.80234 1.68292 5.1795L5.37493 8.63101L14.317 0.269579C14.7204 -0.107628 15.3532 -0.0863925 15.7304 0.31701Z' fill='white'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 10px;
+                transform: scale(0);
+                z-index: 1;
+                transition: .4s ease;
+                @include mq('desktop') {
+                    width: 24px;
+                    height: 24px;
+                    background-size: 16px;
+                }
             }
         }
 
         &:checked {
             + label {
+                &:before {
+                    border-color: $primary-color;
+                    background-color: $primary-color;
+                }
+                &:after {
+                    transform: scale(1);
+                }
+
+            }
+        }
+    }
+}
+
+.form-group-radio {
+    position: relative;
+    margin-bottom: 8px;
+
+    @include mq('tablet') {
+        margin-bottom: 14px;
+    }
+
+    @include mq('dasktop') {
+        margin-bottom: 20px;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+
+        + label {
+            position: relative;
+            padding-left: 26px;
+            cursor: pointer;
+
+            @include mq('desktop') {
+                padding-left: 36px;
+            }
+
+            &::before {
+                content: '';
+                width: 18px;
+                height: 18px;
+                border: 1px solid rgba($dark-bg, .38);
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: .4s ease;
+
+                @include mq('desktop') {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 5px;
+                width: 8px;
+                height: 8px;
+                background-color: $white;
+                border-radius: 50%;
+                z-index: 1;
+                opacity: 0;
+                transition: .4s ease;
+                @include mq('desktop') {
+                    left: 6px;
+                    top: 6px;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+
+        &:checked {
+            + label {
+                &:before {
+                    border-color: $primary-color;
+                    background-color: $primary-color;
+                }
+                &:after {
+                    opacity: 1;
+                }
 
             }
         }

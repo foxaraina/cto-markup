@@ -57,25 +57,34 @@
 
     &.btn--green {
         background-color: $primary-color;
-        color: #fff;
+        color: $white;
 
         &::before {
-            background: #4A5259;
+            background: $grey-md;
         }
     }
 
     &.btn--dark {
         background-color: $dark-bg;
-        color: #fff;
+        color: $white;
 
         &::before {
             background-color: $primary-color;
         }
     }
 
+    &.btn--grey {
+        background-color: $grey-md;
+        color: $white;
+
+        &::before {
+            background: $primary-color;
+        }
+    }
+
     &.btn--outline {
         color: $dark-bg;
-        border: 1px solid rgba(#232325, .5);
+        border: 1px solid rgba($dark-bg, .5);
 
         &::before {
             background: $primary-color;
@@ -83,7 +92,7 @@
 
         &:hover {
             border-color: $primary-color;
-            color: #fff;
+            color: $white;
         }
     }
 
@@ -148,7 +157,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: $primary-color;
-    color: #fff;
+    color: $white;
     font-size: 12px;
     padding: 5px 5px 5px 20px;
     border-radius: 3px;
@@ -193,7 +202,7 @@
 
         .icon {
             font-size: 14px;
-            fill: #fff;
+            fill: $white;
 
             @include mq('desktop') {
                 font-size: 24px;

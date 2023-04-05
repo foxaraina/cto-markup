@@ -9,7 +9,7 @@
 .article-card {
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: $white;
     border-radius: 6px;
     padding: 15px 15px 20px;
     color: $dark-bg;
@@ -56,7 +56,7 @@
     &__date {
         font-size: 10px;
         line-height: 1.7;
-        color: #4A5259;
+        color: $grey-md;
         margin-bottom: 45px;
 
         @include mq('tablet') {
@@ -94,7 +94,7 @@
             background-color: $primary-color;
 
             .icon {
-                fill: #fff;
+                fill: $white;
             }
         }
 

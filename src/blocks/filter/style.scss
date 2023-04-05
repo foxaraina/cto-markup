@@ -28,7 +28,7 @@
         left: 15px;
         height: 100%;
         background: none;
-        border-bottom: 1px solid rgba(#4A5259, .3);
+        border-bottom: 1px solid rgba($grey-md, .3);
         z-index: -1;
     }
 
@@ -53,7 +53,7 @@
             left: 0;
             height: 100%;
             background: none;
-            border-bottom: 1px solid rgba(#4A5259, .3);
+            border-bottom: 1px solid rgba($grey-md, .3);
             z-index: -1;
         }
 

@@ -13,7 +13,7 @@
 .service-card {
     display: flex;
     flex-direction: column;
-    background: #F0F2F4;
+    background: $grey-lighter;
     border-radius: 6px;
     position: relative;
     padding: 15px 15px 20px;
@@ -33,7 +33,7 @@
     }
 
     &.service-card--white {
-        background-color: #fff;
+        background-color: $white;
     }
 
     &__content {
@@ -95,7 +95,7 @@
         }
 
         .icon {
-            fill: #fff;
+            fill: $white;
             font-size: 40px;
 
             @include mq('tablet') {
@@ -150,7 +150,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #232325;
+            background-color: $dark-bg;
             opacity: .5;
             z-index: 2;
         }
@@ -169,8 +169,8 @@
 
     &:hover {
         .btn-with-arrow {
-            border-color: #fff;
-            background-color: #fff;
+            border-color: $white;
+            background-color: $white;
 
             .icon {
                 fill: $primary-color;
@@ -182,7 +182,7 @@
         }
 
         .service-card__title {
-            color: #fff;
+            color: $white;
         }
 
         .service-card__icon {

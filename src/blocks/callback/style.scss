@@ -78,7 +78,7 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 1.4;
-        color: #F0F2F4;
+        color: $grey-lighter;
         margin-bottom: 13px;
 
         @include mq('tablet') {
@@ -116,7 +116,7 @@
         font-weight: 500;
         font-size: 25px;
         line-height: 1.4;
-        color: #FFF;
+        color: $white;
         margin-bottom: 10px;
 
         @include mq('tablet') {

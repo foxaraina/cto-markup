@@ -11,7 +11,7 @@
 }
 
 .team-card {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 8px;
@@ -128,7 +128,7 @@
             border-color: $primary-color;
 
             .icon {
-                fill: #fff;
+                fill: $white;
             }
         }
     }

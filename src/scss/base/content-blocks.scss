@@ -16,7 +16,7 @@ p {
 }
 
 .text-style-grey {
-    color: #4A5259;
+    color: $grey-md;
 }
 
 .page-desc {
@@ -40,7 +40,7 @@ p {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 25px;
-    color: #4A5259;
+    color: $grey-md;
 
     @include mq('tablet') {
         color: $dark-bg;
@@ -87,7 +87,7 @@ p {
         figcaption {
             font-size: 10px;
             line-height: 170%;
-            color: #4A5259;
+            color: $grey-md;
             margin-top: 8px;
 
             @include mq('tablet') {
@@ -194,7 +194,7 @@ p {
         }
 
         &.grey {
-            color: #4A5259;
+            color: $grey-md;
         }
     }
 
@@ -389,7 +389,7 @@ p {
             text-align: left;
             vertical-align: top;
             min-width: 140px;
-            border: 1px solid rgba(#4A5259, .3);
+            border: 1px solid rgba($grey-md, .3);
 
             @include mq('tablet') {
                 padding: 14px;
@@ -420,7 +420,7 @@ p {
         td {
             font-size: 10px;
             line-height: 1.7;
-            color: #4A5259;
+            color: $grey-md;
 
             @include mq('tablet') {
                 font-size: 11px;
@@ -500,7 +500,7 @@ p {
         }
 
         p.sidebar__text--dark {
-            color: #4A5259;
+            color: $grey-md;
         }
     }
 
@@ -510,7 +510,7 @@ p {
 
         &-caption {
             font-size: 12px;
-            color: #4A5259;
+            color: $grey-md;
 
             @include mq('tablet') {
                 font-size: 16px;
@@ -539,7 +539,7 @@ p {
     &__date {
         font-size: 10px;
         line-height: 1.7;
-        color: #4A5259;
+        color: $grey-md;
         margin-bottom: 20px;
 
         @include mq('tablet') {

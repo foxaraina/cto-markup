@@ -104,20 +104,20 @@ block content
                     textarea(name='feedback-message' id='feedback-message' placeholder='Введите свое сообщение')
                 .fieldset
                     .form-group.form-group-checkbox
-                        input(type='checkbox' id='checkbox-1' checked)
+                        input(type='checkbox' id='checkbox-1' value='0' checked)
                         label(for='checkbox-1') Выбранный пункт
                     .form-group.form-group-checkbox
-                        input(type='checkbox' id='checkbox-2' checked)
+                        input(type='checkbox' id='checkbox-2' value='1' checked)
                         label(for='checkbox-2') Не выбранный пункт
                 .fieldset
                     .form-group.form-group-radio
-                        input(type='checkbox' id='radio-1' checked)
-                        label(for='checkbox-1') Выбранный пункт
+                        input(type='radio' id='radio-1' name='input-radio' value='0' checked)
+                        label(for='radio-1') Выбранный пункт
                     .form-group.form-group-radio
-                        input(type='checkbox' id='radio-2' checked)
-                        label(for='checkbox-2') Не выбранный пункт
+                        input(type='radio' name='input-radio' id='radio-2' value='1' )
+                        label(for='radio-2') Не выбранный пункт
                 .form-group-submit
-                    button.btn.btn--md.btn--grey(type='button') Отправить сообщение
+                    button.btn.btn--md.btn--grey(type='submit') Отправить сообщение
         .container
             +feedback()
     +modal('service-order', 'service-order')

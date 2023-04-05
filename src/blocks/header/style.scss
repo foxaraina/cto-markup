@@ -1,5 +1,5 @@
 .header {
-    background-color: #fff;
+    background-color: $white;
     position: fixed;
     top: 5px;
     left: 5px;
@@ -153,7 +153,7 @@
             align-items: center;
             justify-content: center;
             background-color: $dark-bg;
-            color: #fff;
+            color: $white;
             font-size: 10px;
             line-height: 1;
             padding: 10px 15px;

@@ -3,7 +3,7 @@
     flex-direction: column;
     color: $dark-bg;
     padding: 20px 0;
-    border-bottom: 1px solid rgba(#4A5259, .3);
+    border-bottom: 1px solid rgba($grey-md, .3);
     height: 100%;
 
     @include mq('tablet') {
@@ -17,7 +17,7 @@
     &__date {
         font-size: 10px;
         line-height: 170%;
-        color: #4A5259;
+        color: $grey-md;
         margin-bottom: 10px;
 
         @include mq('tablet') {

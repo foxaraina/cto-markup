@@ -1,5 +1,5 @@
 .price-block {
-    background-color: #fff;
+    background-color: $white;
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -45,7 +45,7 @@
             &:not(:last-child) {
                 padding-right: 18px;
                 margin-right: 20px;
-                border-right: 1px solid rgba(#4A5259, .3);
+                border-right: 1px solid rgba($grey-md, .3);
 
                 @include mq('tablet') {
                     margin-right: 30px;
@@ -63,7 +63,7 @@
     &__caption {
         font-size: 10px;
         line-height: 1.7;
-        color: #4A5259;
+        color: $grey-md;
 
         @include mq('tablet') {
             font-size: 11px;

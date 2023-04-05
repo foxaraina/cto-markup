@@ -13,7 +13,7 @@
         align-items: center;
         justify-content: center;
         padding: 40px;
-        background-color: #fff;
+        background-color: $white;
         border-radius: 6px;
         margin-bottom: 10px;
 
@@ -48,7 +48,7 @@
     &__date {
         font-size: 10px;
         line-height: 140%;
-        color: #4A5259;
+        color: $grey-md;
 
         @include mq('tablet') {
             font-size: 12px;

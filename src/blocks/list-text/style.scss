@@ -145,13 +145,13 @@
         }
 
         .list-text__line {
-            border-bottom: 1px solid rgba(#4A5259, .53);
+            border-bottom: 1px solid rgba($grey-md, .53);
         }
     }
 
     &.list-text-light {
         .list-text__item {
-            color: #F0F2F4;
+            color: $grey-lighter;
 
             &:last-child {
                 + .list-text__line {
@@ -161,7 +161,7 @@
         }
 
         .list-text__line {
-            border-bottom: 1px solid rgba(#4A5259, .5);
+            border-bottom: 1px solid rgba($grey-md, .5);
         }
     }
 }

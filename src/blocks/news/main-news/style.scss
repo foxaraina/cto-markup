@@ -1,5 +1,5 @@
 .main-news {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 6px;
     color: $dark-bg;
     margin-bottom: 10px;
@@ -81,7 +81,7 @@
     &__date {
         font-size: 10px;
         line-height: 1.7;
-        color: #4A5259;
+        color: $grey-md;
         margin-bottom: 10px;
 
         @include mq('tablet') {

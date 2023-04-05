@@ -51,7 +51,7 @@
 
     &__inner {
         position: relative;
-        background: #fff;
+        background: $white;
         border-radius: 8px;
         max-width: 100%;
         margin: 0 5px;
@@ -139,10 +139,6 @@
             @include mq('tablet') {
                 margin-top: 30px;
             }
-
-            @include mq('desktop') {
-                text-align: right;
-            }
         }
     }
 
@@ -166,7 +162,7 @@
     &__desc {
         font-size: 12px;
         line-height: 1.5;
-        color: #4A5259;
+        color: $grey-md;
 
         @include mq('tablet') {
             font-size: 16px;
@@ -181,7 +177,7 @@
         display: flex;
         align-items: center;
         padding: 15px;
-        background: #F0F2F4;
+        background: $grey-lighter;
         border-radius: 6px;
 
         @include mq('tablet') {
@@ -233,7 +229,7 @@
 
             .icon {
                 font-size: 40px;
-                fill: #fff;
+                fill: $white;
 
                 @include mq('tablet') {
                     font-size: 53px;
@@ -300,7 +296,7 @@
 .member-card {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 6px;
 
     @include mq('tablet') {
@@ -350,7 +346,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
-        color: #4A5259;
+        color: $grey-md;
         margin-bottom: 25px;
 
         @include mq('tablet') {
@@ -389,7 +385,7 @@
             font-size: 10px;
             line-height: 130%;
             text-transform: uppercase;
-            color: #4A5259;
+            color: $grey-md;
 
             @include mq('tablet') {
                 font-size: 12px;

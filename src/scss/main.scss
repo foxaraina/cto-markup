@@ -32,7 +32,7 @@ body {
     font-family: Inter, sans-serif;
     font-size: 16px;
     line-height: 1.3;
-    background: #232325;
+    background: $dark-bg;
     text-rendering: optimizespeed;
     text-decoration-skip-ink: none;
     text-size-adjust: 100%;
@@ -100,7 +100,7 @@ picture {
 
 .section-grey {
     padding: 30px 0;
-    background-color: #F0F2F4;
+    background-color: $grey-lighter;
     border-radius: 8px 8px 0 0;
     margin: 0 5px;
     position: relative;
@@ -129,7 +129,7 @@ picture {
 
     .section-left,
     .section-right {
-        background-color: #F0F2F4;
+        background-color: $grey-lighter;
     }
 }
 
@@ -152,7 +152,7 @@ picture {
 .section-white {
     position: relative;
     padding: 30px 0;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 0 0 6px 6px;
     margin: 0 5px;
 
@@ -168,7 +168,7 @@ picture {
 
     .section-left,
     .section-right {
-        background-color: #fff;
+        background-color: $white;
     }
 }
 
@@ -261,7 +261,7 @@ picture {
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(0deg, #232325, #232325), #191E22;
+            background: $dark-bg;
             opacity: .5;
             z-index: 2;
         }

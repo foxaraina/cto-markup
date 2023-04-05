@@ -1,7 +1,7 @@
 .educational-course {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: $white;
     padding: 15px 15px 20px;
     color: $dark-bg;
     border-radius: 6px;
@@ -70,7 +70,7 @@
     &__desc {
         font-size: 12px;
         line-height: 1.5;
-        color: #4A5259;
+        color: $grey-md;
         margin-bottom: 14px;
 
         @include mq('tablet') {
@@ -87,7 +87,7 @@
     &__info {
         margin-top: 14px;
         padding-top: 14px;
-        border-top: 1px solid rgba(#4A5259, .3);
+        border-top: 1px solid rgba($grey-md, .3);
 
         @include mq('tablet') {
             margin-top: 20px;
@@ -151,7 +151,7 @@
             &-caption {
                 font-size: 10px;
                 line-height: 1.7;
-                color: #4A5259;
+                color: $grey-md;
 
                 @include mq('tablet') {
                     font-size: 11px;
@@ -197,7 +197,7 @@
         }
 
         span {
-            color: #4A5259;
+            color: $grey-md;
         }
     }
 }

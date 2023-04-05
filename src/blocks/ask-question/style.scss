@@ -2,7 +2,7 @@
     padding: 15px 15px 20px;
     margin-bottom: 30px;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: $white;
 
     @include mq('tablet') {
         padding: 25px 25px 30px;
@@ -21,7 +21,7 @@
     &__caption {
         font-size: 12px;
         line-height: 1.5;
-        color: #4A5259;
+        color: $grey-md;
         margin-bottom: 20px;
 
         @include mq('tablet') {
