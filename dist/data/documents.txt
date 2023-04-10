@@ -1,0 +1,121 @@
+<div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/4.jpg" data-src="/img/documents/4.jpg" data-lg-id="bc3f6553-9537-481d-9176-409d8c3c8b3a">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/4.webp 1x, /img/documents/4@2x.webp 2x" type="image/webp" srcset="/img/documents/4.webp 1x, /img/documents/4@2x.webp 2x">
+                                            <source data-srcset="/img/documents/4.jpg 1x, /img/documents/4@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/4.jpg 1x, /img/documents/4@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/4.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Лицензия на право обучение 2 сторона</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/1.jpg" data-src="/img/documents/1.jpg" data-lg-id="1885037f-e63d-4850-9355-bdba651fb973">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/1.webp 1x, /img/documents/1@2x.webp 2x" type="image/webp" srcset="/img/documents/1.webp 1x, /img/documents/1@2x.webp 2x">
+                                            <source data-srcset="/img/documents/1.jpg 1x, /img/documents/1@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/1.jpg 1x, /img/documents/1@2x.jpg 2x"><img class=" lazyloaded" src="/img/documents/1.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Аттестат аккредитации для проведения работ по классификации объектов туристской индустрии</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/2.jpg" data-src="/img/documents/2.jpg" data-lg-id="901d13e7-9e2d-4b4c-8c65-15db318ca474">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/2.webp 1x, /img/documents/2@2x.webp 2x" type="image/webp" srcset="/img/documents/2.webp 1x, /img/documents/2@2x.webp 2x">
+                                            <source data-srcset="/img/documents/2.jpg 1x, /img/documents/2@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/2.jpg 1x, /img/documents/2@2x.jpg 2x"><img class=" lazyloaded" src="/img/documents/2.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Аккредитация ЦОБТ</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/3.jpg" data-src="/img/documents/3.jpg" data-lg-id="514b1f8c-dd55-45f3-9d32-bf81f24558f5">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x" type="image/webp" srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x">
+                                            <source data-srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x"><img class=" lazyloaded" src="/img/documents/3.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Лицензия на право обучения УК ЦОБТ. Департамент образования Москвы</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/4.jpg" data-src="/img/documents/4.jpg" data-lg-id="a232f66e-1467-4ea6-b600-b1dbb6a084d8">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/4.webp 1x, /img/documents/4@2x.webp 2x" type="image/webp" srcset="/img/documents/4.webp 1x, /img/documents/4@2x.webp 2x">
+                                            <source data-srcset="/img/documents/4.jpg 1x, /img/documents/4@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/4.jpg 1x, /img/documents/4@2x.jpg 2x"><img class=" lazyloaded" src="/img/documents/4.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Лицензия на право обучение 2 сторона</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/2.jpg" data-src="/img/documents/2.jpg" data-lg-id="6c63608f-bf08-460e-9826-77bdf9a900b2">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/2.webp 1x, /img/documents/2@2x.webp 2x" type="image/webp" srcset="/img/documents/2.webp 1x, /img/documents/2@2x.webp 2x">
+                                            <source data-srcset="/img/documents/2.jpg 1x, /img/documents/2@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/2.jpg 1x, /img/documents/2@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/2.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Аккредитация ЦОБТ</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/3.jpg" data-src="/img/documents/3.jpg" data-lg-id="2dff78d3-bfc4-4326-b98e-bfe3f74c5136">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x" type="image/webp" srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x">
+                                            <source data-srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/3.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Лицензия на право обучения УК ЦОБТ. Департамент образования Москвы</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/3.jpg" data-src="/img/documents/3.jpg" data-lg-id="3c43c7d7-0090-4eba-b671-e10040d13e95">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x" type="image/webp" srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x">
+                                            <source data-srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/3.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Аттестат аккредитации для проведения работ по классификации объектов туристской индустрии</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/4.jpg" data-src="/img/documents/4.jpg" data-lg-id="750e4f86-8a59-486a-b2f9-6ef23c042382">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/4.webp 1x, /img/documents/4@2x.webp 2x" type="image/webp" srcset="/img/documents/4.webp 1x, /img/documents/4@2x.webp 2x">
+                                            <source data-srcset="/img/documents/4.jpg 1x, /img/documents/4@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/4.jpg 1x, /img/documents/4@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/4.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Лицензия на право обучение 2 сторона</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/3.jpg" data-src="/img/documents/3.jpg" data-lg-id="f34e4fa2-2c77-420c-958e-5c2421b5f8df">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x" type="image/webp" srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x">
+                                            <source data-srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/3.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Лицензия на право обучения УК ЦОБТ. Департамент образования Москвы</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/2.jpg" data-src="/img/documents/2.jpg" data-lg-id="24c6a452-51b5-41f9-b88d-0da43d0b578d">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/2.webp 1x, /img/documents/2@2x.webp 2x" type="image/webp" srcset="/img/documents/2.webp 1x, /img/documents/2@2x.webp 2x">
+                                            <source data-srcset="/img/documents/2.jpg 1x, /img/documents/2@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/2.jpg 1x, /img/documents/2@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/2.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Аккредитация ЦОБТ</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+                            <div class="col-lg-3 col-md-4"><a class="document-card" href="/img/documents/3.jpg" data-src="/img/documents/3.jpg" data-lg-id="34c89a93-3725-4053-94a1-ff0b82047eaa">
+                                    <div class="document-card__img">
+                                        <picture>
+                                            <source data-srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x" type="image/webp" srcset="/img/documents/3.webp 1x, /img/documents/3@2x.webp 2x">
+                                            <source data-srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/documents/3.jpg 1x, /img/documents/3@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/documents/3.jpg" srcset="img/placeholder.svg" alt="image">
+                                        </picture>
+                                    </div>
+                                    <div class="document-card__title">Аттестат аккредитации для проведения работ по классификации объектов туристской индустрии</div>
+                                    <div class="document-card__date">Дата выдачи: декабрь 2021</div></a>
+                            </div>
+

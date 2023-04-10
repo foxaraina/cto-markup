@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Mountainman</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#000">
+        <meta name="description" content="">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
+        <link as="script" href="js/main.js" rel="preload">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="page">
+            <div class="mobile-menu">
+                <button class="mobile-menu__close js-mobile-menu-close" type="button">
+                    <svg class="icon icon-close">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu__container">
+                    <div class="mobile-menu__list"><a href="#">Одежда</a><a href="#">Аксессуары</a><a href="#">О бренде</a><a href="#">Сотрудничество</a><a href="#">Где купить?</a><a href="#">Помощь</a></div>
+                    <div class="mobile-menu__footer">
+                        <div class="mobile-menu__slogan">С нами ты станешь профи в сноубординге и путешествиях!</div>
+                        <div class="mobile-menu__socials"><a href="/" target="_blank">
+                                <svg class="icon icon-vk">
+                                    <use xlink:href="img/sprite.svg#vk"></use>
+                                </svg></a><a href="/" target="_blank">
+                                <svg class="icon icon-inst">
+                                    <use xlink:href="img/sprite.svg#inst"></use>
+                                </svg></a><a href="/" target="_blank">
+                                <svg class="icon icon-tg">
+                                    <use xlink:href="img/sprite.svg#tg"></use>
+                                </svg></a></div>
+                        <button class="js-modal mobile-menu__subscribe" data-modal="subscribe-form">Подписаться</button>
+                    </div>
+                </div>
+            </div>
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__top">
+                        <div class="header__top-list"><a href="/">Помощь</a><a href="/">Подписаться</a><a href="/">Контакты</a></div>
+                        <div class="header__top-list"><a href="/">О бренде</a><a href="/">Сотрудничество</a><a href="/">Где купить</a></div>
+                    </div>
+                    <div class="header__body">
+                        <div class="header__body-left"><a class="header__catalog" href="/">Каталог</a></div><a class="header__logo" href="/"><img src="img/logo.webp" alt="logo"/></a>
+                        <div class="header__body-right">
+                            <div class="header__socials"><a href="/" target="_blank">
+                                    <svg class="icon icon-vk">
+                                        <use xlink:href="img/sprite.svg#vk"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-inst">
+                                        <use xlink:href="img/sprite.svg#inst"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-tg">
+                                        <use xlink:href="img/sprite.svg#tg"></use>
+                                    </svg></a></div><a class="header__cart" href="/">
+                                <svg class="icon icon-cart">
+                                    <use xlink:href="img/sprite.svg#cart"></use>
+                                </svg><span class="header__cart-number">0</span></a>
+                            <button class="header__mobile-menu-btn" type="button">
+                                <div class="hamburger"><span></span></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="catalog-header">
+                    <picture>
+                        <source data-srcset="img/catalog-top.webp 1x, img/catalog-top@2x.webp 2x" type="image/webp"/>
+                        <source data-srcset="img/catalog-top..jpg 1x, img/catalog-top@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/catalog-top..jpg" srcset="img/placeholder.svg" alt="image"/>
+                    </picture>
+                    <div class="catalog-header__container">
+                        <h1 class="catalog-header__title">Каталог Товаров</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <aside class="sidebar">
+                            <div class="catalog-filter">
+                                <div class="catalog-filter__section">
+                                    <div class="catalog-filter__section-title">Тип одежды</div>
+                                    <div class="catalog-filter__section-list">
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-0" id="filter-0-0">
+                                            <label for="filter-0-0">Анорак</label>
+                                        </div>
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-1" id="filter-0-1">
+                                            <label for="filter-0-1">Балаклава</label>
+                                        </div>
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-2" id="filter-0-2">
+                                            <label for="filter-0-2">Оверсайз Костюмы</label>
+                                        </div>
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-3" id="filter-0-3">
+                                            <label for="filter-0-3">Оверсайз худи</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog-filter__price">
+                                    <div class="catalog-filter__section-title">Фильтровать по цене</div>
+                                    <div id="sliderprice"></div>
+                                    <div class="catalog-filter__price-controls">
+                                        <input type="number" id="price-from" name="priceFrom" data-min="1200" value="1200">&nbsp;-&nbsp;
+                                        <input type="number" id="price-to" name="priceTo" data-max="20000" value="20000">
+                                    </div>
+                                </div>
+                                <div class="catalog-filter__section">
+                                    <div class="catalog-filter__section-title">Цвет</div>
+                                    <div class="catalog-filter__section-list">
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-0" id="filter-1-0">
+                                            <label for="filter-1-0">Черный</label>
+                                        </div>
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-1" id="filter-1-1">
+                                            <label for="filter-1-1">Белый</label>
+                                        </div>
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-2" id="filter-1-2">
+                                            <label for="filter-1-2">Красный</label>
+                                        </div>
+                                        <div class="catalog-filter__section-item">
+                                            <input type="checkbox" name="filter-0-3" id="filter-1-3">
+                                            <label for="filter-1-3">Розовый</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <div class="content">
+                            <div class="catalog-top-filter">
+                                <button class="catalog-filer-mobile-btn js-mobile-filter" type="button">Фильтр</button>
+                                <div class="catalog-search">
+                                    <input type="search" name="catalog-search" placeholder="поиск по каталогу">
+                                    <button type="button">
+                                        <svg class="icon icon-search">
+                                            <use xlink:href="img/sprite.svg#search"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="catalog-sort">
+                                    <div class="catalog-sort__title">Сортировать</div>
+                                    <select id="catalog-sort">
+                                        <option value="0">По умолчанию</option>
+                                        <option value="0">Цена: по возрастанию</option>
+                                        <option value="0">Цена: по убыванию</option>
+                                        <option value="0">Название: А—Я</option>
+                                        <option value="0">Название: Я—А</option>
+                                        <option value="0">Порядок: сперва новые</option>
+                                        <option value="0">Порядок: сперва старые</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="catalog-list">
+                                <div class="product"><a class="product__img" href="/">
+                                        <picture>
+                                            <source data-srcset="img/product-img-1.webp 1x, img/product-img-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-1..jpg 1x, img/product-img-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-1..jpg" srcset="img/placeholder.svg" alt="image"/>
+                                        </picture>
+                                        <picture class="product__img-hover">
+                                            <source data-srcset="img/product-img-1-1.webp 1x, img/product-img-1-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-1-1..jpg 1x, img/product-img-1-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-1-1..jpg" srcset="img/placeholder.svg" width="" height="" alt="image"/>
+                                        </picture></a>
+                                    <div class="product__info"><a class="product__name" href="/">Сноубордическое худи &quot;DARKSIDE&quot;</a>
+                                        <div class="product__code">Артикул: 23MMDS</div>
+                                        <div class="product__price">
+                                            <div class="default">5 490 ₽</div>
+                                        </div>
+                                        <div class="product__sizes">
+                                            <div class="product__sizes-name">Размер</div>
+                                            <div class="product__sizes-list">
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-1" name="undefinedsize"/>
+                                                    <label for="undefined-size-1">XS</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-2" name="undefinedsize"/>
+                                                    <label for="undefined-size-2">S</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-3" name="undefinedsize"/>
+                                                    <label for="undefined-size-3">M</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-4" name="undefinedsize"/>
+                                                    <label for="undefined-size-4">L</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-5" name="undefinedsize"/>
+                                                    <label for="undefined-size-5">XL</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-6" name="undefinedsize"/>
+                                                    <label for="undefined-size-6">XXL</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__available">
+                                            <div class="success">Есть в наличии</div>
+                                        </div>
+                                        <div class="product__controls"><a class="product__controls-more" href="/">Подробнее</a>
+                                            <button class="product__controls-cart js-add-cart" type="button">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product"><a class="product__img" href="/">
+                                        <picture>
+                                            <source data-srcset="img/product-img-2.webp 1x, img/product-img-2@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-2..jpg 1x, img/product-img-2@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-2..jpg" srcset="img/placeholder.svg" alt="image"/>
+                                        </picture>
+                                        <picture class="product__img-hover">
+                                            <source data-srcset="img/product-img-2-1.webp 1x, img/product-img-2-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-2-1..jpg 1x, img/product-img-2-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-2-1..jpg" srcset="img/placeholder.svg" width="" height="" alt="image"/>
+                                        </picture></a>
+                                    <div class="product__info"><a class="product__name" href="/">Сноубордическое худи &quot;DARKSIDE&quot;</a>
+                                        <div class="product__code">Артикул: 23MMDS</div>
+                                        <div class="product__price">
+                                            <div class="default">5 490 ₽</div>
+                                        </div>
+                                        <div class="product__sizes">
+                                            <div class="product__sizes-name">Размер</div>
+                                            <div class="product__sizes-list">
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-1" name="undefinedsize"/>
+                                                    <label for="undefined-size-1">XS</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-2" name="undefinedsize"/>
+                                                    <label for="undefined-size-2">S</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-3" name="undefinedsize"/>
+                                                    <label for="undefined-size-3">M</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-4" name="undefinedsize"/>
+                                                    <label for="undefined-size-4">L</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-5" name="undefinedsize"/>
+                                                    <label for="undefined-size-5">XL</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-6" name="undefinedsize"/>
+                                                    <label for="undefined-size-6">XXL</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__available">
+                                            <div class="out">Нет в наличии</div>
+                                            <div class="product__available-order">Заказать пошив</div>
+                                        </div>
+                                        <div class="product__controls"><a class="product__controls-more" href="/">Подробнее</a>
+                                            <button class="product__controls-cart js-add-cart" type="button">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product"><a class="product__img" href="/">
+                                        <picture>
+                                            <source data-srcset="img/product-img-3.webp 1x, img/product-img-3@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-3..jpg 1x, img/product-img-3@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-3..jpg" srcset="img/placeholder.svg" alt="image"/>
+                                        </picture>
+                                        <picture class="product__img-hover">
+                                            <source data-srcset="img/product-img-3-1.webp 1x, img/product-img-3-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-3-1..jpg 1x, img/product-img-3-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-3-1..jpg" srcset="img/placeholder.svg" width="" height="" alt="image"/>
+                                        </picture></a>
+                                    <div class="product__info"><a class="product__name" href="/">Сноубордическое худи &quot;DARKSIDE&quot;</a>
+                                        <div class="product__code">Артикул: 23MMDS</div>
+                                        <div class="product__price">
+                                            <div class="default">5 490 ₽</div>
+                                        </div>
+                                        <div class="product__sizes">
+                                            <div class="product__sizes-name">Размер</div>
+                                            <div class="product__sizes-list">
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-1" name="undefinedsize"/>
+                                                    <label for="undefined-size-1">XS</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-2" name="undefinedsize"/>
+                                                    <label for="undefined-size-2">S</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-3" name="undefinedsize"/>
+                                                    <label for="undefined-size-3">M</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-4" name="undefinedsize"/>
+                                                    <label for="undefined-size-4">L</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-5" name="undefinedsize"/>
+                                                    <label for="undefined-size-5">XL</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-6" name="undefinedsize"/>
+                                                    <label for="undefined-size-6">XXL</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__available">
+                                            <div class="success">Есть в наличии</div>
+                                        </div>
+                                        <div class="product__controls"><a class="product__controls-more" href="/">Подробнее</a>
+                                            <button class="product__controls-cart js-add-cart" type="button">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product"><a class="product__img" href="/">
+                                        <picture>
+                                            <source data-srcset="img/product-img-1.webp 1x, img/product-img-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-1..jpg 1x, img/product-img-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-1..jpg" srcset="img/placeholder.svg" alt="image"/>
+                                        </picture>
+                                        <picture class="product__img-hover">
+                                            <source data-srcset="img/product-img-1-1.webp 1x, img/product-img-1-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-1-1..jpg 1x, img/product-img-1-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-1-1..jpg" srcset="img/placeholder.svg" width="" height="" alt="image"/>
+                                        </picture></a>
+                                    <div class="product__info"><a class="product__name" href="/">Сноубордическое худи &quot;DARKSIDE&quot;</a>
+                                        <div class="product__code">Артикул: 23MMDS</div>
+                                        <div class="product__price">
+                                            <div class="default">5 490 ₽</div>
+                                        </div>
+                                        <div class="product__sizes">
+                                            <div class="product__sizes-name">Размер</div>
+                                            <div class="product__sizes-list">
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-1" name="undefinedsize"/>
+                                                    <label for="undefined-size-1">XS</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-2" name="undefinedsize"/>
+                                                    <label for="undefined-size-2">S</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-3" name="undefinedsize"/>
+                                                    <label for="undefined-size-3">M</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-4" name="undefinedsize"/>
+                                                    <label for="undefined-size-4">L</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-5" name="undefinedsize"/>
+                                                    <label for="undefined-size-5">XL</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-6" name="undefinedsize"/>
+                                                    <label for="undefined-size-6">XXL</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__available">
+                                            <div class="success">Есть в наличии</div>
+                                        </div>
+                                        <div class="product__controls"><a class="product__controls-more" href="/">Подробнее</a>
+                                            <button class="product__controls-cart js-add-cart" type="button">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product"><a class="product__img" href="/">
+                                        <picture>
+                                            <source data-srcset="img/product-img-2.webp 1x, img/product-img-2@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-2..jpg 1x, img/product-img-2@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-2..jpg" srcset="img/placeholder.svg" alt="image"/>
+                                        </picture>
+                                        <picture class="product__img-hover">
+                                            <source data-srcset="img/product-img-2-1.webp 1x, img/product-img-2-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-2-1..jpg 1x, img/product-img-2-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-2-1..jpg" srcset="img/placeholder.svg" width="" height="" alt="image"/>
+                                        </picture></a>
+                                    <div class="product__info"><a class="product__name" href="/">Сноубордическое худи &quot;DARKSIDE&quot;</a>
+                                        <div class="product__code">Артикул: 23MMDS</div>
+                                        <div class="product__price">
+                                            <div class="default">5 490 ₽</div>
+                                        </div>
+                                        <div class="product__sizes">
+                                            <div class="product__sizes-name">Размер</div>
+                                            <div class="product__sizes-list">
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-1" name="undefinedsize"/>
+                                                    <label for="undefined-size-1">XS</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-2" name="undefinedsize"/>
+                                                    <label for="undefined-size-2">S</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-3" name="undefinedsize"/>
+                                                    <label for="undefined-size-3">M</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-4" name="undefinedsize"/>
+                                                    <label for="undefined-size-4">L</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-5" name="undefinedsize"/>
+                                                    <label for="undefined-size-5">XL</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-6" name="undefinedsize"/>
+                                                    <label for="undefined-size-6">XXL</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__available">
+                                            <div class="out">Нет в наличии</div>
+                                            <div class="product__available-order">Заказать пошив</div>
+                                        </div>
+                                        <div class="product__controls"><a class="product__controls-more" href="/">Подробнее</a>
+                                            <button class="product__controls-cart js-add-cart" type="button">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product"><a class="product__img" href="/">
+                                        <picture>
+                                            <source data-srcset="img/product-img-3.webp 1x, img/product-img-3@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-3..jpg 1x, img/product-img-3@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-3..jpg" srcset="img/placeholder.svg" alt="image"/>
+                                        </picture>
+                                        <picture class="product__img-hover">
+                                            <source data-srcset="img/product-img-3-1.webp 1x, img/product-img-3-1@2x.webp 2x" type="image/webp"/>
+                                            <source data-srcset="img/product-img-3-1..jpg 1x, img/product-img-3-1@2x..jpg 2x" media="(min-width: 980px)" type="image/.jpg"/><img class="lazyload" src="img/product-img-3-1..jpg" srcset="img/placeholder.svg" width="" height="" alt="image"/>
+                                        </picture></a>
+                                    <div class="product__info"><a class="product__name" href="/">Сноубордическое худи &quot;DARKSIDE&quot;</a>
+                                        <div class="product__code">Артикул: 23MMDS</div>
+                                        <div class="product__price">
+                                            <div class="default">5 490 ₽</div>
+                                        </div>
+                                        <div class="product__sizes">
+                                            <div class="product__sizes-name">Размер</div>
+                                            <div class="product__sizes-list">
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-1" name="undefinedsize"/>
+                                                    <label for="undefined-size-1">XS</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-2" name="undefinedsize"/>
+                                                    <label for="undefined-size-2">S</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-3" name="undefinedsize"/>
+                                                    <label for="undefined-size-3">M</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-4" name="undefinedsize"/>
+                                                    <label for="undefined-size-4">L</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-5" name="undefinedsize"/>
+                                                    <label for="undefined-size-5">XL</label>
+                                                </div>
+                                                <div class="product__sizes-item">
+                                                    <input type="radio" id="undefined-size-6" name="undefinedsize"/>
+                                                    <label for="undefined-size-6">XXL</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product__available">
+                                            <div class="success">Есть в наличии</div>
+                                        </div>
+                                        <div class="product__controls"><a class="product__controls-more" href="/">Подробнее</a>
+                                            <button class="product__controls-cart js-add-cart" type="button">В корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="load-more">
+                                <button class="btn btn--black btn--lg" type="button">Загрузить ещё</button>
+                            </div>
+                            <ul class="pagination">
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__row">
+                        <div class="footer__contacts"><a class="footer__logo" href="/"><img src="img/logo-footer.png" alt="logo"/></a>
+                            <div class="footer__socials"><a href="/" target="_blank">
+                                    <svg class="icon icon-vk">
+                                        <use xlink:href="img/sprite.svg#vk"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-inst">
+                                        <use xlink:href="img/sprite.svg#inst"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-tg">
+                                        <use xlink:href="img/sprite.svg#tg"></use>
+                                    </svg></a></div>
+                        </div>
+                        <div class="footer__menu">
+                            <div class="footer__menu-list"><a href="/">Способы оплаты</a><a href="/">Доставка</a><a href="/">Обмен/возврат</a><a href="/">Таблица размеров</a><a href="/">Контакты</a></div>
+                            <div class="footer__menu-list"><a href="/">О бренде</a><a href="/">Подарочные карты</a><a href="/">Сотрудничество</a></div>
+                            <div class="footer__menu-list"><a href="/">Политика о персональных данных</a><a href="/">Публичная оферта</a></div>
+                        </div>
+                    </div>
+                    <div class="footer__row">
+                        <div class="footer__bottom">
+                            <div class="footer__copyright">© 2021 MountainMan</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="bottom-menu">
+                <button class="bottom-menu__item js-search" type="button">
+                    <svg class="icon icon-search">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                    </svg><span class="name">Поиск</span>
+                </button><a class="bottom-menu__item" href="/catalog.html">
+                    <svg class="icon icon-hudi">
+                        <use xlink:href="img/sprite.svg#hudi"></use>
+                    </svg><span class="name">Каталог</span></a><a class="bottom-menu__item" href="#">
+                    <svg class="icon icon-wh">
+                        <use xlink:href="img/sprite.svg#wh"></use>
+                    </svg><span class="name">WhatsApp</span></a><a class="bottom-menu__item" href="#">
+                    <svg class="icon icon-cart">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg><span class="name">Корзина
+                        <div class="number">0</div></span></a>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

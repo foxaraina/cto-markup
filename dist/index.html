@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>СОТ</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#000">
+        <meta name="description" content="">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta property="og:title" content="СОТ">
+        <meta property="og:description" content="СТО">
+        <meta property="og:image" content="/img/og-image.jpg">
+        <meta property="og:type" content="profile">
+        <meta property="og:url" content="/test">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link as="script" href="js/main.js" rel="preload">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/pages/index.css">
+    </head>
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="container">
+                    <div class="row middle-xs">
+                        <div class="col-md-4 col-xs-6"><a class="header__logo" href="/">
+                                <svg class="icon icon-logo">
+                                    <use xlink:href="img/sprite.svg#logo"></use>
+                                </svg><span>Системы <br/> охраны труда</span></a></div>
+                        <div class="col-lg-2 col-md-3 hidden-xs">
+                            <div class="header__clock">
+                                <svg class="icon icon-clock">
+                                    <use xlink:href="img/sprite.svg#clock"></use>
+                                </svg>Моментальный старт работы
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-xs-6">
+                            <div class="header__group">
+                                <div class="header__special-version"><a class="special-version-btn js-special-version bvi-open" href="#"><span class="special-version-btn__icon">
+                                            <svg class="icon icon-eye">
+                                                <use xlink:href="img/sprite.svg#eye"></use>
+                                            </svg></span>Версия  <br/> для&nbspслабовидящих</a></div>
+                                <div class="header__phone"><span>Круглосуточная горячая линия</span><a href="tel:89339991234">8 933 999-12-34</a></div>
+                                <button class="btn btn--md btn--dark modal-trigger md-setperspective" data-modal="feedback-modal">Обратный звонок</button>
+                                <button class="header__menu js-menu-toggle"><span></span><span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <menu class="menu">
+                    <div class="container">
+                        <div class="special-version">
+                            <button class="special-version-btn js-special-version" type="button"><span class="special-version-btn__icon">
+                                    <svg class="icon icon-eye">
+                                        <use xlink:href="img/sprite.svg#eye"></use>
+                                    </svg></span>Версия для&nbspслабовидящих</button>
+                        </div>
+                        <nav class="nav">
+                            <div class="nav__block"><a class="nav__title" href="#">О компании</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Лица компании</a><a class="nav__list-item" href="#">Новости</a><a class="nav__list-item" href="#">Документы</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Наши услуги</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Аутсорсинг по охране труда</a><a class="nav__list-item" href="#">Оценка профессиональных рисков</a><a class="nav__list-item" href="#">Аудит по охране труда</a><a class="nav__list-item" href="#">Разработка пакета локальных нормативных актов по охране труда</a><a class="nav__list-item" href="#">Расследование несчастных случаев на производстве</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Полезная информация</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Отраслевые решения</a><a class="nav__list-item" href="#">Частные ситуации</a><a class="nav__list-item" href="#">Вопрос-ответ</a><a class="nav__list-item" href="#">Наши партнеры</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Учебный центр</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Программы обучения</a><a class="nav__list-item" href="#">Документы</a><a class="nav__list-item" href="#">Сведения об образовательной организации</a><a class="nav__list-item" href="#">Структура и органы управления образовательной организацией</a><a class="nav__list-item" href="#">Образование</a><a class="nav__list-item" href="#">Образовательные стандарты</a><a class="nav__list-item" href="#">Руководство и педагогический состав</a><a class="nav__list-item" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="nav__list-item" href="#">Стипендии и иные виды материальной поддержки</a><a class="nav__list-item" href="#">Вакантные места для приема (перевода)</a><a class="nav__list-item" href="#">Доступная среда</a><a class="nav__list-item" href="#">Международное сотрудничество</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Контакты</a></div>
+                        </nav>
+                    </div>
+                </menu>
+            </header>
+            <main class="main">
+                <div class="first-screen parallax">
+                    <div class="parallax__img-wrap">
+                        <div class="parallax__img">
+                            <div class="parallax__img-inner">
+                                <div class="swiper js-swipper-first-screen">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="/img/first-screen/1.jpg" loading="lazy"/></div>
+                                        <div class="swiper-slide"><img src="/img/first-screen/2.jpg" loading="lazy"/></div>
+                                        <div class="swiper-slide"><img src="/img/first-screen/3.jpg" loading="lazy"/></div>
+                                        <div class="swiper-slide"><img src="/img/first-screen/4.jpg" loading="lazy"/></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container parallax__content">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1 class="first-screen__title">Построим для Вас работающую систему управления охраной труда, сложив нормы и&nbsp;возможности!</h1>
+                            </div>
+                            <div class="col-lg-offset-4 col-lg-8">
+                                <div class="first-screen__bottom scroll-animate scroll-animate-fadeInUp">
+                                    <div class="first-screen__desc">Компания «Системы охраны труда» — первая в Красноярске компания в сфере охраны труда,застраховавшая свою гражданскую ответственность перед клиентами.</div>
+                                    <button class="btn-with-icon js-scroll-to" type="button" data-target="services"><span class="btn-with-icon__text">Наши услуги</span><span class="btn-with-icon__sign"><span class="btn-with-icon__wrapper">
+                                                <svg class="icon icon-arrow">
+                                                    <use xlink:href="img/sprite.svg#arrow"></use>
+                                                </svg></span></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="section-grey border-radius-full">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <h2 class="title title--md mb-md-50 mb-lg-20 mb-xl-40 scroll-animate scroll-animate-fadeInUp">
+                                    Оказываем услуги по охране труда и кадровому делопроизводству.
+                                    Помогаем руководителям компаний сохранять такие важные ресурсы,
+                                    как энергию, время и деньги, чтобы они могли направить их на развитие дела.
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row bottom-lg">
+                            <div class="col-lg-4">
+                                <div class="sidebar">
+                                    <div class="sidebar__text">
+                                        <p class="sidebar__text--md scroll-animate scroll-animate-fadeInUp">
+                                            Выбирая нас, вы выбираете
+                                            основательное и эффективное решение вопроса охраны труда.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="features">
+                                    <div class="feature-card scroll-animate scroll-animate-fadeInUp">
+                                        <div class="feature-card__icon">
+                                            <svg class="icon icon-mintrud">
+                                                <use xlink:href="img/sprite.svg#mintrud"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="feature-card__caption">Аккредитованы Минтрудом России</div>
+                                    </div>
+                                    <div class="feature-card scroll-animate scroll-animate-fadeInUp">
+                                        <div class="feature-card__icon">
+                                            <svg class="icon icon-portfel">
+                                                <use xlink:href="img/sprite.svg#portfel"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="feature-card__caption">Защищаем интересы работодателя</div>
+                                    </div>
+                                    <div class="feature-card scroll-animate scroll-animate-fadeInUp">
+                                        <div class="feature-card__icon">
+                                            <svg class="icon icon-lock">
+                                                <use xlink:href="img/sprite.svg#lock"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="feature-card__caption">Аутсорсинг по&nbsp;охране труда</div>
+                                    </div>
+                                    <div class="feature-card scroll-animate scroll-animate-fadeInUp">
+                                        <div class="feature-card__icon">
+                                            <svg class="icon icon-umbrella">
+                                                <use xlink:href="img/sprite.svg#umbrella"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="feature-card__caption">Ответственность застрахована</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-index js-sliders">
+                            <div class="slider-index__container js-slider-container" data-images="[&quot;/img/slider/slide-1.jpg&quot;,&quot;/img/slider/slide-2.jpg&quot;,&quot;/img/slider/slide-3.jpg&quot;,&quot;/img/slider/slide-4.jpg&quot;]" data-disp="/img/disp1.jpg"></div>
+                            <button class="slider-button-prev" type="button">
+                                <svg class="icon icon-arrow">
+                                    <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="slider-button-next" type="button">
+                                <svg class="icon icon-arrow">
+                                    <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-dark" id="services">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <h2 class="title title--md title--white mb-md-50 mb-xl-90 scroll-animate scroll-animate-fadeInUp">Компания «Системы охраны труда» предлагает максимальный набор услуг аутсорсинга по охране труда.</h2>
+                            </div>
+                        </div>
+                        <div class="services">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6"><a class="service-card" href="#">
+                                        <div class="service-card__icon">
+                                            <svg class="animated-outline" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M71.0938 42.9688V57.3438C71.0938 59.9325 68.995 62.0312 66.4062 62.0312H7.03125C4.4425 62.0312 2.34375 59.9325 2.34375 57.3438V16.4063C2.34375 13.8175 4.4425 11.7188 7.03125 11.7188H12.0312" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M50.7812 77.6562H22.6562L24.0259 75.9442C27.1851 71.9951 28.9062 67.0885 28.9062 62.0313H44.5312C44.5312 67.0886 46.2525 71.9953 49.4116 75.9442L50.7812 77.6562Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M17.9688 77.6562H55.4688" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M2.34375 52.3438H71.0938" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M77.6562 42.9688H12.0312V2.34375H77.6562V42.9688Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M30.7812 33.5938H21.4062V19.5312H30.7812V33.5938ZM30.7812 33.5938V11.7188H40.1562V33.5938M30.7812 33.5938H40.1562M40.1562 33.5938V25.7812H49.5312V33.5938H40.1562Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M58.9062 21.0938H68.2812" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M58.9062 11.7188H68.2812" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <svg class="icon icon-autsors">
+                                                <use xlink:href="img/sprite.svg#autsors"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__content">
+                                            <div class="service-card__title">Аутсорсинг <br/> по&nbsp;охране труда</div>
+                                            <div class="btn-with-arrow js-animate-icon"><span class="btn-with-arrow__icons"><span class="btn-with-arrow__icon base">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span><span class="btn-with-arrow__icon clone">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span></span></div>
+                                        </div>
+                                        <div class="service-card__img">
+                                            <picture>
+                                                <source data-srcset="img/service-covers/sevice-1.webp 1x, img/service-covers/sevice-1@2x.webp 2x" type="image/webp"/>
+                                                <source data-srcset="img/service-covers/sevice-1.jpg 1x, img/service-covers/sevice-1@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg"/><img class="lazyload" src="img/service-covers/sevice-1.jpg" srcset="img/placeholder.svg" alt="image"/>
+                                            </picture>
+                                        </div></a></div>
+                                <div class="col-lg-4 col-md-6"><a class="service-card" href="#">
+                                        <div class="service-card__icon">
+                                            <svg class="animated-outline" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M35.3125 17.9688L32.1875 5.46875C36.3542 1.30203 43.6458 1.30203 47.8125 5.46875L44.6875 17.9688" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M72.9687 42.9688H7.03125C4.4425 42.9688 2.34375 40.87 2.34375 38.2812C2.34375 35.6925 4.4425 33.5938 7.03125 33.5938H72.9687C75.5575 33.5938 77.6562 35.6925 77.6562 38.2812C77.6562 40.87 75.5575 42.9688 72.9687 42.9688Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M32.7952 7.91266C20.8597 10.8872 11.7816 21.0836 10.4727 33.5938" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M69.5256 33.5938C68.2169 21.0838 59.1386 10.8872 47.2031 7.91266" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M8.75 42.9688V52.6562H14.2078C14.853 55.3263 15.9115 57.8792 17.345 60.2223L13.4834 64.0839L22.3223 72.9227L26.1839 69.0611C28.5271 70.4947 31.0799 71.5532 33.75 72.1984V77.6562H46.25V72.1984C48.9201 71.5532 51.4729 70.4947 53.8161 69.0611L57.6777 72.9227L66.5166 64.0839L62.655 60.2223C64.0885 57.8792 65.147 55.3263 65.7922 52.6562H71.25V42.9688" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M56.8333 42.9688C57.0684 44.0995 57.1871 45.2513 57.1875 46.4063C57.1875 55.8986 49.4923 63.5938 40 63.5938C30.5075 63.5938 22.8125 55.8986 22.8125 46.4063C22.8125 45.2275 22.9366 44.0788 23.1666 42.9688" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <svg class="icon icon-audit">
+                                                <use xlink:href="img/sprite.svg#audit"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__content">
+                                            <div class="service-card__title">Аудит <br/> по&nbsp;охране труда</div>
+                                            <div class="btn-with-arrow js-animate-icon"><span class="btn-with-arrow__icons"><span class="btn-with-arrow__icon base">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span><span class="btn-with-arrow__icon clone">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span></span></div>
+                                        </div>
+                                        <div class="service-card__img">
+                                            <picture>
+                                                <source data-srcset="img/service-covers/sevice-2.webp 1x, img/service-covers/sevice-2@2x.webp 2x" type="image/webp"/>
+                                                <source data-srcset="img/service-covers/sevice-2.jpg 1x, img/service-covers/sevice-2@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg"/><img class="lazyload" src="img/service-covers/sevice-2.jpg" srcset="img/placeholder.svg" alt="image"/>
+                                            </picture>
+                                        </div></a></div>
+                                <div class="col-lg-4 col-md-6"><a class="service-card" href="#">
+                                        <div class="service-card__icon">
+                                            <svg class="animated-outline" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M44.5312 37.6563C44.5312 46.7172 37.1859 54.0625 28.125 54.0625C19.0641 54.0625 11.7188 46.7172 11.7188 37.6563C11.7188 28.5953 19.0641 21.25 28.125 21.25C37.1859 21.25 44.5312 28.5953 44.5312 37.6563Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M21.0938 37.6562L25.7812 42.3438L35.1562 32.9688" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M16.5241 49.2572L2.34375 63.4375" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M32.8125 77.6562H70.625C74.5083 77.6562 77.6562 74.5083 77.6562 70.625V68.2812H39.8438V70.625C39.8438 74.5083 36.6958 77.6562 32.8125 77.6562ZM32.8125 77.6562C28.9292 77.6562 25.7812 74.5083 25.7812 70.625V53.8964" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M25.7812 21.416V11.7187" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M68.2814 68.2812V11.7188C68.2814 6.5411 64.0841 2.34376 58.9064 2.34376H18.75" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M25.7812 11.7188H11.7188V9.375C11.7188 5.49172 14.8667 2.34375 18.75 2.34375C22.6333 2.34375 25.7812 5.49172 25.7812 9.375V11.7188Z" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <svg class="icon icon-estimate">
+                                                <use xlink:href="img/sprite.svg#estimate"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__content">
+                                            <div class="service-card__title">Оценка профессиональных рисков</div>
+                                            <div class="btn-with-arrow js-animate-icon"><span class="btn-with-arrow__icons"><span class="btn-with-arrow__icon base">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span><span class="btn-with-arrow__icon clone">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span></span></div>
+                                        </div>
+                                        <div class="service-card__img">
+                                            <picture>
+                                                <source data-srcset="img/service-covers/sevice-3.webp 1x, img/service-covers/sevice-3@2x.webp 2x" type="image/webp"/>
+                                                <source data-srcset="img/service-covers/sevice-3.jpg 1x, img/service-covers/sevice-3@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg"/><img class="lazyload" src="img/service-covers/sevice-3.jpg" srcset="img/placeholder.svg" alt="image"/>
+                                            </picture>
+                                        </div></a></div>
+                                <div class="col-lg-6 col-md-6"><a class="service-card" href="#">
+                                        <div class="service-card__icon">
+                                            <svg class="animated-outline" width="76" height="80" viewBox="0 0 76 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21.4648 72.1855V44.6855C21.4648 39.6152 25.6133 35.4668 30.6836 35.4668C35.7539 35.4668 39.9023 39.6159 39.9023 44.6855V54.998" stroke="white" stroke-width="3" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M12.0898 54.998V44.5293C12.0898 34.3029 20.457 25.9357 30.6836 25.9357C38.3823 25.9357 45.0277 30.6782 47.842 37.3857" stroke="white" stroke-width="3" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M57.1364 35.4678C53.3503 24.4964 42.8985 16.5598 30.6828 16.5598C22.5524 16.5598 15.2038 20.0764 10.0816 25.6632C8.62956 27.247 6.33691 27.5998 4.47613 26.5254L4.30175 26.4248C3.06925 25.7132 2.30269 24.5912 2.088 23.1842C1.87332 21.7772 2.27035 20.4775 3.23457 19.4307C10.0713 12.0089 19.8585 7.34106 30.6828 7.34106C49.4741 7.34106 65.1396 21.4072 67.6697 39.5303" stroke="white" stroke-width="3" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M30.6836 43.748V67.8105" stroke="white" stroke-width="3" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M56.9633 77.6543C47.3939 76.4121 39.9609 68.1945 39.9609 58.2959V42.127L56.9633 36.0918L73.9655 42.127V58.2959C73.9655 68.1943 66.5325 76.4121 56.9633 77.6543Z" stroke="white" stroke-width="3" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M52.9414 57.1203L56.6375 60.8164L63.5372 53.917" stroke="white" stroke-width="3" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M49.293 2.34539C60.4377 7.24416 69.2015 16.3394 73.6834 27.6582" stroke="white" stroke-width="3" stroke-miterlimit="22.926" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <svg class="icon icon-investigation">
+                                                <use xlink:href="img/sprite.svg#investigation"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__content">
+                                            <div class="service-card__title">Расследование несчастных случаев на&nbsp;производстве</div>
+                                            <div class="btn-with-arrow js-animate-icon"><span class="btn-with-arrow__icons"><span class="btn-with-arrow__icon base">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span><span class="btn-with-arrow__icon clone">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span></span></div>
+                                        </div>
+                                        <div class="service-card__img">
+                                            <picture>
+                                                <source data-srcset="img/service-covers/sevice-4.webp 1x, img/service-covers/sevice-4@2x.webp 2x" type="image/webp"/>
+                                                <source data-srcset="img/service-covers/sevice-4.jpg 1x, img/service-covers/sevice-4@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg"/><img class="lazyload" src="img/service-covers/sevice-4.jpg" srcset="img/placeholder.svg" alt="image"/>
+                                            </picture>
+                                        </div></a></div>
+                                <div class="col-lg-6 col-md-12"><a class="service-card" href="#">
+                                        <div class="service-card__icon">
+                                            <svg class="animated-outline" width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M62.7017 72.1939H72.2312V18.117L56.1238 2H9.69141V33.4621" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                <path d="M72.2317 18.117H56.1383V2M72.2682 82H11.4382C6.4483 81.9612 2 77.5102 2 72.0196V33.4621H18.8305L29.9228 39.8539H62.7022V72.4277C62.7022 77.714 66.9851 81.9995 72.2682 81.9995C77.5514 81.9995 82 77.714 82 72.4277V47.608H72.2317M52.3441 50.2631H40.4284M52.3441 59.9248H40.4284" stroke="white" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                            <svg class="icon icon-development">
+                                                <use xlink:href="img/sprite.svg#development"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="service-card__content">
+                                            <div class="service-card__title">Разработка пакета локальных нормативных <br/> актов по&nbsp;охране труда</div>
+                                            <div class="btn-with-arrow js-animate-icon"><span class="btn-with-arrow__icons"><span class="btn-with-arrow__icon base">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span><span class="btn-with-arrow__icon clone">
+                                                        <svg class="icon icon-arrow-up-right">
+                                                            <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                        </svg></span></span></div>
+                                        </div>
+                                        <div class="service-card__img">
+                                            <picture>
+                                                <source data-srcset="img/service-covers/sevice-5.webp 1x, img/service-covers/sevice-5@2x.webp 2x" type="image/webp"/>
+                                                <source data-srcset="img/service-covers/sevice-5.jpg 1x, img/service-covers/sevice-5@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg"/><img class="lazyload" src="img/service-covers/sevice-5.jpg" srcset="img/placeholder.svg" alt="image"/>
+                                            </picture>
+                                        </div></a></div>
+                            </div>
+                        </div>
+                        <div class="row bottom-lg my-lg-90">
+                            <div class="col-lg-4">
+                                <div class="sidebar">
+                                    <div class="sidebar__text">
+                                        <p class="sidebar__text--md sidebar__text--light scroll-animate scroll-animate-fadeInUp">Компанией накоплен многолетний практический опыт в области охраны труда.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="list-text list-text-md-index list-text-light">
+                                    <div class="list-text__item scroll-animate scroll-animate-fadeInUp">В составе комиссий по расследованию более 100 несчастных случаев на производстве, в том числе, групповых, тяжелых и со смертельным исходом</div>
+                                    <div class="list-text__line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                    <div class="list-text__item scroll-animate scroll-animate-fadeInUp">Вместе с нашими клиентами прошли более 200 проверок надзорными органами</div>
+                                    <div class="list-text__line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                    <div class="list-text__item scroll-animate scroll-animate-fadeInUp">Внедрили системы управления охраной труда в более чем 500 организациях</div>
+                                    <div class="list-text__line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-grey border-radius-full">
+                    <div class="container">
+                        <div class="row mb-md-40">
+                            <div class="col-md-6 article-card-wrapper"><a class="article-card scroll-animate scroll-animate-fadeInUp" href="#"><span class="article-card__category">Частные ситуации</span><span class="article-card__content"><span class="article-card__caption">Проверка охраны труда надзорными органами</span>
+                                        <div class="btn-with-arrow js-animate-icon"><span class="btn-with-arrow__icons"><span class="btn-with-arrow__icon base">
+                                                    <svg class="icon icon-arrow-up-right">
+                                                        <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                    </svg></span><span class="btn-with-arrow__icon clone">
+                                                    <svg class="icon icon-arrow-up-right">
+                                                        <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                    </svg></span></span></div></span></a>
+                            </div>
+                            <div class="col-md-6 article-card-wrapper"><a class="article-card scroll-animate scroll-animate-fadeInUp" href="#"><span class="article-card__category">Частные ситуации</span><span class="article-card__content"><span class="article-card__caption">Работник получил травму или погиб, что делать?</span>
+                                        <div class="btn-with-arrow js-animate-icon"><span class="btn-with-arrow__icons"><span class="btn-with-arrow__icon base">
+                                                    <svg class="icon icon-arrow-up-right">
+                                                        <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                    </svg></span><span class="btn-with-arrow__icon clone">
+                                                    <svg class="icon icon-arrow-up-right">
+                                                        <use xlink:href="img/sprite.svg#arrow-up-right"></use>
+                                                    </svg></span></span></div></span></a>
+                            </div>
+                        </div>
+                        <div class="articles-gallery-slider">
+                            <div class="articles-gallery-slider__wrapper">
+                                <div class="swiper article-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide swiper-slide-1"><img src="img/article-gallery/carousel-1.jpg"/></div>
+                                        <div class="swiper-slide swiper-slide-2"><img src="img/article-gallery/carousel-2.jpg"/></div>
+                                        <div class="swiper-slide swiper-slide-3"><img src="img/article-gallery/carousel-3.jpg"/></div>
+                                        <div class="swiper-slide swiper-slide-4"><img src="img/article-gallery/carousel-4.jpg"/></div>
+                                        <div class="swiper-slide swiper-slide-1"><img src="img/article-gallery/carousel-1.jpg"/></div>
+                                        <div class="swiper-slide swiper-slide-2"><img src="img/article-gallery/carousel-2.jpg"/></div>
+                                        <div class="swiper-slide swiper-slide-3"><img src="img/article-gallery/carousel-3.jpg"/></div>
+                                        <div class="swiper-slide swiper-slide-4"><img src="img/article-gallery/carousel-4.jpg"/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg class="icon icon-arrow">
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg class="icon icon-arrow">
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-offset-4 col-lg-8">
+                                <div class="news-list">
+                                    <div class="row">
+                                        <div class="col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                                <div class="news-card__date">22 апреля 2022</div>
+                                                <div class="news-card__caption">Введение новых Правил обучения по охране труда и проверки знания требований охраны труда.</div></a>
+                                        </div>
+                                        <div class="col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                                <div class="news-card__date">27 января 2022</div>
+                                                <div class="news-card__caption">Порядок проведения инвентаризации стационарных источников и выбросов загрязняющих веществ в атмосферный воздух</div></a>
+                                        </div>
+                                        <div class="col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                                <div class="news-card__date">24 января 2020</div>
+                                                <div class="news-card__caption">Показать все что скрыто: Роструд проводит «охоту» на скрытые несчастные случаи</div></a>
+                                        </div>
+                                        <div class="col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                                <div class="news-card__date">25 ноября 2021</div>
+                                                <div class="news-card__caption">Добавлены новые программы в обучение по пожарной безопасности</div></a>
+                                        </div>
+                                    </div><a class="btn btn--outline btn--md btn-all" href="#">Все новости</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="callback scroll-animate scroll-animate-fadeInUp">
+                            <div class="callback__img">
+                                <picture>
+                                    <source data-srcset="img/callback.webp 1x, img/callback@2x.webp 2x" type="image/webp"/>
+                                    <source data-srcset="img/callback.jpg 1x, img/callback@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg"/><img class="lazyload" src="img/callback.jpg" srcset="img/placeholder.svg" alt="image"/>
+                                </picture>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-4 col-lg-6 col-md-8">
+                                    <div class="callback__content">
+                                        <h2 class="callback__title">Наши специалисты <br/> на связи круглосуточно!</h2>
+                                        <p class="callback__desc">
+                                            Небольшой текст о позиционировании нас как специалистов,
+                                            которые приедут, помогут, мы за «живое общение».
+                                        </p><a class="callback__phone" href="tel:89339991234">8 933 999-12-34</a>
+                                        <button class="btn btn--md btn--green modal-trigger md-setperspective" type="button" data-modal="feedback-modal">Обратный звонок</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-dark">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-4">
+                                <h2 class="title title--md title--white scroll-animate scroll-animate-fadeInUp">Мы собрали самые часто встречающиеся вопросы в области охраны труда</h2>
+                                <div class="faq__list faq__list--index">
+                                    <div class="faq__item">
+                                        <button class="faq__item-header scroll-animate scroll-animate-fadeInUp" type="button">
+                                            <div class="faq__item-title">Кто обязан проходить медицинские осмотры?</div><span class="faq__item-toggle"></span>
+                                        </button>
+                                        <div class="faq__item-content">
+                                            <p>
+                                                Обязательные медицинские осмотры могут быть предварительными (при поступлении на работу),
+                                                периодическими (в течение трудовой деятельности), внеочередными (по медицинским показаниям),
+                                                постоянными (каждый рабочий день/смену).
+                                            </p>
+                                            <p>
+                                                Работники на время предварительных, периодических и внеочередных обязательных
+                                                медицинских осмотров освобождаются от работы, за ними сохраняется средняя заработная плата,
+                                                которая исчисляется, исходя из его заработка за последние 12 месяцев.
+                                            </p>
+                                            <p>
+                                                Если работодатель неправомерно отказывается оплачивать прохождение обязательного
+                                                медицинского осмотра работником или требует прохождение осмотра в случаях,
+                                                не предусмотренных законодательством, работник вправе обратиться с жалобой
+                                                на действия работодателя и за защитой своих прав в территориальный орган
+                                                Роструда – государственную инспекцию труда (в том числе через данный ресурс),
+                                                а также в суд.
+                                            </p>
+                                            <p class="comment">Александр Иванов, 12 декабря 2023</p>
+                                        </div>
+                                        <div class="faq__item-line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                    </div>
+                                    <div class="faq__item">
+                                        <button class="faq__item-header scroll-animate scroll-animate-fadeInUp" type="button">
+                                            <div class="faq__item-title">Кто подлежит обучению по охране труда и проверке знания требований охраны труда?</div><span class="faq__item-toggle"></span>
+                                        </button>
+                                        <div class="faq__item-content">
+                                            <p>
+                                                Обязательные медицинские осмотры могут быть предварительными (при поступлении на работу),
+                                                периодическими (в течение трудовой деятельности), внеочередными (по медицинским показаниям),
+                                                постоянными (каждый рабочий день/смену).
+                                            </p>
+                                            <p>
+                                                Работники на время предварительных, периодических и внеочередных обязательных
+                                                медицинских осмотров освобождаются от работы, за ними сохраняется средняя заработная плата,
+                                                которая исчисляется, исходя из его заработка за последние 12 месяцев.
+                                            </p>
+                                            <p>
+                                                Если работодатель неправомерно отказывается оплачивать прохождение обязательного
+                                                медицинского осмотра работником или требует прохождение осмотра в случаях,
+                                                не предусмотренных законодательством, работник вправе обратиться с жалобой
+                                                на действия работодателя и за защитой своих прав в территориальный орган
+                                                Роструда – государственную инспекцию труда (в том числе через данный ресурс),
+                                                а также в суд.
+                                            </p>
+                                            <p class="comment">Александр Иванов, 12 декабря 2023</p>
+                                        </div>
+                                        <div class="faq__item-line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                    </div>
+                                    <div class="faq__item">
+                                        <button class="faq__item-header scroll-animate scroll-animate-fadeInUp" type="button">
+                                            <div class="faq__item-title">Куда и в какой срок надо направлять извещение о несчастных случаях?</div><span class="faq__item-toggle"></span>
+                                        </button>
+                                        <div class="faq__item-content">
+                                            <p>
+                                                Обязательные медицинские осмотры могут быть предварительными (при поступлении на работу),
+                                                периодическими (в течение трудовой деятельности), внеочередными (по медицинским показаниям),
+                                                постоянными (каждый рабочий день/смену).
+                                            </p>
+                                            <p>
+                                                Работники на время предварительных, периодических и внеочередных обязательных
+                                                медицинских осмотров освобождаются от работы, за ними сохраняется средняя заработная плата,
+                                                которая исчисляется, исходя из его заработка за последние 12 месяцев.
+                                            </p>
+                                            <p>
+                                                Если работодатель неправомерно отказывается оплачивать прохождение обязательного
+                                                медицинского осмотра работником или требует прохождение осмотра в случаях,
+                                                не предусмотренных законодательством, работник вправе обратиться с жалобой
+                                                на действия работодателя и за защитой своих прав в территориальный орган
+                                                Роструда – государственную инспекцию труда (в том числе через данный ресурс),
+                                                а также в суд.
+                                            </p>
+                                            <p class="comment">Александр Иванов, 12 декабря 2023</p>
+                                        </div>
+                                        <div class="faq__item-line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                    </div>
+                                    <div class="faq__item">
+                                        <button class="faq__item-header scroll-animate scroll-animate-fadeInUp" type="button">
+                                            <div class="faq__item-title">Где можно пройти обучение по охране труда?</div><span class="faq__item-toggle"></span>
+                                        </button>
+                                        <div class="faq__item-content">
+                                            <p>
+                                                Обязательные медицинские осмотры могут быть предварительными (при поступлении на работу),
+                                                периодическими (в течение трудовой деятельности), внеочередными (по медицинским показаниям),
+                                                постоянными (каждый рабочий день/смену).
+                                            </p>
+                                            <p>
+                                                Работники на время предварительных, периодических и внеочередных обязательных
+                                                медицинских осмотров освобождаются от работы, за ними сохраняется средняя заработная плата,
+                                                которая исчисляется, исходя из его заработка за последние 12 месяцев.
+                                            </p>
+                                            <p>
+                                                Если работодатель неправомерно отказывается оплачивать прохождение обязательного
+                                                медицинского осмотра работником или требует прохождение осмотра в случаях,
+                                                не предусмотренных законодательством, работник вправе обратиться с жалобой
+                                                на действия работодателя и за защитой своих прав в территориальный орган
+                                                Роструда – государственную инспекцию труда (в том числе через данный ресурс),
+                                                а также в суд.
+                                            </p>
+                                            <p class="comment">Александр Иванов, 12 декабря 2023</p>
+                                        </div>
+                                        <div class="faq__item-line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                    </div>
+                                    <div class="faq__item">
+                                        <button class="faq__item-header scroll-animate scroll-animate-fadeInUp" type="button">
+                                            <div class="faq__item-title">Для чего используются средства индивидуальной защиты?</div><span class="faq__item-toggle"></span>
+                                        </button>
+                                        <div class="faq__item-content">
+                                            <p>
+                                                Обязательные медицинские осмотры могут быть предварительными (при поступлении на работу),
+                                                периодическими (в течение трудовой деятельности), внеочередными (по медицинским показаниям),
+                                                постоянными (каждый рабочий день/смену).
+                                            </p>
+                                            <p>
+                                                Работники на время предварительных, периодических и внеочередных обязательных
+                                                медицинских осмотров освобождаются от работы, за ними сохраняется средняя заработная плата,
+                                                которая исчисляется, исходя из его заработка за последние 12 месяцев.
+                                            </p>
+                                            <p>
+                                                Если работодатель неправомерно отказывается оплачивать прохождение обязательного
+                                                медицинского осмотра работником или требует прохождение осмотра в случаях,
+                                                не предусмотренных законодательством, работник вправе обратиться с жалобой
+                                                на действия работодателя и за защитой своих прав в территориальный орган
+                                                Роструда – государственную инспекцию труда (в том числе через данный ресурс),
+                                                а также в суд.
+                                            </p>
+                                            <p class="comment">Александр Иванов, 12 декабря 2023</p>
+                                        </div>
+                                        <div class="faq__item-line scroll-animate scroll-animate-fadeLeftToRight"></div>
+                                    </div>
+                                </div><a class="btn btn--green btn--md" href="#">Все вопросы</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-white border-radius-full">
+                    <div class="container">
+                        <div class="feedback row">
+                            <div class="col-lg-offset-4 col-lg-8 col-md-offset-2 col-md-8">
+                                <h2 class="title title--md scroll-animate scroll-animate-fadeInUp">Есть вопросы? Заинтересовались? <br/> Звоните или приезжайте на встречу!</h2>
+                                <p class="test-style-1 text-style-grey scroll-animate scroll-animate-fadeInUp">Будем рады ответить на ваши вопросы</p>
+                                <form class="feedback__form scroll-animate scroll-animate-fadeInUp fetch-form" action="/">
+                                    <div class="form-group">
+                                        <label for="feedback-name">Ваше имя</label>
+                                        <input class="required" type="text" name="feedback-name" id="feedback-name" placeholder="Введите ваше имя"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="feedback-phone">Ваш телефон</label>
+                                        <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="+7 (___) __-__-__ "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="feedback-message">Ваше сообщение</label>
+                                        <textarea name="feedback-message" id="feedback-message" placeholder="Введите свое сообщение"></textarea>
+                                    </div>
+                                    <div class="form-group-submit">
+                                        <button class="btn btn--md btn--green" type="submit">Отправить сообщение</button>
+                                        <div class="form-policy">Нажав на кнопку, вы соглашаетесь на персональную обработку данных</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="footer__logo">
+                                <svg class="icon icon-logo">
+                                    <use xlink:href="img/sprite.svg#logo"></use>
+                                </svg><span>системы <br/> охраны труда</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="footer__phones"><a href="tel:">8 933 999-12-34</a><a href="tel:">8 913 507-94-65</a></div>
+                            <div class="footer__mail"><a href="mailto:sot-24@mail.ru">sot-24@mail.ru</a></div>
+                            <address class="footer__address">660118, Россия, Красноярский край,<br/>г. Красноярск, пр. Комсомольский, здание 1Е, пом. 28</address>
+                            <div class="footer__sert">В реестре Минтруда РФ № 4427</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="button-scroll-top" id="button-scroll-top"><span class="button-scroll-top__text">Наверх</span><span class="button-scroll-top__icon">
+                                    <svg class="icon icon-arrow">
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg></span></button>
+                        </div>
+                        <div class="col-md-9 first-md">
+                            <div class="footer__copyright">© Системы охраны труда, 2018‒2023</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="modal effect" id="feedback-modal">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-modal-close" type="button">
+                            <svg class="icon icon-close">
+                                <use xlink:href="img/sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                        <div class="modal__body">
+                            <div class="modal__header">
+                                <div class="modal__title">Обратный звонок</div>
+                                <div class="modal__desc">Заполните заявку на обратный звонок прямо сейчас и мы постараемся перезвонить Вам в кратчайшее время.</div>
+                            </div>
+                            <form class="modal__form fetch-form" action="/">
+                                <div class="form-group">
+                                    <label for="feedback-modal-name">Ваше имя</label>
+                                    <input type="text" name="feedback-modal-name" id="feedback-modal-name" placeholder="Введите ваше имя"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback-modal-phone">Ваш телефон</label>
+                                    <input type="tel" name="feedback-modal-phone" id="feedback-modal-phone" placeholder="+7 (___) __-__-__ "/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback-modal-company">Ваше сообщение</label>
+                                    <textarea name="feedback-modal-company" id="feedback-modal-company" placeholder="Введите свое сообщение"></textarea>
+                                </div>
+                                <div class="form-group-submit">
+                                    <div class="btn btn--md btn--green" type="submit">Отправить сообщение</div>
+                                    <div class="form-policy">Нажав на кнопку, вы соглашаетесь на персональную обработку данных</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__overlay"></div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

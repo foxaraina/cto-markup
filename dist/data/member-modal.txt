@@ -1,0 +1,20 @@
+<div class="member-card">
+    <div class="member-card__photo">
+        <picture>
+            <source data-srcset="/img/members/member-card-photo.webp 1x, /img/members/member-card-photo@2x.webp 2x" type="image/webp" srcset="/img/members/member-card-photo.webp 1x, /img/members/member-card-photo@2x.webp 2x">
+            <source data-srcset="/img/members/member-card-photo.jpg 1x, /img/members/member-card-photo@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg" srcset="/img/members/member-card-photo.jpg 1x, /img/members/member-card-photo@2x.jpg 2x"><img class=" ls-is-cached lazyloaded" src="/img/members/member-card-photo.jpg" srcset="img/placeholder.svg" alt="image">
+        </picture>
+    </div>
+    <div class="member-card__info">
+        <div class="member-card__name">Анастасия Корневич</div>
+        <div class="member-card__post">Директор департамента управления складской недвижимостью</div>
+        <div class="member-card__bio">
+            В команде с 2012 года. Анастасия имеет более 20 лет опыта в
+            области юридического сопровождения всех видов коммерческой недвижимости,
+            представления интересов во всех инстанциях арбитражных судов,
+            включая Верховный Суд РФ и суды общей юрисдикции.
+        </div>
+        <div class="member-card__phone"><span>Контактный телефон</span><a href="tel:89135079465">8 913-507-94-65</a></div>
+        <div class="member-card__mail"><span>Электронная почта</span><a href="mailto:sot-24@mail.ru">sot-24@mail.ru</a></div>
+    </div>
+</div>

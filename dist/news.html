@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>СОТ Список новостей</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#000">
+        <meta name="description" content="">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta property="og:title" content="СОТ">
+        <meta property="og:description" content="СТО">
+        <meta property="og:image" content="/img/og-image.jpg">
+        <meta property="og:type" content="profile">
+        <meta property="og:url" content="/test">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+        <link as="script" href="js/main.js" rel="preload">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/pages/news.css">
+    </head>
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="container">
+                    <div class="row middle-xs">
+                        <div class="col-md-4 col-xs-6"><a class="header__logo" href="/">
+                                <svg class="icon icon-logo">
+                                    <use xlink:href="img/sprite.svg#logo"></use>
+                                </svg><span>Системы <br/> охраны труда</span></a></div>
+                        <div class="col-lg-2 col-md-3 hidden-xs">
+                            <div class="header__clock">
+                                <svg class="icon icon-clock">
+                                    <use xlink:href="img/sprite.svg#clock"></use>
+                                </svg>Моментальный старт работы
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-xs-6">
+                            <div class="header__group">
+                                <div class="header__special-version"><a class="special-version-btn js-special-version bvi-open" href="#"><span class="special-version-btn__icon">
+                                            <svg class="icon icon-eye">
+                                                <use xlink:href="img/sprite.svg#eye"></use>
+                                            </svg></span>Версия  <br/> для&nbspслабовидящих</a></div>
+                                <div class="header__phone"><span>Круглосуточная горячая линия</span><a href="tel:89339991234">8 933 999-12-34</a></div>
+                                <button class="btn btn--md btn--dark modal-trigger md-setperspective" data-modal="feedback-modal">Обратный звонок</button>
+                                <button class="header__menu js-menu-toggle"><span></span><span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <menu class="menu">
+                    <div class="container">
+                        <div class="special-version">
+                            <button class="special-version-btn js-special-version" type="button"><span class="special-version-btn__icon">
+                                    <svg class="icon icon-eye">
+                                        <use xlink:href="img/sprite.svg#eye"></use>
+                                    </svg></span>Версия для&nbspслабовидящих</button>
+                        </div>
+                        <nav class="nav">
+                            <div class="nav__block"><a class="nav__title" href="#">О компании</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Лица компании</a><a class="nav__list-item" href="#">Новости</a><a class="nav__list-item" href="#">Документы</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Наши услуги</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Аутсорсинг по охране труда</a><a class="nav__list-item" href="#">Оценка профессиональных рисков</a><a class="nav__list-item" href="#">Аудит по охране труда</a><a class="nav__list-item" href="#">Разработка пакета локальных нормативных актов по охране труда</a><a class="nav__list-item" href="#">Расследование несчастных случаев на производстве</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Полезная информация</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Отраслевые решения</a><a class="nav__list-item" href="#">Частные ситуации</a><a class="nav__list-item" href="#">Вопрос-ответ</a><a class="nav__list-item" href="#">Наши партнеры</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Учебный центр</a>
+                                <div class="nav__list"><a class="nav__list-item" href="#">Программы обучения</a><a class="nav__list-item" href="#">Документы</a><a class="nav__list-item" href="#">Сведения об образовательной организации</a><a class="nav__list-item" href="#">Структура и органы управления образовательной организацией</a><a class="nav__list-item" href="#">Образование</a><a class="nav__list-item" href="#">Образовательные стандарты</a><a class="nav__list-item" href="#">Руководство и педагогический состав</a><a class="nav__list-item" href="#">Материально-техническое обеспечение и оснащённость образовательного процесса</a><a class="nav__list-item" href="#">Стипендии и иные виды материальной поддержки</a><a class="nav__list-item" href="#">Вакантные места для приема (перевода)</a><a class="nav__list-item" href="#">Доступная среда</a><a class="nav__list-item" href="#">Международное сотрудничество</a></div>
+                            </div>
+                            <div class="nav__block"><a class="nav__title" href="#">Контакты</a></div>
+                        </nav>
+                    </div>
+                </menu>
+            </header>
+            <main class="main">
+                <div class="page-header parallax">
+                    <div class="parallax__img-wrap">
+                        <div class="parallax__img">
+                            <div class="parallax__img-inner" style="background-image: url(&quot;../img/page-headers/news-header.jpg&quot;)"></div>
+                        </div>
+                    </div>
+                    <div class="container parallax__content">
+                        <div class="page-header__content"><a class="page-header__back" href="#"><span class="page-header__back-icon">
+                                    <svg class="icon icon-arrow">
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg></span><span class="page-header__back-caption">На главную страницу</span></a>
+                            <h1 class="title title--white title--lg">Новости компании</h1>
+                        </div>
+                    </div>
+                </div>
+                <section class="section-grey">
+                    <div class="container">
+                        <div class="news-list">
+                            <div class="main-news"><a class="main-news__link" href="#"></a>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="main-news__img">
+                                            <picture>
+                                                <source data-srcset="/img/news/main-news.webp 1x, /img/news/main-news@2x.webp 2x" type="image/webp"/>
+                                                <source data-srcset="/img/news/main-news.jpg 1x, /img/news/main-news@2x.jpg 2x" media="(min-width: 980px)" type="image/jpg"/><img class="lazyload" src="/img/news/main-news.jpg" srcset="img/placeholder.svg" width="535" height="352" alt="image"/>
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="main-news__content">
+                                            <div class="main-news__date">27 января 2022</div>
+                                            <div class="main-news__caption">Порядок проведения инвентаризации стационарных источников и выбросов загрязняющих веществ в атмосферный воздух</div><span class="btn btn--md btn--green" href="#">Узнать больше</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">22 апреля 2022</div>
+                                        <div class="news-card__caption">Введение новых Правил обучения по охране труда и проверки знания требований охраны труда.</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">27 января 2022</div>
+                                        <div class="news-card__caption">Порядок проведения инвентаризации стационарных источников и выбросов загрязняющих веществ в атмосферный воздух</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">22 апреля 2022</div>
+                                        <div class="news-card__caption">С завтрашнего дня обучать сотрудников по ОТ можно только после уведомления Минтруда</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">24 января 2020</div>
+                                        <div class="news-card__caption">Добавлены новые программы в обучение по пожарной безопасности</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">25 ноября 2021</div>
+                                        <div class="news-card__caption">Показать все что скрыто: Роструд проводит «охоту» на скрытые несчастные случаи</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">24 января 2020</div>
+                                        <div class="news-card__caption">Добавлены новые программы в обучение по пожарной безопасности</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">22 апреля 2022</div>
+                                        <div class="news-card__caption">Введение новых Правил обучения по охране труда и проверки знания требований охраны труда.</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">27 января 2022</div>
+                                        <div class="news-card__caption">Порядок проведения инвентаризации стационарных источников и выбросов загрязняющих веществ в атмосферный воздух</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">22 апреля 2022</div>
+                                        <div class="news-card__caption">Порядок проведения инвентаризации стационарных источников и выбросов загрязняющих веществ в атмосферный воздух</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">27 января 2022</div>
+                                        <div class="news-card__caption">Введение новых Правил обучения по охране труда и проверки знания требований охраны труда.</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">24 января 2020</div>
+                                        <div class="news-card__caption">Порядок проведения инвентаризации стационарных источников и выбросов загрязняющих веществ в атмосферный воздух</div></a>
+                                </div>
+                                <div class="col-lg-4 col-md-6"><a class="news-card scroll-animate scroll-animate-fadeInUp" href="#">
+                                        <div class="news-card__date">25 ноября 2021</div>
+                                        <div class="news-card__caption">С завтрашнего дня обучать сотрудников по ОТ можно только после уведомления Минтруда</div></a>
+                                </div>
+                            </div>
+                            <div class="pagination"><a class="pagination__item active" href="#">1</a><a class="pagination__item" href="#">2</a><a class="pagination__item" href="#">3</a><a class="pagination__item" href="#">4</a></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-white">
+                    <div class="container">
+                        <div class="feedback row">
+                            <div class="col-lg-offset-4 col-lg-8 col-md-offset-2 col-md-8">
+                                <h2 class="title title--md scroll-animate scroll-animate-fadeInUp">Есть вопросы? Заинтересовались? <br/> Звоните или приезжайте на встречу!</h2>
+                                <p class="test-style-1 text-style-grey scroll-animate scroll-animate-fadeInUp">Будем рады ответить на ваши вопросы</p>
+                                <form class="feedback__form scroll-animate scroll-animate-fadeInUp fetch-form" action="/">
+                                    <div class="form-group">
+                                        <label for="feedback-name">Ваше имя</label>
+                                        <input class="required" type="text" name="feedback-name" id="feedback-name" placeholder="Введите ваше имя"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="feedback-phone">Ваш телефон</label>
+                                        <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="+7 (___) __-__-__ "/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="feedback-message">Ваше сообщение</label>
+                                        <textarea name="feedback-message" id="feedback-message" placeholder="Введите свое сообщение"></textarea>
+                                    </div>
+                                    <div class="form-group-submit">
+                                        <button class="btn btn--md btn--green" type="submit">Отправить сообщение</button>
+                                        <div class="form-policy">Нажав на кнопку, вы соглашаетесь на персональную обработку данных</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="modal effect" id="ask-question">
+                    <div class="modal__container">
+                        <div class="modal__inner">
+                            <button class="modal__close js-modal-close" type="button">
+                                <svg class="icon icon-close">
+                                    <use xlink:href="img/sprite.svg#close"></use>
+                                </svg>
+                            </button>
+                            <div class="modal__body">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="footer__logo">
+                                <svg class="icon icon-logo">
+                                    <use xlink:href="img/sprite.svg#logo"></use>
+                                </svg><span>системы <br/> охраны труда</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="footer__phones"><a href="tel:">8 933 999-12-34</a><a href="tel:">8 913 507-94-65</a></div>
+                            <div class="footer__mail"><a href="mailto:sot-24@mail.ru">sot-24@mail.ru</a></div>
+                            <address class="footer__address">660118, Россия, Красноярский край,<br/>г. Красноярск, пр. Комсомольский, здание 1Е, пом. 28</address>
+                            <div class="footer__sert">В реестре Минтруда РФ № 4427</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="button-scroll-top" id="button-scroll-top"><span class="button-scroll-top__text">Наверх</span><span class="button-scroll-top__icon">
+                                    <svg class="icon icon-arrow">
+                                        <use xlink:href="img/sprite.svg#arrow"></use>
+                                    </svg></span></button>
+                        </div>
+                        <div class="col-md-9 first-md">
+                            <div class="footer__copyright">© Системы охраны труда, 2018‒2023</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="modal effect" id="feedback-modal">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-modal-close" type="button">
+                            <svg class="icon icon-close">
+                                <use xlink:href="img/sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                        <div class="modal__body">
+                            <div class="modal__header">
+                                <div class="modal__title">Обратный звонок</div>
+                                <div class="modal__desc">Заполните заявку на обратный звонок прямо сейчас и мы постараемся перезвонить Вам в кратчайшее время.</div>
+                            </div>
+                            <form class="modal__form fetch-form" action="/">
+                                <div class="form-group">
+                                    <label for="feedback-modal-name">Ваше имя</label>
+                                    <input type="text" name="feedback-modal-name" id="feedback-modal-name" placeholder="Введите ваше имя"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback-modal-phone">Ваш телефон</label>
+                                    <input type="tel" name="feedback-modal-phone" id="feedback-modal-phone" placeholder="+7 (___) __-__-__ "/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback-modal-company">Ваше сообщение</label>
+                                    <textarea name="feedback-modal-company" id="feedback-modal-company" placeholder="Введите свое сообщение"></textarea>
+                                </div>
+                                <div class="form-group-submit">
+                                    <div class="btn btn--md btn--green" type="submit">Отправить сообщение</div>
+                                    <div class="form-policy">Нажав на кнопку, вы соглашаетесь на персональную обработку данных</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__overlay"></div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

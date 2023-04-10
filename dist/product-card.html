@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Mountainman</title>
+        <meta charset="utf-8">
+        <meta name="theme-color" content="#000">
+        <meta name="description" content="">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico">
+        <link as="script" href="js/main.js" rel="preload">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="page">
+            <div class="mobile-menu">
+                <button class="mobile-menu__close js-mobile-menu-close" type="button">
+                    <svg class="icon icon-close">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu__container">
+                    <div class="mobile-menu__list"><a href="#">Одежда</a><a href="#">Аксессуары</a><a href="#">О бренде</a><a href="#">Сотрудничество</a><a href="#">Где купить?</a><a href="#">Помощь</a></div>
+                    <div class="mobile-menu__footer">
+                        <div class="mobile-menu__slogan">С нами ты станешь профи в сноубординге и путешествиях!</div>
+                        <div class="mobile-menu__socials"><a href="/" target="_blank">
+                                <svg class="icon icon-vk">
+                                    <use xlink:href="img/sprite.svg#vk"></use>
+                                </svg></a><a href="/" target="_blank">
+                                <svg class="icon icon-inst">
+                                    <use xlink:href="img/sprite.svg#inst"></use>
+                                </svg></a><a href="/" target="_blank">
+                                <svg class="icon icon-tg">
+                                    <use xlink:href="img/sprite.svg#tg"></use>
+                                </svg></a></div>
+                        <button class="js-modal mobile-menu__subscribe" data-modal="subscribe-form">Подписаться</button>
+                    </div>
+                </div>
+            </div>
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__top">
+                        <div class="header__top-list"><a href="/">Помощь</a><a href="/">Подписаться</a><a href="/">Контакты</a></div>
+                        <div class="header__top-list"><a href="/">О бренде</a><a href="/">Сотрудничество</a><a href="/">Где купить</a></div>
+                    </div>
+                    <div class="header__body">
+                        <div class="header__body-left"><a class="header__catalog" href="/">Каталог</a></div><a class="header__logo" href="/"><img src="img/logo.webp" alt="logo"/></a>
+                        <div class="header__body-right">
+                            <div class="header__socials"><a href="/" target="_blank">
+                                    <svg class="icon icon-vk">
+                                        <use xlink:href="img/sprite.svg#vk"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-inst">
+                                        <use xlink:href="img/sprite.svg#inst"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-tg">
+                                        <use xlink:href="img/sprite.svg#tg"></use>
+                                    </svg></a></div><a class="header__cart" href="/">
+                                <svg class="icon icon-cart">
+                                    <use xlink:href="img/sprite.svg#cart"></use>
+                                </svg><span class="header__cart-number">0</span></a>
+                            <button class="header__mobile-menu-btn" type="button">
+                                <div class="hamburger"><span></span></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <div class="product-card">
+                    <div class="product-card__inner"><a class="back-page" href="#"><span class="back-page__icon">
+                                <svg class="icon icon-arr-back">
+                                    <use xlink:href="img/sprite.svg#arr-back"></use>
+                                </svg></span>назад</a>
+                        <div class="product-card__body">
+                            <div class="product-card__gallery">
+                                <div class="product-card__gallery-thumbs">
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb current">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-1.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-1.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-1.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-2.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-2.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-2.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-3.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-3.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-3.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-4.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-4.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-4.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-5.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-5.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-5.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-6.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-6.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-6.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-7.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-7.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-7.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-8.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-8.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-8.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-9.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-9.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-9.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-thumbs-item js-product-card-thumb">
+                                        <picture>
+                                            <source data-srcset="img/product-card/product-card-sm-10.webp" type="image/webp"/>
+                                            <source data-srcset="img/product-card/product-card-sm-10.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-sm-10.jpg" srcset="img/placeholder-130.svg" width="80" height="100" alt="image"/>
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="product-card__gallery-big swiper js-product-card-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-1.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-1.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-1.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-1.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-2.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-2.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-2.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-2.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-3.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-3.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-3.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-3.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-4.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-4.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-4.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-4.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-5.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-5.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-5.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-5.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-6.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-6.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-6.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-6.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-7.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-7.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-7.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-7.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-8.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-8.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-8.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-8.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-9.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-9.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-9.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-9.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                        <div class="swiper-slide"><a href="img/product-card/product-card-big-10.jpg" data-fancybox="product-gallery">
+                                                <picture>
+                                                    <source data-srcset="img/product-card/product-card-md-10.webp" type="image/webp"/>
+                                                    <source data-srcset="img/product-card/product-card-md-10.jpg" type="image/jpg"/><img class="lazyload" src="img/product-card/product-card-md-10.jpg" srcset="img/placeholder-130.svg" width="640" height="800" alt="image"/>
+                                                </picture></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__content">
+                                <div class="product-card__top">
+                                    <h1 class="title title--md">Сноубордическое худи MARSHMALLOW</h1>
+                                    <div class="product-card__btand">MountainMan</div>
+                                    <div class="product-card__code">Артикул: 1234567</div>
+                                    <div class="product-card__price">13 050 ₽</div>
+                                    <div class="product-card___sizes">
+                                        <div class="product-card__sizes-name">Размер</div>
+                                        <div class="product-card__sizes-list">
+                                            <div class="product-card__sizes-item">
+                                                <input class="js-choose-size" type="radio" id="product-size-1" name="product-size" data-quanity="0">
+                                                <label for="product-size-1">XS</label>
+                                            </div>
+                                            <div class="product-card__sizes-item">
+                                                <input class="js-choose-size" type="radio" id="product-size-2" name="product-size" data-quanity="5">
+                                                <label for="product-size-2">S</label>
+                                            </div>
+                                            <div class="product-card__sizes-item">
+                                                <input class="js-choose-size" type="radio" id="product-size-3" name="product-size" data-quanity="0">
+                                                <label for="product-size-3">M</label>
+                                            </div>
+                                            <div class="product-card__sizes-item">
+                                                <input class="js-choose-size" type="radio" id="product-size-4" name="product-size" data-quanity="5">
+                                                <label for="product-size-4">L</label>
+                                            </div>
+                                            <div class="product-card__sizes-item">
+                                                <input class="js-choose-size" type="radio" id="product-size-5" name="product-size" data-quanity="5">
+                                                <label for="product-size-5">XL</label>
+                                            </div>
+                                            <div class="product-card__sizes-item">
+                                                <input class="js-choose-size" type="radio" id="product-size-6" name="product-size" data-quanity="5">
+                                                <label for="product-size-6">XXL</label>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__sizes-available js-product-available"></div>
+                                    </div>
+                                    <div class="product-card__control">
+                                        <button class="btn btn--cart js-modal js-add-cart" type="button" data-modal="#product-added-cart">купить
+                                            <svg class="icon icon-basket">
+                                                <use xlink:href="img/sprite.svg#basket"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="btn btn--sew js-modal js-order-sew" type="button" data-modal="#product-sew">заказать пошив
+                                            <svg class="icon icon-sew">
+                                                <use xlink:href="img/sprite.svg#sew"></use>
+                                            </svg>
+                                        </button>
+                                    </div><a class="product-card__inst" href="/">Что если в наличии нет моего размера?</a>
+                                </div>
+                                <div class="product-card__box">
+                                    <p>
+                                        Худи Mountainman - абсолютный топ продаж среди худи для катания.
+                                        Создана для сноубордистов и лыжников, в ней ты будешь уверенно чувствовать себя как на
+                                        склоне, так и в городской среде, а удлиненный крой защитит от ветра и снега.
+                                        Идеально для горнолыжного спорта и походов в снежные и холодные путешествия!
+                                    </p>
+                                    <h3>Ткань</h3>
+                                    <p>Плотный Футер с начесом на изнанке. (340 г/м2)</p>
+                                    <h3>Состав</h3>
+                                    <p>Хлопок 80% Полиэстер 20% для оптимальной работы в холодных и влажных условиях.</p>
+                                    <h3>Крой</h3>
+                                    <p>Унисекс. Удлиненный и свободный, глубокий капюшон налезает на шлем, высокий ворот закрывает лицо от ветра.</p>
+                                    <h3>Полезные мелочи:</h3>
+                                    <ul>
+                                        <li>манжеты от снега в рукавах</li>
+                                        <li>карман для ски-пасса</li>
+                                        <li>карман-кенгруру на молниях для телефона</li>
+                                        <li>встроенная в ворот балаклава.</li>
+                                    </ul>
+                                    <p>Мы создаем профессиональную горнолыжную одежду с учетом потребностей райдеров!</p>
+                                    <p>Сделано в России!</p>
+                                </div>
+                                <div class="product-card__box">
+                                    <div class="product-card__box-title">Характеристики товара</div>
+                                    <ul class="product-card__box-list">
+                                        <li><span>Тип одежды</span><span>Сноубордическое худи</span></li>
+                                        <li><span>Материал</span><span>Футер</span></li>
+                                        <li><span>Инструкция по уходу</span><span>машинная стирка при 40C</span></li>
+                                        <li><span>Цвет</span><span>Черный</span></li>
+                                        <li><span>Состав материала</span><span>хлопок 80% полиэстер 20%</span></li>
+                                        <li><span>ДxШxВ</span><span>500x450x70 мм</span></li>
+                                        <li><span>Вес</span><span>800 г</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="added-cart">
+                    <div class="modal__inner">
+                        <button class="modal__close js-modal-close" type="button">
+                            <svg class="icon icon-close">
+                                <use xlink:href="img/sprite.svg#close"></use>
+                            </svg>
+                        </button>
+                        <div class="modal__body">
+                            <div class="added-cart">
+                                <div class="added-cart__sign">
+                                    <svg class="icon icon-check">
+                                        <use xlink:href="img/sprite.svg#check"></use>
+                                    </svg>
+                                </div>
+                                <div class="added-cart__title">Товар добавлен в корзину</div>
+                                <div class="added-cart__btns"><a class="btn btn--dark-cart" href="/cart.html">перейти в корзину
+                                        <svg class="icon icon-cart">
+                                            <use xlink:href="img/sprite.svg#cart"></use>
+                                        </svg></a><a class="btn btn--highlight" href="/category.html">продолжить покупки
+                                        <svg class="icon icon-arr-back">
+                                            <use xlink:href="img/sprite.svg#arr-back"></use>
+                                        </svg></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__row">
+                        <div class="footer__contacts"><a class="footer__logo" href="/"><img src="img/logo-footer.png" alt="logo"/></a>
+                            <div class="footer__socials"><a href="/" target="_blank">
+                                    <svg class="icon icon-vk">
+                                        <use xlink:href="img/sprite.svg#vk"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-inst">
+                                        <use xlink:href="img/sprite.svg#inst"></use>
+                                    </svg></a><a href="/" target="_blank">
+                                    <svg class="icon icon-tg">
+                                        <use xlink:href="img/sprite.svg#tg"></use>
+                                    </svg></a></div>
+                        </div>
+                        <div class="footer__menu">
+                            <div class="footer__menu-list"><a href="/">Способы оплаты</a><a href="/">Доставка</a><a href="/">Обмен/возврат</a><a href="/">Таблица размеров</a><a href="/">Контакты</a></div>
+                            <div class="footer__menu-list"><a href="/">О бренде</a><a href="/">Подарочные карты</a><a href="/">Сотрудничество</a></div>
+                            <div class="footer__menu-list"><a href="/">Политика о персональных данных</a><a href="/">Публичная оферта</a></div>
+                        </div>
+                    </div>
+                    <div class="footer__row">
+                        <div class="footer__bottom">
+                            <div class="footer__copyright">© 2021 MountainMan</div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="bottom-menu">
+                <button class="bottom-menu__item js-search" type="button">
+                    <svg class="icon icon-search">
+                        <use xlink:href="img/sprite.svg#search"></use>
+                    </svg><span class="name">Поиск</span>
+                </button><a class="bottom-menu__item" href="/catalog.html">
+                    <svg class="icon icon-hudi">
+                        <use xlink:href="img/sprite.svg#hudi"></use>
+                    </svg><span class="name">Каталог</span></a><a class="bottom-menu__item" href="#">
+                    <svg class="icon icon-wh">
+                        <use xlink:href="img/sprite.svg#wh"></use>
+                    </svg><span class="name">WhatsApp</span></a><a class="bottom-menu__item" href="#">
+                    <svg class="icon icon-cart">
+                        <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg><span class="name">Корзина
+                        <div class="number">0</div></span></a>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
