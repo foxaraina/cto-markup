@@ -28,7 +28,12 @@
 
                 if (valid) {
                     let response = await fetch(form.action, {method: 'POST', body: data});
-                    formFields.forEach(control => cleanInput(control));
+                    formFields.forEach(control => {
+                        if (formFields.type !== 'hidden') {
+                            cleanInput(control)
+                        }
+                    });
+                    return response.json()
                 }
 
             } catch (e) {
