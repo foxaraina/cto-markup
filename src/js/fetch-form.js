@@ -27,21 +27,25 @@
                 });
 
                 if (valid) {
-                    console.log(form.action)
+
                     let response = await fetch(form.getAttribute('action'),
                         {
                             method: 'POST',
-                            headers: {
-                            'Content-Type': 'multipart/form-data'
-                            },
                             body: data
                         });
-                    formFields.forEach(control => {
-                        if (formFields.type !== 'hidden') {
-                            cleanInput(control)
-                        }
-                    });
-                    return response.json()
+
+                    let responseData = response.json()
+
+                    if (response.status === 200) {
+                        form.insertAdjacentHTML('beforebegin', `<div>Форма успешно отправлена</div>`)
+                        formFields.forEach(control => {
+                            if (formFields.type !== 'hidden') {
+                                cleanInput(control)
+                            }
+                        });
+                    }
+
+                    return responseData
                 }
 
             } catch (e) {
