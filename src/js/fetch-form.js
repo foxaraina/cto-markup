@@ -27,7 +27,15 @@
                 });
 
                 if (valid) {
-                    let response = await fetch(form.action, {method: 'POST', body: data});
+                    console.log(form.action)
+                    let response = await fetch(form.getAttribute('action'),
+                        {
+                            method: 'POST',
+                            headers: {
+                            'Content-Type': 'multipart/form-data'
+                            },
+                            body: data
+                        });
                     formFields.forEach(control => {
                         if (formFields.type !== 'hidden') {
                             cleanInput(control)
