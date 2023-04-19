@@ -146,7 +146,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="feedback-phone">Ваш телефон</label>
-                                        <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="+7 (___) __-__-__ "/>
+                                        <input type="tel" name="feedback-phone" id="feedback-phone" placeholder="+7 (___) __-__-__"/>
                                     </div>
                                     <div class="form-group">
                                         <label for="feedback-message">Ваше сообщение</label>
@@ -182,6 +182,7 @@
                                     </div>
                                 </div>
                                 <form class="modal__form fetch-form" action="/">
+                                    <input name="action" type="hidden" value="save"/>
                                     <div class="form-group">
                                         <label for="service-order-name">Ваше имя</label>
                                         <input type="text" name="service-order-name" id="service-order-name" placeholder="Введите ваше имя"/>
@@ -195,7 +196,7 @@
                                         <textarea name="service-order-company" id="service-order-company" placeholder="Введите свое сообщение"></textarea>
                                     </div>
                                     <div class="form-group-submit">
-                                        <div class="btn btn--md btn--green" type="submit">Отправить сообщение</div>
+                                        <button class="btn btn--md btn--green" type="submit">Отправить сообщение</button>
                                         <div class="form-policy">Нажав на кнопку, вы соглашаетесь на персональную обработку данных</div>
                                     </div>
                                 </form>
@@ -248,6 +249,7 @@
                                 <div class="modal__desc">Заполните заявку на обратный звонок прямо сейчас и мы постараемся перезвонить Вам в кратчайшее время.</div>
                             </div>
                             <form class="modal__form fetch-form" action="/">
+                                <input name="action" type="hidden" value="save"/>
                                 <div class="form-group">
                                     <label for="feedback-modal-name">Ваше имя</label>
                                     <input type="text" name="feedback-modal-name" id="feedback-modal-name" placeholder="Введите ваше имя"/>
@@ -261,7 +263,7 @@
                                     <textarea name="feedback-modal-company" id="feedback-modal-company" placeholder="Введите свое сообщение"></textarea>
                                 </div>
                                 <div class="form-group-submit">
-                                    <div class="btn btn--md btn--green" type="submit">Отправить сообщение</div>
+                                    <button class="btn btn--md btn--green" type="submit">Отправить сообщение</button>
                                     <div class="form-policy">Нажав на кнопку, вы соглашаетесь на персональную обработку данных</div>
                                 </div>
                             </form>

@@ -1,56 +1,69 @@
 (function () {
-    const Forms = document.querySelectorAll('.fetch-form');
+    const forms = document.querySelectorAll('.fetch-form');
 
-    const cleanInput = (control) => {
-        control.value = '';
+    const cleanInput = (formFields) => {
+        formFields.forEach(control => {
+            if (formFields.type !== 'hidden') {
+                control.value = '';
+            }
+        });
+
     };
 
-    Forms.forEach(form => {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            let data = new FormData(form);
-            let formFields = form.querySelectorAll('input, textarea');
-            let valid = false;
-            try {
-                formFields.forEach(control => {
-                    valid = !control.parentElement.classList.contains('error');
-                    if (control.classList.contains('required') && !control.value.length) {
-                        control.parentElement.classList.add('error');
-                        valid = false;
+    const successSend = (form) => {
+        form.insertAdjacentHTML('beforebegin',
+            `<div class="btn btn--md btn--green mt-xs-20">Сообщение успешно отправлено. Менеджер свяжется с вами в ближайшее время.</div>`);
+
+    };
+
+    const handleFormSubmit = async (form) => {
+        let data = new FormData(form);
+        let formFields = form.querySelectorAll('input, textarea');
+
+        try {
+            formFields.forEach(control => {
+                control.addEventListener('input', () => {
+                    let parent = control.parentElement;
+                    if (parent.classList.contains('error')) {
+                        parent.classList.remove('error');
+                        parent.querySelector('.error-message').remove();
                     }
-                    control.addEventListener('change', () => {
-                        let parent = control.parentElement;
-                        if (parent.classList.contains('error')) {
-                            parent.classList.remove('error');
-                        }
-                    });
+                });
+            });
+
+            let response = await fetch(form.getAttribute('action'),
+                {
+                    method: 'POST',
+                    body: data
                 });
 
-                if (valid) {
+            let responseData = await response.json();
 
-                    let response = await fetch(form.getAttribute('action'),
-                        {
-                            method: 'POST',
-                            body: data
-                        });
+            if (!responseData.errors.length) {
+                successSend(form);
+                cleanInput(formFields);
 
-                    let responseData = response.json()
-
-                    if (response.status === 200) {
-                        form.insertAdjacentHTML('beforebegin', `<div>Форма успешно отправлена</div>`)
-                        formFields.forEach(control => {
-                            if (formFields.type !== 'hidden') {
-                                cleanInput(control)
-                            }
-                        });
+            } else {
+                responseData.errors.map(err => {
+                    if (err.includes('email')) {
+                        let formGroup = form.querySelector('[type="mail"]').parentNode;
+                        formGroup.classList.add('error');
+                        formGroup.insertAdjacentHTML('beforeend', `<div class="error-message">${err}</div>`);
                     }
-
-                    return responseData
-                }
-
-            } catch (e) {
-                console.log(e.message);
+                });
             }
+
+            return responseData;
+
+        } catch (e) {
+            console.log(e.message);
+        }
+    };
+
+    forms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await handleFormSubmit(form);
         });
     });
 })();

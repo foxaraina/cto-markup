@@ -26,6 +26,7 @@ mixin modal-header(data)
 
 mixin modal-form(id, data)
     form.modal__form.fetch-form(action='/')
+        input(name="action" type="hidden" value="save")
         each field in data.fields
             if field.textarea
                 .form-group
@@ -36,5 +37,5 @@ mixin modal-form(id, data)
                     label(for=id + '-' + field.id)=field.label
                     input(type=field.type name=id + '-' + field.id id=id + '-' + field.id placeholder=field.placeholder)
         .form-group-submit
-            .btn.btn--md.btn--green(type='submit')=data.submitText
+            button.btn.btn--md.btn--green(type='submit')=data.submitText
             .form-policy Нажав на кнопку, вы соглашаетесь на персональную обработку данных

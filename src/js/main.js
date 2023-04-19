@@ -177,28 +177,29 @@ document.addEventListener('DOMContentLoaded', () => {
         btnsWithIcon.forEach(item => {
             let iconContainer = item.querySelector('.btn-with-icon__sign');
             let icon = iconContainer.querySelector('.btn-with-icon__wrapper');
-            let clone = icon.cloneNode(true);
-            clone.classList.add('clone');
-            icon.classList.add('base');
-            iconContainer.insertAdjacentElement('beforeend', clone);
+            if (icon) {
+                let clone = icon.cloneNode(true);
+                clone.classList.add('clone');
+                icon.classList.add('base');
+                iconContainer.insertAdjacentElement('beforeend', clone);
+                item.addEventListener('mouseenter', () => {
+                    gsap.fromTo(item.querySelector('.base'), {x: '0%', y: '0%'}, {
+                        x: '0%',
+                        y: '102%',
+                        duration: .6,
+                        ease: 'power3.out',
+                        delay: .05
+                    });
 
-            item.addEventListener('mouseenter', () => {
-                gsap.fromTo(item.querySelector('.base'), {x: '0%', y: '0%'}, {
-                    x: '0%',
-                    y: '102%',
-                    duration: .6,
-                    ease: 'power3.out',
-                    delay: .05
+                    gsap.fromTo(item.querySelector('.clone'), {x: '0%', y: '-102%'}, {
+                        y: '0%',
+                        x: '0%',
+                        duration: .6,
+                        ease: 'power3.out',
+                        delay: .2
+                    });
                 });
-
-                gsap.fromTo(item.querySelector('.clone'), {x: '0%', y: '-102%'}, {
-                    y: '0%',
-                    x: '0%',
-                    duration: .6,
-                    ease: 'power3.out',
-                    delay: .2
-                });
-            });
+            }
         });
     }
 
@@ -274,9 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const phoneInputs = document.querySelectorAll('input[type="tel"]');
     phoneInputs.forEach(item => {
-        item.addEventListener('focus', () => {
-            initMasks(item);
-        });
+        initMasks(item);
     });
 
     /*Scroll top button*/
