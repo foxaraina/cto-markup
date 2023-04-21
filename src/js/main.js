@@ -19,6 +19,7 @@ import '../blocks/documents-list/script';
 import '../blocks/sliders/script';
 import '../blocks/first-screen/script';
 import './fetch-form';
+import '../blocks/articles-gallery/script';
 import * as isvek from './bvi/dist/js/bvi';
 
 //add simple support for background images:
@@ -226,31 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         effect: 'fade',
     });
 
-    // Слайдер на главной и в списке новостей
-    const articlesSlider = document.querySelector('.articles-gallery-slider');
-    if (articlesSlider) {
 
-        const swiperGallery = new Swiper('.article-swiper', {
-            modules: [Navigation, Pagination, Autoplay],
-            slidesPerView: 'auto',
-            loop: true,
-            speed: 800,
-            autoplay: {
-                delay: 3000,
-            },
-            navigation: {
-                nextEl: articlesSlider.querySelector('.swiper-button-next'),
-                prevEl: articlesSlider.querySelector('.swiper-button-prev'),
-            },
-            on: {
-                afterInit: function (swiper) {
-                    setTimeout(() => {
-                        articlesSlider.querySelector('.articles-gallery-slider__wrapper').style.minHeight = swiper.height + 'px';
-                    }, 1000);
-                },
-            },
-        });
-    }
 
     // Анимация в блоке обратного звонка
     const callBackBtn = document.querySelector('.callback .btn');
