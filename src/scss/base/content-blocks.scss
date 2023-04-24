@@ -199,20 +199,6 @@ p {
     }
 
     .list {
-        margin-bottom: 20px;
-        margin-top: 20px;
-        max-width: 740px;
-
-        @include mq('tablet') {
-            margin-bottom: 50px;
-        }
-
-        @include mq('desktop') {
-            margin-bottom: 30px;
-            margin-top: 30px;
-            max-width: 100%;
-        }
-
         &__caption {
             font-size: 12px;
             line-height: 1.5;
@@ -228,112 +214,135 @@ p {
                 margin-bottom: 15px;
             }
         }
+    }
 
-        ul {
-            margin-top: 10px;
+    ul {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        max-width: 740px;
 
-            @include mq('desktop') {
-                margin-top: 16px;
+        @include mq('tablet') {
+            margin-bottom: 50px;
+        }
+
+        @include mq('desktop') {
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+
+        @include mq('desktop') {
+            margin-top: 16px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            font-size: 12px;
+            line-height: 1.5;
+
+            @include mq('tablet') {
+                font-size: 16px;
             }
 
-            li {
-                position: relative;
-                padding-left: 30px;
-                font-size: 12px;
-                line-height: 1.5;
+            @include mq('desktop') {
+                font-size: 22px;
+                padding-left: 40px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
 
                 @include mq('tablet') {
-                    font-size: 16px;
+                    margin-bottom: 10px;
                 }
 
                 @include mq('desktop') {
-                    font-size: 22px;
-                    padding-left: 40px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 14px;
+                left: 0;
+                width: 20px;
+                height: 2px;
+                border-radius: 2px;
+                background-color: $primary-color;
+
+                @include mq('tablet') {
+                    top: 11px;
+                    width: 20px;
                 }
 
-                &:not(:last-child) {
-                    margin-bottom: 10px;
-
-                    @include mq('tablet') {
-                        margin-bottom: 10px;
-                    }
-
-                    @include mq('desktop') {
-                        margin-bottom: 15px;
-                    }
-                }
-
-                &::before {
-                    content: '';
-                    position: absolute;
+                @include mq('desktop') {
                     top: 14px;
                     left: 0;
-                    width: 20px;
-                    height: 2px;
-                    border-radius: 2px;
-                    background-color: $primary-color;
-
-                    @include mq('tablet') {
-                        top: 11px;
-                        width: 20px;
-                    }
-
-                    @include mq('desktop') {
-                        top: 14px;
-                        left: 0;
-                    }
                 }
             }
         }
+    }
 
-        ol {
-            margin-top: 10px;
-            counter-reset: myCounter;
+    ol {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        max-width: 740px;
 
-            @include mq('desktop') {
-                margin-top: 16px;
+        @include mq('tablet') {
+            margin-bottom: 50px;
+        }
+
+        @include mq('desktop') {
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+
+        counter-reset: myCounter;
+
+        @include mq('desktop') {
+            margin-top: 16px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            font-size: 12px;
+            line-height: 1.5;
+
+            @include mq('tablet') {
+                font-size: 16px;
             }
 
-            li {
-                position: relative;
-                padding-left: 30px;
-                font-size: 12px;
-                line-height: 1.5;
+            @include mq('desktop') {
+                font-size: 22px;
+                padding-left: 40px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
 
                 @include mq('tablet') {
-                    font-size: 16px;
+                    margin-bottom: 10px;
                 }
 
                 @include mq('desktop') {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &::before {
+                counter-increment: myCounter;
+                content: counter(myCounter) ". ";
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150%;
+                color: $primary-color;
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include mq('desktop') {
                     font-size: 22px;
-                    padding-left: 40px;
-                }
-
-                &:not(:last-child) {
-                    margin-bottom: 10px;
-
-                    @include mq('tablet') {
-                        margin-bottom: 10px;
-                    }
-
-                    @include mq('desktop') {
-                        margin-bottom: 15px;
-                    }
-                }
-
-                &::before {
-                    counter-increment: myCounter;
-                    content: counter(myCounter) ". ";
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 150%;
-                    color: $primary-color;
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    @include mq('desktop') {
-                        font-size: 22px;
-                    }
                 }
             }
         }
