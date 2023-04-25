@@ -10,6 +10,7 @@ import Swiper, {Autoplay, Navigation, Pagination} from 'swiper';
             slidesPerView: 'auto',
             loop: true,
             speed: 800,
+            lazy: true,
             autoplay: {
                 delay: 3000,
             },
@@ -26,7 +27,7 @@ import Swiper, {Autoplay, Navigation, Pagination} from 'swiper';
                     }
 
                     setTimeout(() => {
-                        articlesSlider.querySelector('.articles-gallery-slider__wrapper').style.minHeight = swiper.height + 'px';
+                        articlesSlider.querySelector('.articles-gallery-slider__wrapper').style.minHeight = swiper.height + 10 + 'px';
                     }, 1000);
                 },
             },

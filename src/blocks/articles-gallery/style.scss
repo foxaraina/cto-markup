@@ -11,6 +11,7 @@
         &-slide {
             transition: .4s ease-in-out;
             width: 100%;
+            aspect-ratio: 774 / 886;
 
             @include mq('tablet') {
                 width: 22.386%;
