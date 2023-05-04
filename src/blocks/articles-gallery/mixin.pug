@@ -4,13 +4,13 @@ mixin articles-gallery(className)
             .swiper.article-swiper
                 .swiper-wrapper
                     .swiper-slide.swiper-slide-1
-                        img(src='img/article-gallery/carousel-1.jpg')
+                        img( decoding="async" class="lazyload" src='img/article-gallery/carousel-1.jpg' srcset="img/placeholder.svg" data-srcset="img/article-gallery/carousel-1.jpg" width=774 height=886)
                     .swiper-slide.swiper-slide-2
-                        img(src='img/article-gallery/carousel-2.jpg')
+                        img( decoding="async" class="lazyload" src='img/article-gallery/carousel-2.jpg' srcset="img/placeholder.svg" data-srcset="img/article-gallery/carousel-2.jpg" width=774 height=886)
                     .swiper-slide.swiper-slide-3
-                        img(src='img/article-gallery/carousel-3.jpg')
+                        img( decoding="async" class="lazyload" src='img/article-gallery/carousel-3.jpg' srcset="img/placeholder.svg" data-srcset="img/article-gallery/carousel-3.jpg" width=774 height=886)
                     .swiper-slide.swiper-slide-4
-                        img(src='img/article-gallery/carousel-4.jpg')
+                        img( decoding="async" class="lazyload" src='img/article-gallery/carousel-4.jpg' srcset="img/placeholder.svg" data-srcset="img/article-gallery/carousel-4.jpg" width=774 height=886)
             .swiper-button-prev
                 +icon('arrow')
             .swiper-button-next
