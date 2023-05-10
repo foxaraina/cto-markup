@@ -126,7 +126,7 @@
     }
 
     @include mq('desktop') {
-        font-size: 15px;
+        font-size: 18px;
     }
 
     &__icon {
@@ -141,13 +141,16 @@
         justify-content: center;
 
         @include mq('desktop') {
-            width: 36px;
-            height: 36px;
-            margin-right: 13px;
+            width: 45px;
+            height: 45px;
+            margin-right: 16px;
         }
 
         .icon {
             font-size: 14px;
+            @include mq('desktop') {
+                font-size: 24px;
+            }
         }
     }
 }
@@ -205,7 +208,7 @@
             fill: $white;
 
             @include mq('desktop') {
-                font-size: 24px;
+                font-size: 20px;
             }
         }
     }
@@ -236,6 +239,30 @@
     &:hover {
         .btn-with-icon__sign {
             background-color: $secondary-color;
+        }
+    }
+
+    &.btn-with-icon--outline {
+        background-color: transparent;
+        border: 1px solid rgba(#fff, 0.3);
+        .btn-with-icon__sign {
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            .btn-with-icon__sign {
+                border: 1px solid rgba(#fff, 0.3);
+            }
+        }
+    }
+
+    &.btn-with-icon--left {
+        .btn-with-icon__sign {
+            .icon {
+                transform: rotate(-90deg);
+            }
         }
     }
 }

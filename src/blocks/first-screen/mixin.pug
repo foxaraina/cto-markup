@@ -21,8 +21,14 @@ mixin first-screen()
                 .col-lg-offset-4.col-lg-8
                     .first-screen__bottom.scroll-animate.scroll-animate-fadeInUp
                         .first-screen__desc Компания «Системы охраны труда» — первая в Красноярске компания в сфере охраны труда,застраховавшая свою гражданскую ответственность перед клиентами.
-                        button.btn-with-icon.js-scroll-to(type='button' data-target='services')
-                            span.btn-with-icon__text Наши услуги
-                            span.btn-with-icon__sign
-                                span.btn-with-icon__wrapper
-                                    +icon('arrow')
+                        .first-screen__btns
+                            button.btn-with-icon.js-scroll-to(type='button' data-target='services')
+                                span.btn-with-icon__text Наши услуги
+                                span.btn-with-icon__sign
+                                    span.btn-with-icon__wrapper
+                                        +icon('arrow')
+                            a.btn-with-icon.btn-with-icon--outline.btn-with-icon--left(href='#')
+                                span.btn-with-icon__text Учебный центр
+                                span.btn-with-icon__sign
+                                    span.btn-with-icon__wrapper
+                                        +icon('arrow')
