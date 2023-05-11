@@ -6,10 +6,10 @@ mixin news(data)
                 +news-card(news)
 
 mixin news-index(data, all)
-    .news-list
+    .news-list.news-list--green
         .row
             each news in data
                 .col-md-6
                     +news-card(news)
         if all
-            a.btn.btn--outline.btn--md.btn-all(href='#') Все новости
+            a.btn.btn--green.btn--md.btn-all(href='#') Все новости

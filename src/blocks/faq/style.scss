@@ -34,14 +34,6 @@
                         background-color: #191E22;
                     }
                 }
-
-                &.is-active {
-                    .faq__item-toggle {
-                        &::before, &::after {
-                            background-color: $white;
-                        }
-                    }
-                }
             }
         }
 
@@ -97,7 +89,7 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 1.5;
-            color: #A5A8AA;
+            color: $primary-color;
             text-align: left;
 
             @include mq('tablet') {
@@ -120,8 +112,8 @@
         &-toggle {
             position: relative;
             display: inline-flex;
-            border: 1px solid $grey-md;
             border-radius: 4px;
+            background-color: $white;
             width: 46px;
             height: 30px;
             margin-left: 30px;
@@ -144,7 +136,7 @@
                 content: '';
                 width: 10px;
                 height: 2px;
-                background-color: $grey-lighter;
+                background-color: $dark-bg;
                 border-radius: 2px;
                 position: absolute;
                 top: calc(50% - 1px);
@@ -155,7 +147,7 @@
                 content: '';
                 width: 10px;
                 height: 2px;
-                background-color: $grey-lighter;
+                background-color: $dark-bg;
                 border-radius: 2px;
                 position: absolute;
                 top: calc(50% - 1px);
@@ -183,7 +175,7 @@
                 font-size: 12px;
                 line-height: 1.5;
                 margin-bottom: 20px;
-                color: $grey-lighter;
+                color: $dark-bg;
 
                 &:not(:last-child) {
                     margin-bottom: 20px;
@@ -220,10 +212,14 @@
 
         &.is-active {
             .faq__item-toggle {
-                background-color: $grey-md;
 
                 &::after {
+                    background-color: $primary-color;
                     transform: rotate(0deg);
+                }
+
+                &::before {
+                    background-color: $primary-color;
                 }
             }
         }
