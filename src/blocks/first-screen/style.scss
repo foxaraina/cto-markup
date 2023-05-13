@@ -1,6 +1,7 @@
 .first-screen {
     position: relative;
-    min-height: 760px;
+    max-height: 760px;
+    height: calc(100vh - 30px);
 
     &::before {
         content: '';
@@ -15,16 +16,15 @@
     }
 
     @include mq('tablet') {
-        min-height: 1270px;
+        max-height: 1270px;
     }
 
     @include mq('laptop') {
-        min-height: 689px;
+        max-height: 689px;
     }
 
     @include mq('desktop') {
-        min-height: 100vh;
-        max-height: 100vh;
+        max-height: 1030px;
     }
 
     &__title {
