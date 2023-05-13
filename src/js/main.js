@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .addLabel('start', 0)
                 .to(item.DOM.title, {
                     ease: 'none',
-                    y: (item.DOM.imageWrap.offsetHeight - item.DOM.title.offsetHeight) / 2.5 + 'px'
+                    y: (item.DOM.imageWrap.offsetHeight - item.DOM.title.offsetHeight) / 3 + 'px'
                 }, 'start')
                 .to(item.DOM.imageInner, {
                     ease: 'none',

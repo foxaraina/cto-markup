@@ -23,8 +23,8 @@
     }
 
     @include mq('desktop') {
-        min-height: 1030px;
-        padding: 0;
+        min-height: 100vh;
+        max-height: 100vh;
     }
 
     &__title {
