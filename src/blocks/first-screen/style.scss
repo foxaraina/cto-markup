@@ -1,8 +1,6 @@
 .first-screen {
     position: relative;
-    max-height: 100vh;
-    height: calc(100vh - 60px);
-    min-height: -webkit-fill-available;
+    height: calc(var(--vh, 1vh) * 100);
 
     &::before {
         content: '';

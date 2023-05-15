@@ -31,6 +31,15 @@ document.addEventListener('lazybeforeunveil', function (e) {
 });
 document.addEventListener('DOMContentLoaded', () => {
 
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
     new isvek.Bvi({
         target: '.js-special-version',
         fontSize: 24,
@@ -311,7 +320,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
 });
 
 

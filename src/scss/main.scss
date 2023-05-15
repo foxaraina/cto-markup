@@ -26,10 +26,6 @@ html, body {
     height: 100%;
 }
 
-html {
-    height: -webkit-fill-available;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -41,8 +37,6 @@ body {
     text-decoration-skip-ink: none;
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
 
     &.lock {
         position: relative;
