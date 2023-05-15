@@ -1,7 +1,7 @@
 .first-screen {
     position: relative;
-    max-height: 760px;
-    height: calc(100vh - 30px);
+    max-height: 100vh;
+    height: 100vh;
 
     &::before {
         content: '';
@@ -19,12 +19,12 @@
         max-height: 1270px;
     }
 
-    @include mq('laptop') {
-        max-height: 689px;
-    }
-
     @include mq('desktop') {
         max-height: 1030px;
+    }
+
+    @media (max-height: 340px) {
+        min-height: 400px;
     }
 
     &__title {
@@ -144,7 +144,7 @@
             flex-direction: row;
         }
         button {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             @include mq('tablet') {
                 margin-right: 20px;
                 margin-bottom: 0;
