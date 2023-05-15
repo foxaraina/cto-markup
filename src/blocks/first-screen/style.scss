@@ -1,7 +1,7 @@
 .first-screen {
     position: relative;
     max-height: 100vh;
-    height: 100vh;
+    height: calc(100vh - 60px);
 
     &::before {
         content: '';
@@ -17,6 +17,7 @@
 
     @include mq('tablet') {
         max-height: 1270px;
+        height: 100vh;
     }
 
     @include mq('desktop') {
