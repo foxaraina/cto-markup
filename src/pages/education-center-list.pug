@@ -2,6 +2,7 @@ extends ../template/layout
 include ../blocks/feedback/mixin
 include ../blocks/page-header/mixin
 include ../blocks/educational-courses-list/mixin
+include ../blocks/pagination/mixin
 
 block variables
     -
@@ -38,6 +39,7 @@ block content
     section.section-grey
         .container
             +educational-courses-list(educationalCoursesList)
+            +pagination()
 
     section.section-white
         .container

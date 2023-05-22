@@ -59,6 +59,7 @@
         background-color: $primary-color;
         border-radius: 3px;
         margin-right: 20px;
+        flex-shrink: 0;
 
         @include mq('tablet') {
             width: 80px;
