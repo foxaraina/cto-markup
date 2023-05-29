@@ -96,7 +96,7 @@ menu, nav {
         }
 
         &:nth-child(4) {
-            @include mq('desktop') {
+            @media (min-width: 1440px) {
                 max-width: 520px;
             }
         }
@@ -124,6 +124,33 @@ menu, nav {
 
         &:hover {
             color: $primary-color;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        line-height: 1.5;
+        font-size: 12px;
+        margin-bottom: 8px;
+        color: $dark-bg;
+        transition: .3s ease;
+        &:hover {
+            color: $primary-color;
+        }
+        @include mq('tablet') {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        @include mq('desktop') {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        + .nav__list {
+            margin-left: 15px;
+            @include mq('laptop') {
+                margin-left: 30px;
+            }
         }
     }
 

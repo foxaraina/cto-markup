@@ -30,7 +30,7 @@ mixin services-list(white)
                     +btn-with-arrow()
                 .service-card__img
                     +srcsetRetinaImg('img/service-covers/sevice-3', 'jpg')
-        .col-lg-6.col-md-6
+        .col-lg-4.col-md-6
             a.service-card(href='#' class={'service-card--white': white})
                 .service-card__icon
                     +iconInvestigation()
@@ -40,7 +40,7 @@ mixin services-list(white)
                     +btn-with-arrow()
                 .service-card__img
                     +srcsetRetinaImg('img/service-covers/sevice-4', 'jpg')
-        .col-lg-6.col-md-12
+        .col-lg-4.col-md-12
             a.service-card(href='#' class={'service-card--white': white})
                 .service-card__icon
                     +iconDevelopment()
@@ -50,6 +50,16 @@ mixin services-list(white)
                     +btn-with-arrow()
                 .service-card__img
                     +srcsetRetinaImg('img/service-covers/sevice-5', 'jpg')
+        .col-lg-4.col-md-12
+            a.service-card(href='#' class={'service-card--white': white})
+                .service-card__icon
+                    +iconMintrud()
+                    +icon('mintrud')
+                .service-card__content
+                    .service-card__title Обучение по охране труда
+                    +btn-with-arrow()
+                .service-card__img
+                    +srcsetRetinaImg('img/service-covers/sevice-6', 'jpg')
 mixin services()
     .services
         .container

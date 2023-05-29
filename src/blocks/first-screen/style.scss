@@ -151,6 +151,16 @@
             }
         }
     }
+
+    &__btn {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+            @include mq('tablet') {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
     .btn-with-icon {
         width: 100%;
 

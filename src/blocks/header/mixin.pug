@@ -4,7 +4,7 @@ mixin header(data)
     header.header
         .container
             .row.middle-xs
-                .col-md-4.col-xs-6
+                .col-lg-3.col-md-4.col-xs-5
                     a.header__logo(href='/')
                         +icon('logo')
                         span Системы #[br] охраны труда
@@ -12,7 +12,7 @@ mixin header(data)
                     .header__clock
                         +icon('clock')
                         | Моментальный старт работы
-                .col-lg-6.col-md-5.col-xs-6
+                .col-lg-7.col-md-5.col-xs-7
                     .header__group
                         .header__special-version
                             a.special-version-btn.js-special-version.bvi-open(href='#')
@@ -24,6 +24,8 @@ mixin header(data)
                             a(href='tel:89339991234') 8 933 999-12-34
                         button.btn.btn--md.btn--dark.modal-trigger.md-setperspective(data-modal='feedback-modal') Обратный звонок
                         button.header__menu.js-menu-toggle
-                            span
-                            span
+                            span.header__menu-icon
+                                span.icon
+                                span.icon
+                            span.header__menu-text Меню
         +navigation()

@@ -22,13 +22,18 @@ mixin first-screen()
                     .first-screen__bottom.scroll-animate.scroll-animate-fadeInUp
                         .first-screen__desc Компания «Системы охраны труда» — первая в Красноярске компания в сфере охраны труда,застраховавшая свою гражданскую ответственность перед клиентами.
                         .first-screen__btns
-                            button.btn-with-icon.js-scroll-to(type='button' data-target='services')
+                            button.btn-with-icon.js-scroll-to.first-screen__btn(type='button' data-target='services')
                                 span.btn-with-icon__text Наши услуги
                                 span.btn-with-icon__sign
                                     span.btn-with-icon__wrapper
                                         +icon('arrow')
-                            a.btn-with-icon.btn-with-icon--outline.btn-with-icon--left(href='#')
+                            a.btn-with-icon.btn-with-icon--outline.btn-with-icon--left.first-screen__btn(href='#')
                                 span.btn-with-icon__text Учебный центр
+                                span.btn-with-icon__sign
+                                    span.btn-with-icon__wrapper
+                                        +icon('arrow')
+                            a.btn-with-icon.btn-with-icon--outline.btn-with-icon--left.first-screen__btn(href='http://sot24.beget.tech/login/index.php' target='_blank')
+                                span.btn-with-icon__text Дистанционное обучение
                                 span.btn-with-icon__sign
                                     span.btn-with-icon__wrapper
                                         +icon('arrow')

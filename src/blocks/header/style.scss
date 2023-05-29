@@ -197,71 +197,100 @@
     }
 
     &__menu {
-        width: 20px;
-        height: 20px;
         position: relative;
         background: none;
         border: none;
-
-        @include mq('tablet') {
-            width: 28px;
-            height: 28px;
-        }
-
+        display: flex;
+        align-items: center;
         @include mq('laptop') {
             &:hover {
-                span {
+                .icon {
                     background-color: $dark-bg;
                 }
+
+                .header__menu-text {
+                    color: $dark-bg;
+                }
             }
         }
 
-        @include mq('desktop') {
-            width: 40px;
-            height: 40px;
-        }
-
-        span {
-            position: absolute;
-            display: block;
-            background-color: $primary-color;
-            height: 2px;
-            border-radius: 2px;
+        &-text {
+            display: inline-block;
+            color: $primary-color;
+            text-transform: uppercase;
+            line-height: 1.3;
+            font-size: 10px;
+            margin-left: 6px;
             transition: .3s ease;
 
-            &:first-child {
-                width: 18px;
-                top: 7px;
-
-                @include mq('tablet') {
-                    top: 10px;
-                    width: 26px;
-                }
-
-                @include mq('desktop') {
-                    top: 15px;
-                    width: 38px;
-                }
+            @include mq('laptop') {
+                font-size: 12px;
+                margin-left: 10px;
             }
 
-            &:last-child {
-                width: 14px;
-                top: 13px;
+            @include mq('desktop') {
+                margin-left: 16px;
+                font-size: 16px;
+            }
+        }
 
-                @include mq('tablet') {
-                    top: 18px;
-                    width: 20px;
+        &-icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+
+            @include mq('tablet') {
+                width: 28px;
+                height: 28px;
+            }
+
+            @include mq('desktop') {
+                width: 40px;
+                height: 40px;
+            }
+
+            .icon {
+                position: absolute;
+                display: block;
+                background-color: $primary-color;
+                height: 2px;
+                border-radius: 2px;
+                transition: .3s ease;
+
+                &:first-child {
+                    width: 18px;
+                    top: 7px;
+
+                    @include mq('tablet') {
+                        top: 10px;
+                        width: 26px;
+                    }
+
+                    @include mq('desktop') {
+                        top: 15px;
+                        width: 38px;
+                    }
                 }
 
-                @include mq('desktop') {
-                    top: 25px;
-                    width: 29px;
+                &:last-child {
+                    width: 14px;
+                    top: 13px;
+
+                    @include mq('tablet') {
+                        top: 18px;
+                        width: 20px;
+                    }
+
+                    @include mq('desktop') {
+                        top: 25px;
+                        width: 29px;
+                    }
                 }
             }
         }
 
         &.is-active {
-            span {
+            .icon {
                 &:first-child {
                     width: 26px;
                     transform: rotate(45deg);
