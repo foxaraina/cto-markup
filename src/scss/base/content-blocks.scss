@@ -441,6 +441,14 @@ p {
             }
         }
     }
+
+    a {
+        color: $dark-bg;
+        transition: .3s ease;
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 
 .sidebar {
